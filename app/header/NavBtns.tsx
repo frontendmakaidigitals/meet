@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const NavBtns = ({ textColor }: { textColor: string }) => {
@@ -8,9 +9,11 @@ const NavBtns = ({ textColor }: { textColor: string }) => {
       >
         Careers
       </button>
-      <button className="bg-yellow-400  text-black px-6 py-2 rounded-full hover:bg-yellow-500 transition font-medium">
-        Contact
-      </button>
+      <Link href={"/contact"}>
+        <button className="bg-yellow-400  text-black px-6 py-2 rounded-full hover:bg-yellow-500 transition font-medium">
+          Contact
+        </button>
+      </Link>
     </div>
   );
 };
