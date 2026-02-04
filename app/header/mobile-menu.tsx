@@ -5,8 +5,8 @@ import Link from "next/link";
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const links = [
-    { label: "Home", href: "#" },
-    { label: "About Us", href: "#" },
+    { label: "Home", href: "/" },
+    { label: "About Us", href: "/about" },
     { label: "Products", href: "#" },
     { label: "Sustainability", href: "#" },
     { label: "Careers", href: "#" },
@@ -41,9 +41,11 @@ const MobileMenu = () => {
               ))}
             </ul>
             <div className="flex justify-center items-center w-full">
-              <button className="w-fit px-5 py-2 bg-yellow-500 text-lg rounded-full">
-                Contact Us
-              </button>
+              <Link href={"/contact"}>
+                <button className="w-fit px-5 py-2 bg-yellow-500 text-lg rounded-full">
+                  Contact Us
+                </button>
+              </Link>
             </div>
           </div>
         </div>

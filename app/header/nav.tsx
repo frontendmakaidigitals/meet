@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Nav = ({ path, textColor }: { path: string; textColor: string }) => {
   const links = [
-    { label: "Home", href: "#" },
+    { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
     { label: "Products", href: "#" },
     { label: "Sustainability", href: "#" },

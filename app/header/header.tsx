@@ -46,7 +46,7 @@ export const Header = () => {
 
         <MobileMenu />
         <div className="hidden lg:block">
-          <NavBtns  textColor={textColor} />
+          <NavBtns textColor={textColor} />
         </div>
       </div>
     </nav>
