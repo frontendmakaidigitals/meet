@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Facebook, Instagram, Linkedin, X } from "lucide-react";
-
+import Logo from "../sections/Logo";
 const Footer = () => {
   return (
     <footer className="bg-black text-gray-400">
@@ -8,9 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand / About */}
           <div>
-            <h3 className="text-yellow-500 font-baskervville text-lg mb-4">
-              MEET
-            </h3>
+            <Logo src={"/Logo/logo-light.png"} className="mb-5" />
 
             <p className="text-sm leading-relaxed mb-6">
               Middle East Engineering Technologies (MEET) is a Dubai-based B2B
@@ -47,14 +45,11 @@ const Footer = () => {
               {["Home", "About Us", "Products", "Sustainability"].map(
                 (item) => (
                   <li key={item}>
-                    <Link
-                      href="#"
-                      className="hover:text-yellow-500 transition"
-                    >
+                    <Link href="#" className="hover:text-yellow-500 transition">
                       {item}
                     </Link>
                   </li>
-                )
+                ),
               )}
             </ul>
           </div>
@@ -66,18 +61,12 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <Link
-                  href="#"
-                  className="hover:text-yellow-500 transition"
-                >
+                <Link href="#" className="hover:text-yellow-500 transition">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link
-                  href="#"
-                  className="hover:text-yellow-500 transition"
-                >
+                <Link href="#" className="hover:text-yellow-500 transition">
                   Terms & Conditions
                 </Link>
               </li>
@@ -110,8 +99,8 @@ const Footer = () => {
             <div>
               <p className="text-yellow-500 mb-1">APAC Office</p>
               <p className="leading-relaxed">
-                Ground Floor, Network Bldg, Road No 9 Jubilee Hills,
-                Hyderabad 500 033 Telangana, India
+                Ground Floor, Network Bldg, Road No 9 Jubilee Hills, Hyderabad
+                500 033 Telangana, India
               </p>
             </div>
           </div>
