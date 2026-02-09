@@ -1,5 +1,7 @@
 import Hero from "../sections/apparel/hero";
 import About from "../sections/apparel/about";
+import Brochure from "../sections/brochure";
+import Contact from "../sections/home/contact";
 export default function AparaellPage() {
   return (
     <>
@@ -48,7 +50,13 @@ export default function AparaellPage() {
             {/* Right Image */}
           </div>
         </div>
-
+        <Brochure
+          title={"Comfort Designed for Better Rest"}
+          desc={
+            "Our mattresses are crafted to provide long-lasting comfort and support. Using quality materials and thoughtful design, they promote healthy sleep and enhanced well-being for everyday use."
+          }
+          btn={""}
+        />
         <About
           title="Why Global Leaders Work with Us"
           highlight="Global Leaders"
@@ -68,7 +76,9 @@ export default function AparaellPage() {
             },
           ]}
         />
+
       </div>
+        <Contact />
     </>
   );
 }

@@ -1,6 +1,8 @@
 import React from "react";
 import Hero from "../../sections/sub-apparel/hero";
 import Products from "../../sections/sub-apparel/products";
+import Brochure from "@/app/sections/brochure";
+import Contact from "@/app/sections/home/contact";
 const products = [
   {
     label: "BUCKLES",
@@ -82,13 +84,6 @@ const products = [
         usage:
           "Used in sports shoes, outdoor footwear, and performance footwear.",
         img: "/apparel/detail/buckels/footwear-buckle.jpg",
-      },
-      {
-        id: 10,
-        name: "Special & Custom Buckles",
-        usage:
-          "Used in custom apparel, technical gear, and brand-specific products.",
-        img: "/apparel/detail/buckels/custom-buckel.jpg",
       },
     ],
     brochure: null, // space for download brochure
@@ -210,13 +205,6 @@ const products = [
           "High-visibility cooling vest combining safety compliance with heat-relief performance.",
         img: "/apparel/detail/buckels/KU92514.jpg",
       },
-      {
-        id: 4,
-        name: "N05732 - Short-Sleeve Cooling Wear",
-        usage:
-          "Short-sleeve cooling wear designed to improve mobility while maintaining cooling comfort.",
-        img: "/apparel/detail/buckels/N05732.avif",
-      },
     ],
     brochure: null,
     images: [],
@@ -247,6 +235,17 @@ const page = () => {
         image="/apparel/detail/banner.jpg"
       />
       <Products data={products} />
+      <section className="mt-10 mb-20">
+        <Brochure
+          title={"Smart Apparel for Everyday Performance"}
+          desc={
+            "Our apparel range is designed for durability, comfort, and practical use. Crafted with quality materials, it supports demanding work environments while maintaining a modern, professional look suitable for daily operations."
+          }
+          btn={""}
+        />
+      </section>
+
+      <Contact />
     </div>
   );
 };

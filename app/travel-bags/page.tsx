@@ -1,7 +1,9 @@
 import Hero from "../sections/apparel/hero";
 import About from "../sections/apparel/about";
 import Image from "next/image";
+import Brochure from "../sections/brochure";
 import OurPartners from "../sections/apparel/our-partners";
+import Contact from "../sections/home/contact";
 export default function AparaellPage() {
   return (
     <>
@@ -43,6 +45,16 @@ export default function AparaellPage() {
             />
           </div>
         </div>
+
+        <section className="mt-10 mb-20">
+          <Brochure
+            title={"Travel Solutions Built for Every Journey"}
+            desc={
+              "Our travel bags are designed for durability, functionality, and style. With smart storage and robust construction, they support both business and personal travel with ease and reliability."
+            }
+            btn={""}
+          />
+        </section>
 
         <About
           title="Why Global Leaders Work with Us"
@@ -90,6 +102,7 @@ export default function AparaellPage() {
           ]}
         />
       </div>
+      <Contact />
     </>
   );
 }

@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 
 type AboutItem = {
@@ -26,7 +25,7 @@ const AboutSection = ({
     return (
       <>
         {parts[0]}
-        <span className="text-yellow-400">{highlight}</span>
+        <span className="text-primary">{highlight}</span>
         {parts[1]}
       </>
     );
@@ -56,10 +55,10 @@ const AboutSection = ({
             {items.map((item, idx) => (
               <div key={idx} className="flex items-start gap-4">
                 <div className="mt-2">
-                  <div className="w-4 h-4 border border-yellow-400 rotate-45" />
+                  <div className="w-4 h-4 border border-primary rotate-45" />
                 </div>
                 <div>
-                  <h3 className="text-2xl text-yellow-500 mb-3">
+                  <h3 className="text-2xl text-primary mb-3">
                     {item.label}
                   </h3>
                   <p className="text-gray-700 leading-relaxed">{item.desc}</p>
@@ -69,6 +68,7 @@ const AboutSection = ({
           </div>
         </div>
       </div>
+
     </section>
   );
 };

@@ -32,7 +32,7 @@ const Supplies = ({
                   <p className=" text-gray-500">{product.desc}</p>
                 </div>
                 <Link href={link} className="  font-medium">
-                  <button className="px-5 py-2 bg-yellow-500 text-slate-50">
+                  <button className="px-5 py-2 bg-primary text-slate-50">
                     View more
                   </button>
                 </Link>
@@ -40,11 +40,6 @@ const Supplies = ({
             </div>
           ))}
         </div>
-      </div>
-      <div className="flex justify-center mt-12">
-        <button className="px-5 py-2 bg-yellow-400 text-black ">
-          Download Brochure
-        </button>
       </div>
     </div>
   );

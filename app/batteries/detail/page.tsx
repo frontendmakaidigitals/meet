@@ -2,7 +2,8 @@
 import React from "react";
 import Hero from "../../sections/sub-apparel/hero";
 import Products from "../../sections/sub-apparel/products";
-
+import Brochure from "@/app/sections/brochure";
+import Contact from "@/app/sections/home/contact";
 /* ===============================
    AUTOMOTIVE BATTERIES
 ================================ */
@@ -168,6 +169,18 @@ const page = () => {
       <section className=" mb-28">
         <Products num={3} data={lithiumProducts} />
       </section>
+
+      <section className="mt-10 mb-20">
+        <Brochure
+          title={"Reliable Power for Every Application"}
+          desc={
+            "We offer advanced battery solutions that ensure consistent performance, long life, and dependable energy storage. Built to support critical operations, our batteries enable efficient power management across industries."
+          }
+          btn={""}
+        />
+      </section>
+
+      <Contact />
     </div>
   );
 };

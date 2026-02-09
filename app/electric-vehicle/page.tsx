@@ -3,6 +3,7 @@ import Industries from "../sections/apparel/industries";
 import Supplies from "../sections/apparel/supplies";
 import About from "../sections/apparel/about";
 import OurPartners from "../sections/apparel/our-partners";
+import Contact from "../sections/home/contact";
 import {
   Store, // for Retail and private label distribution
   Gift, // for Corporate gifting and promotions
@@ -122,9 +123,8 @@ export default function EngineeringTechnologiesPage() {
           ]}
         />
 
-        {/* Brochure space intentionally left */}
-        {/* Future: Download Brochure + Request Callback */}
       </div>
+        <Contact />
     </>
   );
 }

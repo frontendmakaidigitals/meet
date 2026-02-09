@@ -2,6 +2,7 @@
 import Hero from "../sections/apparel/hero";
 import About from "../sections/apparel/about";
 import Image from "next/image";
+import Brochure from "../sections/brochure";
 import Contact from "../sections/home/contact";
 export default function AparaellPage() {
   const productCategories = [
@@ -101,6 +102,15 @@ export default function AparaellPage() {
             },
           ]}
         />
+        <section className="my-10 mb-20">
+          <Brochure
+            title={"Smarter Appliances for Modern Living"}
+            desc={
+              "Our home appliances combine innovation with efficiency to simplify everyday life. Designed for reliability and reduced energy consumption, they deliver comfort while supporting responsible resource use."
+            }
+            btn={""}
+          />
+        </section>
         <Contact />
       </div>
     </>

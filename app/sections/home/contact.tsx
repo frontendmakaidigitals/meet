@@ -1,6 +1,6 @@
 import React from "react";
 
-const Contact = ({ color = "bg-white" }: { color?: string }) => {
+const Contact = ({ color = "bg-[#FFEDEE]" }: { color?: string }) => {
   return (
     <section className={`py-20 ${color}`} id="contact">
       <div className="container mx-auto px-6">

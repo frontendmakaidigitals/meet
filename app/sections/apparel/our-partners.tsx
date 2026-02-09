@@ -28,7 +28,7 @@ const OurPartners = ({
         {/* Heading */}
         <h2 className="text-4xl font-baskervville mb-5">
           {parts[0]}
-          <span className="text-yellow-400">{highlight}</span>
+          <span className="text-primary">{highlight}</span>
           {parts[1]}
         </h2>
 

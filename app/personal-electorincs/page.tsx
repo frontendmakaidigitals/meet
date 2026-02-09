@@ -2,6 +2,8 @@
 import Hero from "../sections/apparel/hero";
 import About from "../sections/apparel/about";
 import Image from "next/image";
+import Brochure from "../sections/brochure";
+import Contact from "../sections/home/contact";
 export default function AparaellPage() {
   const productCategories = [
     {
@@ -75,7 +77,13 @@ export default function AparaellPage() {
             </div>
           </div>
         </div>
-
+        <Brochure
+          title={"Technology That Powers Everyday Life"}
+          desc={
+            "Our electronics portfolio delivers dependable performance through practical, user-focused technology. Built to meet modern demands, our products support efficiency, connectivity, and long-term value."
+          }
+          btn={""}
+        />
         <About
           title="Why Global Leaders Work with Us"
           highlight="Global Leaders"
@@ -96,6 +104,7 @@ export default function AparaellPage() {
           ]}
         />
       </div>
+        <Contact />
     </>
   );
 }

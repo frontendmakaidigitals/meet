@@ -8,8 +8,10 @@ import {
   Globe,
   CheckCircle,
 } from "lucide-react";
+import Brochure from "@/app/sections/brochure";
 
 import { BadgeCheck } from "lucide-react";
+import Contact from "@/app/sections/home/contact";
 
 const page = () => {
   const reasons = [
@@ -212,6 +214,16 @@ const page = () => {
           </div>
         </div>
       </section>
+      <section className="mt-10 mb-20">
+        <Brochure
+          title={"Driving the Future of Electric Mobility"}
+          desc={
+            "Our electric mobility solutions support cleaner transportation through reliable, energy-efficient vehicles and infrastructure. Designed to reduce emissions and operating costs, they help businesses move toward a more sustainable future."
+          }
+          btn={""}
+        />
+      </section>
+      <Contact />
     </div>
   );
 };

@@ -22,7 +22,7 @@ const Industries = ({
   highlightWord = "and",
   desc,
   items,
-  iconBgClass = "bg-yellow-400",
+  iconBgClass = "bg-primary ",
 }: IndustriesProps) => {
   const [first, second] = title.split(` ${highlightWord} `);
 
@@ -31,8 +31,7 @@ const Industries = ({
       <div className="container border border-slate-500/20 bg-white py-10 rounded-3xl">
         {/* Heading */}
         <h2 className="text-4xl text-center uppercase font-baskervville">
-          {first} <span className="text-yellow-400">{highlightWord}</span>{" "}
-          {second}
+          {first} <span className="text-primary">{highlightWord}</span> {second}
         </h2>
 
         {/* Description */}
@@ -53,10 +52,7 @@ const Industries = ({
                 className={`w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 ${iconBgClass}`}
               >
                 {item.icon && (
-                  <item.icon
-                    className="w-6 h-6 text-gray-800"
-                    strokeWidth={2}
-                  />
+                  <item.icon className="w-6 h-6 text-gray-50" strokeWidth={2} />
                 )}
               </div>
               <h3 className="text-lg font-medium pt-2">{item.label}</h3>
