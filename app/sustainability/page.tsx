@@ -1,4 +1,3 @@
-import React from "react";
 import Hero from "../sections/about.tsx/hero";
 import Contact from "../sections/home/contact";
 
@@ -19,7 +18,14 @@ const page = () => {
               Our purpose is to help businesses access practical and reliable
               products that support long-term growth.
             </p>
-            <div className="h-64 md:h-[400px] lg:h-[500px] bg-gray-200 rounded" />
+            <div className="h-64 md:h-[400px] lg:h-[500px] bg-gray-200 rounded">
+              <img
+                className="object-cover w-full h-full"
+                src={
+                  "https://images.unsplash.com/photo-1764681307945-6ea20deddc0a?q=80&w=1209&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                }
+              />
+            </div>
           </div>
 
           <div className="space-y-4 md:space-y-6">
@@ -31,7 +37,14 @@ const page = () => {
               offering solutions that improve efficiency, reduce operating
               costs, and support responsible use of resources.
             </p>
-            <div className="h-64 md:h-[350px] lg:h-[450px] bg-gray-200 rounded" />
+            <div className="h-64 md:h-[350px] lg:h-[450px] bg-gray-200 rounded">
+              <img
+                className="object-cover w-full h-full"
+                src={
+                  "https://images.unsplash.com/photo-1631673566298-c9ee67da39cd?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                }
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -62,13 +75,41 @@ const page = () => {
             </p>
 
             <div className="flex gap-3 md:gap-4 pt-2 md:pt-4">
-              <div className="w-full h-24 md:h-32 bg-gray-200 rounded-lg" />
-              <div className="w-full h-24 md:h-32 bg-gray-200 rounded-lg" />
-              <div className="w-full h-24 md:h-32 bg-gray-200 rounded-lg" />
+              <div className="w-full h-24 md:h-32 overflow-hidden bg-gray-200 rounded-lg">
+                <img
+                  className="object-cover w-full h-full"
+                  src={
+                    "https://images.unsplash.com/photo-1759325906183-6b80895b6795?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  }
+                />
+              </div>
+              <div className="w-full h-24 md:h-32 overflow-hidden bg-gray-200 rounded-lg">
+                <img
+                  className="object-cover w-full h-full"
+                  src={
+                    "https://images.unsplash.com/photo-1761396716215-9ccb2a7eda9d?q=80&w=1174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  }
+                />
+              </div>
+              <div className="w-full h-24 md:h-32 overflow-hidden bg-gray-200 rounded-lg">
+                <img
+                  className="object-cover w-full h-full"
+                  src={
+                    "https://images.unsplash.com/photo-1630770147528-3c38bc9e05a6?q=80&w=1186&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  }
+                />
+              </div>
             </div>
           </div>
 
-          <div className="h-64 md:h-96 lg:h-full min-h-[400px] bg-gray-200 rounded" />
+          <div className="h-64 md:h-96 lg:h-full min-h-[400px] bg-gray-200 rounded">
+            <img
+              className="object-cover w-full h-full"
+              src={
+                "https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              }
+            />
+          </div>
         </div>
       </section>
 
@@ -92,10 +133,30 @@ const page = () => {
           </div>
 
           {/* Image cards */}
-          <div className="h-[250px] lg:h-auto lg:aspect-square bg-gray-200 rounded-xl" />
-          <div className="h-[250px] lg:h-auto lg:aspect-square bg-gray-200 rounded-xl" />
-          <div className="h-[250px] lg:h-auto lg:aspect-square bg-gray-200 rounded-xl" />
-          <div className="h-[250px] lg:h-auto lg:aspect-square bg-gray-200 rounded-xl" />
+          <div className="h-[250px] lg:h-auto lg:aspect-square bg-gray-200 rounded-xl">
+            <img
+              src={"/sustainability/img-2.jpeg"}
+              className="object-cover w-full h-full"
+            />
+          </div>
+          <div className="h-[250px] lg:h-auto lg:aspect-square bg-gray-200 rounded-xl">
+            <img
+              src={"/sustainability/img-4.webp"}
+              className="object-cover w-full h-full"
+            />
+          </div>
+          <div className="h-[250px] lg:h-auto lg:aspect-square bg-gray-200 rounded-xl">
+            <img
+              src={"/sustainability/img-5.jpg"}
+              className="object-cover w-full h-full"
+            />
+          </div>
+          <div className="h-[250px] lg:h-auto lg:aspect-square bg-gray-200 rounded-xl">
+            <img
+              src={"/sustainability/sustainable-industrial-warehouse.jpg"}
+              className="object-cover w-full h-full"
+            />
+          </div>
 
           {/* Quote Card */}
           <div className="bg-gray-700 flex justify-center items-center sm:col-span-2 md:col-span-2 text-white p-4 md:p-6 rounded-xl">
@@ -117,7 +178,13 @@ const page = () => {
         </h3>
 
         {/* Large Visual Block */}
-        <div className="mx-auto max-w-5xl h-64 md:h-[350px] lg:h-[450px] bg-gray-200 rounded-2xl mb-6 md:mb-10" />
+        <div className="mx-auto max-w-5xl overflow-hidden h-64 md:h-[350px] lg:h-[450px] bg-gray-200 rounded-2xl mb-6 md:mb-10">
+          <img
+            src={"/sustainability/cta.jpg"}
+            alt={""}
+            className="w-full h-full object-cover"
+          />
+        </div>
 
         {/* Description */}
         <p className="max-w-4xl mx-auto text-gray-700 leading-relaxed text-sm md:text-base lg:text-lg px-4">

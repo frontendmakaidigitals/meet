@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from "next/link";
 const Sustainability = () => {
   return (
     <section className="py-24 bg-white">
@@ -33,9 +33,11 @@ const Sustainability = () => {
           </p>
 
           {/* CTA */}
-          <button className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-yellow-500 text-white text-sm hover:bg-yellow-600 transition">
-            Learn more about our approach
-          </button>
+          <Link href={"/contact"}>
+            <button className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-primary text-white text-sm hover:bg-yellow-600 transition">
+              Learn more about our approach
+            </button>
+          </Link>
         </div>
       </div>
     </section>

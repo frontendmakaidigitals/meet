@@ -54,7 +54,7 @@ const Hero = () => {
         {/* Trust Badges */}
         {/* Trust Badges */}
         <div className="mt-28 hidden lg:flex w-full justify-between items-center text-white">
-          <p className="text-sm text-start shrink-0">
+          <p className="text-lg text-start shrink-0">
             <span className="text-primary">85%</span> of Fortune 100 companies
             <br />
             choose Meet
