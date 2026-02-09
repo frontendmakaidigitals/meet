@@ -160,10 +160,10 @@ const Products = () => {
                       </p>
 
                       <div className="flex gap-4 text-sm">
-                        <button className="px-5 py-1.5 bg-yellow-600 rounded-full">
+                        <button className="px-5 py-1.5 bg-primary rounded-full text-white">
                           Learn more
                         </button>
-                        <button className="px-5 py-1.5 rounded-full text-black border border-yellow-600">
+                        <button className="px-5 py-1.5 rounded-full text-black border border-primary">
                           Buy now
                         </button>
                       </div>
