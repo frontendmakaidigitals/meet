@@ -2,13 +2,23 @@
 
 export default function CTASection() {
   return (
-    <section className=" max-w-sm lg:max-w-6xl mx-auto overflow-hidden mb-20">
+    <section className=" max-w-sm lg:max-w-6xl mx-auto rounded-xl overflow-hidden mb-20">
       <div className="container flex flex-col justify-center items-center py-20 relative  text-center">
-        <div className="absolute w-full h-full ">
-          <video loop muted className="w-full object-cover h-full">
-            <source src={"/home/hero.mp4"} type="video/mp4" />
+        <div className="absolute inset-0">
+          <video
+            className="w-full h-full object-cover"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source src="/home/hero.mp4" type="video/mp4" />
           </video>
+
+          {/* Optional overlay */}
+          <div className="absolute inset-0 bg-black/40" />
         </div>
+
         {/* Eyebrow */}
         <p className="text-2xl relative tracking-wide text-yellow-500 mb-3">
           Let’s <span className="font-allura">build</span>&nbsp; the right

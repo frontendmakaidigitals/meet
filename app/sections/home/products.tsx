@@ -102,6 +102,27 @@ const Products = () => {
     {
       label: (
         <h2 className="text-3xl text-black">
+          Personal <span className="font-allura">Electronics devices</span> 
+        </h2>
+      ),
+      desc: "Reliable personal electronics designed for everyday use, built to last long.",
+      img: (
+        <div className="relative w-full h-[300px] mx-auto flex items-end justify-center">
+          <Image
+            src={"/home/products/personal-electronics.png"}
+            alt={""}
+            width={500}
+            height={500}
+            className="object-contain w-full h-full"
+          />
+        </div>
+      ),
+      bgColor: "bg-linear-to-b from-[#FFEDEE] to-[#F7F7F7]",
+      class: "lg:col-span-2",
+    },
+    {
+      label: (
+        <h2 className="text-3xl text-black">
           Home <span className="font-allura">&</span> Luggage
         </h2>
       ),

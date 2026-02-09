@@ -2,41 +2,42 @@
 import Hero from "../sections/apparel/hero";
 import About from "../sections/apparel/about";
 import Image from "next/image";
+import Contact from "../sections/home/contact";
 export default function AparaellPage() {
   const productCategories = [
     {
       title: "Water Heaters",
-      image: "/images/water-heaters.jpg", // replace when available
+      image: "/home-appliance/water-heater.jpg", // replace when available
       desc: "Reliable water heating solutions designed for safe, consistent, and efficient hot water supply.",
     },
     {
       title: "Cooking Stoves",
-      image: "/images/cooking-stoves.jpg",
+      image: "/home-appliance/cooking-stove.jpg",
       desc: "Durable cooking stoves built to support everyday use in residential and project environments.",
     },
     {
       title: "Refrigerators",
-      image: "/images/refrigerators.jpg",
+      image: "/home-appliance/refrigrator.avif",
       desc: "Efficient refrigeration solutions designed to support food storage needs across multiple settings.",
     },
     {
       title: "Freezers",
-      image: "/images/freezers.jpg",
+      image: "/home-appliance/freezers.webp",
       desc: "Freezing solutions designed for dependable temperature control and long-term storage requirements.",
     },
     {
       title: "Washers & Dryers",
-      image: "/images/washers-dryers.jpg",
+      image: "/home-appliance/Washers-Dryers.webp",
       desc: "Washing and drying solutions designed for regular use with a focus on efficiency and ease of operation.",
     },
     {
       title: "Dishwashers",
-      image: "/images/dishwashers.jpg",
+      image: "/home-appliance/dishwashers.webp",
       desc: "Practical dishwashing solutions designed to support water efficiency and daily cleaning needs.",
     },
     {
       title: "Water Purifiers",
-      image: "/images/water-purifiers.jpg",
+      image: "/home-appliance/water-purifier.webp",
       desc: "Water purification solutions designed to support clean and safe drinking water requirements.",
     },
   ];
@@ -62,8 +63,14 @@ export default function AparaellPage() {
             <div className="grid grid-cols-4 gap-6 mt-10">
               {productCategories.map((item, idx) => (
                 <div key={idx} className="">
-                  <div>
-                    <Image src={""} width={300} height={300} alt={""} />
+                  <div className="h-[240px] overflow-hidden ">
+                    <Image
+                      src={item.image}
+                      width={300}
+                      className="object-cover w-full h-full"
+                      height={300}
+                      alt={""}
+                    />
                   </div>
                   <p className="text-lg font-baskervville font-[600]">
                     {item.title}
@@ -94,6 +101,7 @@ export default function AparaellPage() {
             },
           ]}
         />
+        <Contact />
       </div>
     </>
   );

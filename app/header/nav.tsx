@@ -54,7 +54,7 @@ const Nav = ({ path, textColor }: { path: string; textColor: string }) => {
             >
               {/* Trigger */}
               <span
-                className={`cursor-pointer flex items-center gap-1 hover:text-yellow-400 transition ${textColor}`}
+                className={`cursor-pointer flex items-center gap-1 hover:text-primary transition ${textColor}`}
               >
                 Products
                 <ChevronDown
@@ -93,7 +93,7 @@ const Nav = ({ path, textColor }: { path: string; textColor: string }) => {
           <Link
             key={idx}
             href={link.href}
-            className={`hover:text-yellow-400 transition ${textColor} ${
+            className={`hover:text-primary transition ${textColor} ${
               path.toLowerCase() === link.href.toLowerCase() ? "underline" : ""
             }`}
           >
