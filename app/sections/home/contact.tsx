@@ -26,12 +26,12 @@ const Contact = ({ color = "bg-white" }: { color?: string }) => {
                 <input
                   type="text"
                   placeholder="Name"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-400"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"
                 />
                 <input
                   type="text"
                   placeholder="Phone Number"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-400"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"
                 />
               </div>
 
@@ -39,16 +39,16 @@ const Contact = ({ color = "bg-white" }: { color?: string }) => {
                 <input
                   type="email"
                   placeholder="Email"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-400"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"
                 />
                 <input
                   type="text"
                   placeholder="Subject"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-400"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"
                 />
               </div>
 
-              <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-400 text-gray-600">
+              <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary text-gray-600">
                 <option>SELECT SERVICE</option>
                 <option>Apparel & Footwear</option>
                 <option>EV Vehicles</option>
@@ -58,7 +58,7 @@ const Contact = ({ color = "bg-white" }: { color?: string }) => {
                 <option>Travel Bags & Luggage</option>
               </select>
 
-              <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-400 text-gray-600">
+              <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary text-gray-600">
                 <option>ENQUIRY</option>
                 <option>Product Information</option>
                 <option>Partnership</option>
@@ -68,12 +68,12 @@ const Contact = ({ color = "bg-white" }: { color?: string }) => {
               <textarea
                 placeholder="Leave your Message"
                 rows={4}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-400"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"
               />
 
               <button
                 type="submit"
-                className="w-full bg-yellow-400 text-black py-3 rounded-full hover:bg-yellow-500 transition font-semibold"
+                className="w-full bg-primary text-white py-3 rounded-full hover:bg-yellow-500 transition font-semibold"
               >
                 SUBMIT
               </button>

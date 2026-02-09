@@ -22,7 +22,7 @@ export default function CTASection() {
         </h2>
 
         {/* CTA Button */}
-        <button className="px-10 relative py-3 max-w-lg border border-yellow-500 text-yellow-500 text-xs tracking-widest uppercase rounded-lg hover:bg-yellow-500 hover:text-black transition-colors duration-300">
+        <button className="px-10 relative py-3 max-w-lg border border-yellow-500 text-yellow-500 text-xs tracking-widest uppercase rounded-lg hover:bg-primary hover:text-black transition-colors duration-300">
           Get in touch
         </button>
       </div>

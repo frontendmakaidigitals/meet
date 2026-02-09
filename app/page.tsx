@@ -9,7 +9,7 @@ export default function Home() {
       <Hero />
       <Products />
       <WhyChoose />
-      <Contact />
+      <Contact color={"#FAF3F4"} />
       <CTA />
     </main>
   );

@@ -6,9 +6,9 @@ import OurPartners from "../sections/apparel/our-partners";
 import {
   Store, // for Retail and private label distribution
   Gift, // for Corporate gifting and promotions
-  Plane, // for Travel and mobility use
-  Briefcase, // for Office and everyday personal use
-  Package, // for Project-based and bulk supply needs
+  Plane,
+  Briefcase,
+  Package,
 } from "lucide-react";
 export default function EngineeringTechnologiesPage() {
   const products = [

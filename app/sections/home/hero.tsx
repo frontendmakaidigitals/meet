@@ -43,7 +43,7 @@ const Hero = () => {
         </p>
 
         <div className="flex flex-col max-w-2xs mx-auto lg:max-w-lg  sm:flex-row gap-4 justify-center items-center">
-          <button className="bg-yellow-400 w-full lg:w-auto text-white uppercase px-6 py-2 rounded-full hover:bg-yellow-500 transition font-inter font-semibold">
+          <button className="bg-primary w-full lg:w-auto text-white uppercase px-6 py-2 rounded-full hover:bg-yellow-500 transition font-inter font-semibold">
             Explore our products
           </button>
           <button className="border w-full lg:w-auto border-yellow-500 text-white px-6 py-2 rounded-full hover:bg-white hover:text-black font-inter transition font-semibold">
@@ -52,25 +52,32 @@ const Hero = () => {
         </div>
 
         {/* Trust Badges */}
-        <div className="mt-28 hidden  lg:flex w-full justify-between text-white">
-          <p className="text-sm text-start ">
-            <span className="text-yellow-500">85%</span> of Fortune 100
-            companies
+        {/* Trust Badges */}
+        <div className="mt-28 hidden lg:flex w-full justify-between items-center text-white">
+          <p className="text-sm text-start shrink-0">
+            <span className="text-primary">85%</span> of Fortune 100 companies
             <br />
             choose Meet
           </p>
-          <div className="flex justify-center items-center gap-8 flex-wrap">
-            {logos.map((logo, img) => (
-              <div key={img} className="size-14 bg-white p-2 rounded-full">
-                <Image
-                  src={`/home/hero-brand-logo/${logo.img}`}
-                  alt=""
-                  width={100}
-                  height={100}
-                  className="w-full h-full rounded-full object-contain"
-                />
-              </div>
-            ))}
+
+          {/* Logo loop container */}
+          <div className="relative overflow-hidden w-[420px]">
+            <div className="flex items-center gap-8 animate-logo-loop">
+              {[...logos, ...logos].map((logo, index) => (
+                <div
+                  key={index}
+                  className="size-14 bg-white p-2 rounded-full shrink-0"
+                >
+                  <Image
+                    src={`/home/hero-brand-logo/${logo.img}`}
+                    alt=""
+                    width={100}
+                    height={100}
+                    className="w-full h-full rounded-full object-contain"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

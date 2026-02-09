@@ -117,7 +117,7 @@ const Products = () => {
           />
         </div>
       ),
-      bgColor: "bg-linear-to-b from-[#FFEDEE] to-[#F7F7F7]",
+      bgColor: "bg-linear-to-b from-[#B3A287] to-[#F7F7F7]",
       class: "lg:col-span-2",
     },
   ];

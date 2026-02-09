@@ -3,8 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-
-  --primary-color: #e1ff00;
+  --primary-color: #c6a544;
 }
 
 @theme inline {
@@ -15,6 +14,7 @@
   --font-inter: var(--font-inter);
   --font-baskervville: var(--font-baskervville);
   --font-allura: var(--font-allura);
+  --color-primary: var(--primary-color);
 }
 
 body {
@@ -27,4 +27,16 @@ body {
   margin-right: auto;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+@keyframes logo-loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-logo-loop {
+  animation: logo-loop 10s linear infinite;
 }

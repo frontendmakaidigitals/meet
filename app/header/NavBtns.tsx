@@ -10,7 +10,7 @@ const NavBtns = ({ textColor }: { textColor: string }) => {
         Careers
       </button>
       <Link href={"/contact"}>
-        <button className="bg-yellow-400  text-black px-6 py-2 rounded-full hover:bg-yellow-500 transition font-medium">
+        <button className=" text-black bg-primary px-6 py-2 rounded-full hover:bg-yellow-500 transition font-medium">
           Contact
         </button>
       </Link>

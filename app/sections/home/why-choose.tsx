@@ -221,7 +221,7 @@ const WhyChooseUs = () => {
         {/* Heading */}
         <div className="text-center max-w-4xl mx-auto mb-4 lg:mb-16">
           <h2 className="text-4xl md:text-5xl font-baskervville tracking-wide mb-6">
-            WHY CHOOSE <span className="text-amber-500">US</span>
+            WHY CHOOSE <span className="text-primary">US</span>
           </h2>
 
           <p className="text-lg text-gray-600 mb-4">
@@ -256,36 +256,36 @@ const WhyChooseUs = () => {
 
           {/* Center - Stacking Cards */}
           {/* Center - Stacking Cards */}
-<div className="flex justify-center items-center lg:py-0 mt-8">
-  <div
-    ref={cardsContainerRef}
-    className="relative w-[280px] h-[380px]"
-    style={{ perspective: "1000px" }}
-  >
-    {cards.map((card, index) => (
-      <div
-        key={card.id}
-        ref={(el) => {
-          cardsRef.current[index] = el;
-        }}
-        className="absolute inset-0 will-change-transform"
-        style={isDesktop ? getCardStyle(index) : undefined}
-        onClick={() =>
-          isDesktop &&
-          setActiveIndex((activeIndex + 1) % cards.length)
-        }
-      >
-        <div className="w-full h-full rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-white">
-          <img
-            src={`/home/why-choose/img-${index + 1}.png`}
-            alt={card.leftText || card.rightText || ""}
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </div>
-    ))}
-  </div>
-</div>
+          <div className="flex justify-center items-center lg:py-0 mt-8">
+            <div
+              ref={cardsContainerRef}
+              className="relative w-[280px] h-[380px]"
+              style={{ perspective: "1000px" }}
+            >
+              {cards.map((card, index) => (
+                <div
+                  key={card.id}
+                  ref={(el) => {
+                    cardsRef.current[index] = el;
+                  }}
+                  className="absolute inset-0 will-change-transform"
+                  style={isDesktop ? getCardStyle(index) : undefined}
+                  onClick={() =>
+                    isDesktop &&
+                    setActiveIndex((activeIndex + 1) % cards.length)
+                  }
+                >
+                  <div className="w-full h-full rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-white">
+                    <img
+                      src={`/home/why-choose/img-${index + 1}.png`}
+                      alt={card.leftText || card.rightText || ""}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
           {/* Right list */}
           <div ref={rightTextRef} className="hidden lg:block space-y-6">
@@ -295,11 +295,11 @@ const WhyChooseUs = () => {
                 onClick={() => setActiveIndex(item.id)}
                 className={`flex items-start gap-3 cursor-pointer transition-all duration-300 p-3 rounded-lg ${
                   activeIndex === item.id
-                    ? "text-amber-500 bg-amber-50"
-                    : "text-gray-700 hover:text-amber-500 hover:bg-gray-50"
+                    ? "text-primary bg-yellow-50"
+                    : "text-gray-700 hover:text-yellow-500 hover:bg-gray-50"
                 }`}
               >
-                <span className="text-xl mt-0.5">◇</span>
+                <span className="text-xl ">◇</span>
                 <span className="text-base font-medium">{item.rightText}</span>
               </div>
             ))}
