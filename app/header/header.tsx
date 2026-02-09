@@ -11,7 +11,7 @@ export const Header = () => {
   const pathName = usePathname();
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > window.innerHeight / 4) {
+      if (window.scrollY > 0) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -40,16 +40,16 @@ export const Header = () => {
   const colorMode = scrolled ? false : isDark ? true : false;
   return (
     <nav
-      className={`fixed py-1 top-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-black" : ""}`}
+      className={`fixed py-6 top-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-black" : ""}`}
     >
-      <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="container mx-auto  flex items-center justify-between">
         <div className=" w-40">
           <Logo src={!colorMode ? "/Logo/logo-light.png" : "/Logo/logo.png"} />
         </div>
 
         <Nav path={pathName} textColor={textColor} />
 
-        <MobileMenu />
+        <MobileMenu textColor={textColor} />
         <div className="hidden lg:block">
           <NavBtns textColor={textColor} />
         </div>

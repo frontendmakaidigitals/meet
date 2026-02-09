@@ -1,8 +1,8 @@
 import React from "react";
 
-const Contact = () => {
+const Contact = ({ color = "bg-white" }: { color?: string }) => {
   return (
-    <section className="py-20 bg-white" id="contact">
+    <section className={`py-20 ${color}`} id="contact">
       <div className="container mx-auto px-6">
         {/* ================= TITLE ================= */}
         <div className="text-center mb-12">

@@ -11,7 +11,7 @@ const page = () => {
         />
       </section>
       <section>
-        <Contact />
+        <Contact  />
       </section>
     </>
   );
