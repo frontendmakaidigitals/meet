@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { Facebook, Instagram, Linkedin, X } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
+
 import Logo from "../sections/Logo";
 const Footer = () => {
   return (
@@ -75,11 +77,15 @@ const Footer = () => {
 
           {/* Contact / Offices */}
           <div className="text-sm space-y-6">
-            <div>
-              <p className="text-yellow-500 mb-1">T:</p>
-              <p>+971 50 1483346</p>
+            {/* Phone */}
+            <div className="flex items-center gap-3">
+              <Phone size={16} className="text-yellow-500" />
+              <span>+971 50 1483346</span>
+            </div>
 
-              <p className="text-yellow-500 mt-4 mb-1">E:</p>
+            {/* Email */}
+            <div className="flex items-center gap-3">
+              <Mail size={16} className="text-yellow-500" />
               <a
                 href="mailto:info@meuniversal.com"
                 className="hover:text-yellow-500 transition"
@@ -88,19 +94,25 @@ const Footer = () => {
               </a>
             </div>
 
-            <div>
-              <p className="text-yellow-500 mb-1">Head Office</p>
+            {/* Head Office */}
+            <div className="flex items-start gap-3">
+              <div>
+                <MapPin size={16} className="text-yellow-500 mt-1" />
+              </div>
               <p className="leading-relaxed">
-                Office 7, Bel Resheed Building 2 Nad Al Hamar, Deira Dubai,
+                Office 7, Bel Resheed Building 2, Nad Al Hamar, Deira Dubai,
                 United Arab Emirates
               </p>
             </div>
 
-            <div>
-              <p className="text-yellow-500 mb-1">APAC Office</p>
+            {/* APAC Office */}
+            <div className="flex items-start gap-3">
+              <div>
+                <MapPin size={16} className="text-yellow-500 mt-1" />
+              </div>
               <p className="leading-relaxed">
-                Ground Floor, Network Bldg, Road No 9 Jubilee Hills, Hyderabad
-                500 033 Telangana, India
+                Ground Floor, Network Bldg, Road No 9, Jubilee Hills, Hyderabad
+                500 033, Telangana, India
               </p>
             </div>
           </div>
@@ -109,7 +121,10 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="mt-16 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
           <p>© 2026 MEET. ALL RIGHTS RESERVED</p>
-          <p className="mt-2 md:mt-0">CREATED BY SPOK DIGITAL</p>
+          <p className="mt-2 md:mt-0">
+            Designed & Developed By{" "}
+            <a href={"https://www.spok.digital"} className="text-yellow-500">Spok Digital</a>{" "}
+          </p>
         </div>
       </div>
     </footer>
