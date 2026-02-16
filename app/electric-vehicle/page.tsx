@@ -4,6 +4,7 @@ import Supplies from "../sections/apparel/supplies";
 import About from "../sections/apparel/about";
 import OurPartners from "../sections/apparel/our-partners";
 import Contact from "../sections/home/contact";
+import CTASection from "../sections/cta";
 import {
   Store, // for Retail and private label distribution
   Gift, // for Corporate gifting and promotions
@@ -122,9 +123,8 @@ export default function EngineeringTechnologiesPage() {
             },
           ]}
         />
-
       </div>
-        <Contact />
+      <CTASection />
     </>
   );
 }

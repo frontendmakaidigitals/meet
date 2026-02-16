@@ -1,4 +1,4 @@
-import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 const Products = () => {
   const productList = [
@@ -18,6 +18,7 @@ const Products = () => {
       ),
       bgColor: "bg-linear-to-b from-[#FFFDF7] to-[#FFFFFF]",
       class: "lg:col-span-2",
+      link:'/apparel'
     },
     {
       label: (
@@ -39,6 +40,7 @@ const Products = () => {
       ),
       bgColor: "bg-linear-to-b from-[#F7F7F7] to-[#F7F7F7]",
       class: "col-span-1",
+      link:'/electric-vehicle'
     },
     {
       label: <h2 className="text-3xl text-black">Batteries</h2>,
@@ -56,6 +58,7 @@ const Products = () => {
       ),
       bgColor: "bg-linear-to-b from-[#FFEDEE] to-[#F7F7F7]",
       class: "col-span-1",
+      link:'/batteries'
     },
     {
       label: (
@@ -77,6 +80,7 @@ const Products = () => {
       ),
       bgColor: "bg-linear-to-b from-[#F7F7F7] to-[#F7F7F7]",
       class: "col-span-1",
+      link:'/home-appliance'
     },
     {
       label: (
@@ -98,11 +102,12 @@ const Products = () => {
       ),
       bgColor: "bg-linear-to-b from-[#FFEDEE] to-[#F7F7F7]",
       class: "col-span-1",
+      link:'/matress'
     },
     {
       label: (
         <h2 className="text-3xl text-black">
-          Personal <span className="font-allura">Electronics devices</span> 
+          Personal <span className="font-allura">Electronics devices</span>
         </h2>
       ),
       desc: "Reliable personal electronics designed for everyday use, built to last long.",
@@ -119,11 +124,12 @@ const Products = () => {
       ),
       bgColor: "bg-linear-to-b from-[#FFEDEE] to-[#F7F7F7]",
       class: "lg:col-span-2",
+      link:'/personal-electorincs'
     },
     {
       label: (
         <h2 className="text-3xl text-black">
-          Home <span className="font-allura">&</span> Luggage
+          Travel Bags <span className="font-allura">&</span> Luggage
         </h2>
       ),
       desc: "Spacious and durable luggage that travels long distances withstanding every environment.",
@@ -140,6 +146,7 @@ const Products = () => {
       ),
       bgColor: "bg-linear-to-b from-[#B3A287] to-[#F7F7F7]",
       class: "lg:col-span-2",
+      link:'/travel-bags'
     },
   ];
   return (
@@ -208,9 +215,11 @@ const Products = () => {
 
                     {/* CTA */}
                     <div className="order-4 flex gap-4 text-sm">
-                      <button className="px-5 py-1.5 bg-yellow-600 rounded-full">
-                        Learn more
-                      </button>
+                      <Link href={"/"}>
+                        <button className="px-5 py-1.5 bg-primary text-white rounded-full">
+                          Learn more
+                        </button>
+                      </Link>
                       <button className="px-5 py-1.5 rounded-full text-black border border-yellow-600">
                         Buy now
                       </button>

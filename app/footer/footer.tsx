@@ -123,7 +123,9 @@ const Footer = () => {
           <p>© 2026 MEET. ALL RIGHTS RESERVED</p>
           <p className="mt-2 md:mt-0">
             Designed & Developed By{" "}
-            <a href={"https://www.spok.digital"} className="text-yellow-500">Spok Digital</a>{" "}
+            <a href={"https://www.spok.digital"} className="text-yellow-500">
+              Spok Digital
+            </a>{" "}
           </p>
         </div>
       </div>

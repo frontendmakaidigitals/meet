@@ -2,6 +2,7 @@ import Hero from "../sections/apparel/hero";
 import About from "../sections/apparel/about";
 import Brochure from "../sections/brochure";
 import Contact from "../sections/home/contact";
+import CTASection from "../sections/cta";
 export default function AparaellPage() {
   return (
     <>
@@ -76,9 +77,8 @@ export default function AparaellPage() {
             },
           ]}
         />
-
       </div>
-        <Contact />
+      <CTASection />
     </>
   );
 }

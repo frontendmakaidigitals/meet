@@ -3,6 +3,7 @@ import Hero from "../sections/apparel/hero";
 import About from "../sections/apparel/about";
 import Image from "next/image";
 import Brochure from "../sections/brochure";
+import CTASection from "../sections/cta";
 import Contact from "../sections/home/contact";
 export default function AparaellPage() {
   const productCategories = [
@@ -111,7 +112,7 @@ export default function AparaellPage() {
             btn={""}
           />
         </section>
-        <Contact />
+        <CTASection />
       </div>
     </>
   );

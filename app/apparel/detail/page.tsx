@@ -3,6 +3,7 @@ import Hero from "../../sections/sub-apparel/hero";
 import Products from "../../sections/sub-apparel/products";
 import Brochure from "@/app/sections/brochure";
 import Contact from "@/app/sections/home/contact";
+import CTASection from "@/app/sections/cta";
 const products = [
   {
     label: "BUCKLES",
@@ -245,7 +246,7 @@ const page = () => {
         />
       </section>
 
-      <Contact />
+      <CTASection />
     </div>
   );
 };

@@ -4,6 +4,7 @@ import Supplies from "../sections/apparel/supplies";
 import About from "../sections/apparel/about";
 import OurPartners from "../sections/apparel/our-partners";
 import { Zap, Shirt, Footprints, Backpack, ShieldCheck } from "lucide-react";
+import CTASection from "../sections/cta";
 export default function AparaellPage() {
   const products = [
     {
@@ -108,6 +109,7 @@ export default function AparaellPage() {
           ]}
         />
       </div>
+      <CTASection />
     </>
   );
 }

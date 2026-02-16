@@ -4,6 +4,7 @@ import About from "../sections/apparel/about";
 import Image from "next/image";
 import Brochure from "../sections/brochure";
 import Contact from "../sections/home/contact";
+import CTASection from "../sections/cta";
 export default function AparaellPage() {
   const productCategories = [
     {
@@ -104,7 +105,7 @@ export default function AparaellPage() {
           ]}
         />
       </div>
-        <Contact />
+      <CTASection />
     </>
   );
 }

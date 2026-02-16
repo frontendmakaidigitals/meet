@@ -9,10 +9,8 @@ import {
   CheckCircle,
 } from "lucide-react";
 import Brochure from "@/app/sections/brochure";
-
 import { BadgeCheck } from "lucide-react";
-import Contact from "@/app/sections/home/contact";
-
+import CTASection from "@/app/sections/cta";
 const page = () => {
   const reasons = [
     {
@@ -223,7 +221,7 @@ const page = () => {
           btn={""}
         />
       </section>
-      <Contact />
+      <CTASection />
     </div>
   );
 };

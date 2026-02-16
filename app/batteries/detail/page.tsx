@@ -1,9 +1,8 @@
 "use client";
-import React from "react";
 import Hero from "../../sections/sub-apparel/hero";
 import Products from "../../sections/sub-apparel/products";
 import Brochure from "@/app/sections/brochure";
-import Contact from "@/app/sections/home/contact";
+import CTASection from "@/app/sections/cta";
 /* ===============================
    AUTOMOTIVE BATTERIES
 ================================ */
@@ -180,7 +179,7 @@ const page = () => {
         />
       </section>
 
-      <Contact />
+      <CTASection />
     </div>
   );
 };

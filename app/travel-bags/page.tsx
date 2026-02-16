@@ -4,6 +4,7 @@ import Image from "next/image";
 import Brochure from "../sections/brochure";
 import OurPartners from "../sections/apparel/our-partners";
 import Contact from "../sections/home/contact";
+import CTASection from "../sections/cta";
 export default function AparaellPage() {
   return (
     <>
@@ -102,7 +103,7 @@ export default function AparaellPage() {
           ]}
         />
       </div>
-      <Contact />
+      <CTASection />
     </>
   );
 }

@@ -2,26 +2,29 @@ import React from "react";
 
 const Contact = ({ color = "bg-[#FFEDEE]" }: { color?: string }) => {
   return (
-    <section className={`py-20 ${color}`} id="contact">
-      <div className="container mx-auto px-6">
-        {/* ================= TITLE ================= */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-baskervville text-black mb-4">
-            CONTACT US
-          </h2>
-          <p className="text-gray-600">
-            Whether you are looking for electric mobility, power solutions,
-            industrial products, or home appliances, our team is ready to help.
-            <br />
-            Talk to us to find the right product for your business needs.
-          </p>
-        </div>
+    <section className={`py-12 ${color} mb-14`} id="contact">
+      <div className="container mx-auto px-6 max-w-6xl">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          {/* ================= LEFT: TITLE & DESCRIPTION ================= */}
+          <div>
+            <h2 className="text-4xl md:text-5xl font-baskervville text-black mb-4 leading-tight">
+              Have Questions? We Have Answers
+            </h2>
+            <div className="space-y-3 text-gray-600 text-lg">
+              <p>
+                Whether you are looking for electric mobility, power solutions,
+                industrial products, or home appliances, our team is ready to
+                help.
+              </p>
+              <p>
+                Talk to us to find the right product for your business needs.
+              </p>
+            </div>
+          </div>
 
-        {/* ================= GRID ================= */}
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* ================= FORM (2nd on mobile, right on desktop) ================= */}
-          <div className="order-2 md:order-2 bg-gray-50 p-8 rounded-lg">
-            <form className="space-y-4">
+          {/* ================= RIGHT: FORM ================= */}
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <form className="space-y-3">
               <div className="grid md:grid-cols-2 gap-4">
                 <input
                   type="text"
@@ -67,7 +70,7 @@ const Contact = ({ color = "bg-[#FFEDEE]" }: { color?: string }) => {
 
               <textarea
                 placeholder="Leave your Message"
-                rows={4}
+                rows={3}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"
               />
 
@@ -78,42 +81,6 @@ const Contact = ({ color = "bg-[#FFEDEE]" }: { color?: string }) => {
                 SUBMIT
               </button>
             </form>
-          </div>
-
-          {/* ================= CONTACT INFO (3rd on mobile, left on desktop) ================= */}
-          <div className="order-3 md:order-1">
-            <div className="mb-8">
-              <h3 className="font-bold text-lg text-black mb-2">
-                📞 +971 56 799 0150
-              </h3>
-              <p className="text-gray-600">Meetinfo@Meet.ae</p>
-            </div>
-
-            <div className="mb-8">
-              <h4 className="font-bold mb-2 text-black">Head Office</h4>
-              <p className="text-gray-600">
-                Office 7, 3rd Business Building 2
-                <br />
-                Near Al Hamriya Saray
-                <br />
-                Dubai, United Arab Emirates
-                <br />
-                P.O. Box 5459
-              </p>
-            </div>
-
-            <div>
-              <h4 className="font-bold text-black mb-2">Branch Office</h4>
-              <p className="text-gray-600">
-                Sreepad Plaza, Marothuodu Bhasi
-                <br />
-                Road No 17
-                <br />
-                Thrissur, Kerala - 680001
-                <br />
-                Thrissur, India
-              </p>
-            </div>
           </div>
         </div>
       </div>
