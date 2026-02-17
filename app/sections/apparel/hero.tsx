@@ -20,8 +20,8 @@ const SplitHero = ({
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           {/* Text Content */}
-          <div className="space-y-6">
-            <h1 className="text-4xl font-rubik md:text-5xl font-[400] text-gray-900 leading-tight">
+          <div className="space-y-3">
+            <h1 className="text-4xl font-rubik md:text-5xl font-[400] text-gray-900 leading-tight tracking-tight">
               {title}
             </h1>
 

@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -11,7 +11,7 @@ const Hero = () => {
     { img: "dell.png" },
   ];
   return (
-    <section className="relative min-h-[calc(100dvh)] lg:min-h-[calc(100vh+5rem)] flex items-end pb-28 justify-center overflow-hidden">
+    <section className="relative min-h-[calc(100dvh)] lg:min-h-[calc(90vh+5rem)] flex items-end pb-20 justify-center overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0">
         <video
@@ -21,16 +21,16 @@ const Hero = () => {
           muted
           playsInline
         >
-          <source src="/home/hero.mp4" type="video/mp4" />
+          <source src="/home/preview.mp4" type="video/mp4" />
         </video>
 
         {/* Optional overlay */}
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/70 to-black/60" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
-        <h1 className="text-3xl lg:text-[40px] font-rubik font-[400] text-white mb-6 leading-tight">
+        <h1 className="text-3xl lg:text-[40px] font-rubik font-[500] text-white mb-6 leading-tight">
           SMART PRODUCTS AND PRACTICAL
           <br />
           SOLUTIONS.{" "}

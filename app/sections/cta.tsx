@@ -22,7 +22,7 @@ export default function CTASection() {
         </div>
 
         {/* Eyebrow */}
-        <p className="text-2xl relative tracking-wide text-yellow-500 mb-3">
+        <p className="text-3xl relative font-rubik tracking-wide text-yellow-500 mb-3">
           Let’s <span className="font-allura">build</span>&nbsp; the right
           solution together.
         </p>
