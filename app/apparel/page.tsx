@@ -8,7 +8,7 @@ import CTASection from "../sections/cta";
 export default function AparaellPage() {
   const products = [
     {
-      img: "/apparel/apparel.jpg",
+      img: "/apparel/apparel.png",
       label: (
         <h3 className="text-2xl font-rubik">Apparel & Footwear Accessories</h3>
       ),
@@ -16,7 +16,7 @@ export default function AparaellPage() {
       link: "",
     },
     {
-      img: "/apparel/cooling-jacket.webp",
+      img: "/apparel/cooling-jacket.png",
       label: <h3 className="text-2xl font-rubik">Cooling Jackets</h3>,
       desc: "Lightweight air conditioned jackets designed to help regulate body temperature and keep wearers comfortable in demanding work or outdoor conditions.",
       link: "",
@@ -27,7 +27,7 @@ export default function AparaellPage() {
       <Hero
         title="Apparel Accessories"
         desc="Middle East Engineering Technologies delivers trusted apparel components and advanced cooling jackets to global clothing brands, manufacturers, and B2B partners."
-        image="/apparel/banner.jpg"
+        image="/apparel/banner.png"
       />
       <div className="relative pb-20">
         <div className="lg:w-md h-full absolute bg-[#FFFAEC] -z-10" />
