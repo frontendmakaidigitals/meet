@@ -3,7 +3,7 @@ import Image from "next/image";
 const Products = () => {
   const productList = [
     {
-      label: <h2 className="text-3xl text-black">APPAREL</h2>,
+      label: <h2 className="text-3xl text-black font-rubik">APPAREL</h2>,
       desc: "Apparel accessories like Fasteners, Buckles and cooling jackets are built to improve comfort and safety in demanding work environments.",
       img: (
         <div className="max-h-[350px] w-lg overflow-hidden">
@@ -22,7 +22,7 @@ const Products = () => {
     },
     {
       label: (
-        <h2 className="text-3xl text-black">
+        <h2 className="text-3xl text-black font-rubik">
           EV <span className="font-allura">Vehicles</span>
         </h2>
       ),
@@ -43,7 +43,9 @@ const Products = () => {
       link: "/electric-vehicle",
     },
     {
-      label: <h2 className="text-3xl text-black">Batteries</h2>,
+      label: (
+        <h2 className="text-3xl font-rubik text-black">Batteries</h2>
+      ),
       desc: "From automotive batteries to energy storage systems, we provide dependable power for mobility, backup, and daily operations.",
       img: (
         <div className="relative w-full  overflow-hidden h-[250px] mx-auto flex items-end justify-center">
@@ -62,7 +64,7 @@ const Products = () => {
     },
     {
       label: (
-        <h2 className="text-3xl text-black">
+        <h2 className="text-3xl font-rubik text-black">
           Home <span className="font-allura">Appliances</span>
         </h2>
       ),
@@ -84,7 +86,7 @@ const Products = () => {
     },
     {
       label: (
-        <h2 className="text-3xl text-black">
+        <h2 className="text-3xl font-rubik text-black">
           Sleep <span className="font-allura">&</span> Beddings
         </h2>
       ),
@@ -106,7 +108,7 @@ const Products = () => {
     },
     {
       label: (
-        <h2 className="text-3xl text-black">
+        <h2 className="text-3xl font-rubik text-black">
           Personal <span className="font-allura">Electronics devices</span>
         </h2>
       ),
@@ -128,7 +130,7 @@ const Products = () => {
     },
     {
       label: (
-        <h2 className="text-3xl text-black">
+        <h2 className="text-3xl font-rubik text-black">
           Travel Bags <span className="font-allura">&</span> Luggage
         </h2>
       ),
