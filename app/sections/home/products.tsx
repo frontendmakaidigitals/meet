@@ -194,7 +194,7 @@ const Products = () => {
                           </button>
                         </Link>
                         <Link href={"/contact"}>
-                          <button className="px-5 py-1.5 rounded-full text-black border border-yellow-600">
+                          <button className="px-5 py-1.5  rounded-full text-black border border-yellow-600">
                             Buy now
                           </button>
                         </Link>

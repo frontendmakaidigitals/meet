@@ -33,7 +33,7 @@ const Sustainability = () => {
           </p>
 
           {/* CTA */}
-          <Link href={"/contact"}>
+          <Link href={"/sustainability"}>
             <button className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-primary text-white text-sm hover:bg-yellow-600 transition">
               Learn more about our approach
             </button>

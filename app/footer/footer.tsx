@@ -44,15 +44,21 @@ const Footer = () => {
               QUICK LINKS
             </h4>
             <ul className="space-y-3 text-sm">
-              {["Home", "About Us", "Products", "Sustainability"].map(
-                (item) => (
-                  <li key={item}>
-                    <Link href="#" className="hover:text-yellow-500 transition">
-                      {item}
-                    </Link>
-                  </li>
-                ),
-              )}
+              {[
+                { label: "Home", href: "/" },
+                { label: "About Us", href: "/about" },
+                { label: "Products", href: "/#products" },
+                { label: "Sustainability", href: "/sustainability" },
+              ].map((item) => (
+                <li key={item.label}>
+                  <Link
+                    href={item.href}
+                    className="hover:text-yellow-500 transition"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
