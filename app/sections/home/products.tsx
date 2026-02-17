@@ -43,9 +43,7 @@ const Products = () => {
       link: "/electric-vehicle",
     },
     {
-      label: (
-        <h2 className="text-3xl font-rubik text-black">Batteries</h2>
-      ),
+      label: <h2 className="text-3xl font-rubik text-black">Batteries</h2>,
       desc: "From automotive batteries to energy storage systems, we provide dependable power for mobility, backup, and daily operations.",
       img: (
         <div className="relative w-full  overflow-hidden h-[250px] mx-auto flex items-end justify-center">
@@ -217,14 +215,16 @@ const Products = () => {
 
                     {/* CTA */}
                     <div className="order-4 flex gap-4 text-sm">
-                      <Link href={"/"}>
+                      <Link href={product.link}>
                         <button className="px-5 py-1.5 bg-primary text-white rounded-full">
                           Learn more
                         </button>
                       </Link>
-                      <button className="px-5 py-1.5 rounded-full text-black border border-yellow-600">
-                        Buy now
-                      </button>
+                      <Link href={"/contact"}>
+                        <button className="px-5 py-1.5 rounded-full text-black border border-yellow-600">
+                          Buy now
+                        </button>
+                      </Link>
                     </div>
                     <div className=" lg:order-4  w-full hidden lg:flex justify-center mb-4">
                       {product.img}
