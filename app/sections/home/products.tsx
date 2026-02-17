@@ -30,7 +30,7 @@ const Products = () => {
       img: (
         <div className="relative w-full  h-[250px] mx-auto flex items-end justify-center">
           <Image
-            src={"/home/products/ev.png"}
+            src={"/home/products/bike.png"}
             alt={""}
             width={500}
             height={500}

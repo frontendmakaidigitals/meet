@@ -28,37 +28,37 @@ const WhyChooseUs = () => {
   const cards = [
     {
       id: 0,
-      image: "/transport.jpg",
+      image: "/global.jpeg",
       leftText: "Global B2B solutions partner",
       rightText: null,
     },
     {
       id: 1,
-      image: "/quality.jpg",
+      image: "/quality-products.png",
       leftText: "Quality products built for everyday use",
       rightText: null,
     },
     {
       id: 2,
-      image: "/multi-category.jpg",
+      image: "/multi-category.avif",
       leftText: "Multi category products",
       rightText: null,
     },
     {
       id: 3,
-      image: "/durable.jpg",
+      image: "/durable.png",
       leftText: null,
       rightText: "Durable quality products",
     },
     {
       id: 4,
-      image: "/communication.jpg",
+      image: "/approach.png",
       leftText: null,
       rightText: "Impactful approach and communication",
     },
     {
       id: 5,
-      image: "/transparent.jpg",
+      image: "/process.png",
       leftText: null,
       rightText: "Transparent, reliable processes",
     },
@@ -277,7 +277,7 @@ const WhyChooseUs = () => {
                 >
                   <div className="w-full h-full rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-white">
                     <img
-                      src={`/home/why-choose/img-${index + 1}.png`}
+                      src={`/home/why-choose/${card.image}`}
                       alt={card.leftText || card.rightText || ""}
                       className="w-full h-full object-cover"
                     />
