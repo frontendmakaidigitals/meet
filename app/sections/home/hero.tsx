@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+
 
 const Hero = () => {
   const logos = [
@@ -30,14 +30,14 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
-        <h1 className="text-3xl lg:text-[40px] font-rubik font-[500] text-white mb-6 leading-tight">
+        <h1 className="text-3xl lg:text-5xl font-rubik font-[500] text-slate-50 mb-6 leading-tight">
           SMART PRODUCTS AND PRACTICAL
           <br />
           SOLUTIONS.{" "}
           <span className="text-yellow-400">BUILT FOR BUSINESSES.</span>
         </h1>
 
-        <p className="text-gray-300 max-w-3xl mx-auto mb-8 lg:text-lg">
+        <p className="text-gray-200 max-w-3xl mx-auto mb-8 lg:text-lg">
           Middle East Engineering Technologies (MEET) is a B2B trading and
           solutions company based in Dubai, working globally. We bring reliable
           products and technologies that help businesses work better, save

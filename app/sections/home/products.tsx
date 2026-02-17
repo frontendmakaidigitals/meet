@@ -169,7 +169,7 @@ const Products = () => {
             return (
               <div
                 key={idx}
-                className={`${product.bgColor} ${product.class} p-8`}
+                className={`${product.bgColor} ${product.class} rounded-xl p-8`}
               >
                 {isWide ? (
                   /* ===================== WIDE CARD ===================== */
