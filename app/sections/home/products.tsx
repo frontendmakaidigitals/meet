@@ -150,7 +150,7 @@ const Products = () => {
     },
   ];
   return (
-    <section className="py-20 bg-white">
+    <section id={"products"} className="py-20 bg-white">
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-4xl font-rubik text-black mb-4">
           OUR INNOVATIVE <span className="text-yellow-400">PRODUCT RANGE</span>
@@ -188,12 +188,16 @@ const Products = () => {
                       </p>
 
                       <div className="flex gap-4 text-sm">
-                        <button className="px-5 py-1.5 bg-primary rounded-full text-white">
-                          Learn more
-                        </button>
-                        <button className="px-5 py-1.5 rounded-full text-black border border-primary">
-                          Buy now
-                        </button>
+                        <Link href={product.link}>
+                          <button className="px-5 py-1.5 bg-primary text-white rounded-full">
+                            Learn more
+                          </button>
+                        </Link>
+                        <Link href={"/contact"}>
+                          <button className="px-5 py-1.5 rounded-full text-black border border-yellow-600">
+                            Buy now
+                          </button>
+                        </Link>
                       </div>
                     </div>
                   </div>
