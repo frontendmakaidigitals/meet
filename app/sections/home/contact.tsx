@@ -7,7 +7,7 @@ const Contact = ({ color = "bg-[#FFEDEE]" }: { color?: string }) => {
         <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* ================= LEFT: TITLE & DESCRIPTION ================= */}
           <div>
-            <h2 className="text-4xl md:text-5xl font-rubik text-black mb-4 leading-tight">
+            <h2 className="text-4xl font-rubik text-black mb-4 leading-tight">
               Have Questions? We Have Answers
             </h2>
             <div className="space-y-3 text-gray-600 text-lg">
@@ -29,12 +29,12 @@ const Contact = ({ color = "bg-[#FFEDEE]" }: { color?: string }) => {
                 <input
                   type="text"
                   placeholder="Name"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"
                 />
                 <input
                   type="text"
                   placeholder="Phone Number"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"
                 />
               </div>
 
@@ -42,41 +42,43 @@ const Contact = ({ color = "bg-[#FFEDEE]" }: { color?: string }) => {
                 <input
                   type="email"
                   placeholder="Email"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"
                 />
                 <input
                   type="text"
                   placeholder="Subject"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"
                 />
               </div>
 
-              <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary text-gray-600">
-                <option>SELECT SERVICE</option>
-                <option>Apparel & Footwear</option>
-                <option>EV Vehicles</option>
-                <option>Batteries</option>
-                <option>Home Appliances</option>
-                <option>Sleep & Beddings</option>
-                <option>Travel Bags & Luggage</option>
-              </select>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+                <select className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-primary text-gray-600">
+                  <option>SELECT SERVICE</option>
+                  <option>Apparel & Footwear</option>
+                  <option>EV Vehicles</option>
+                  <option>Batteries</option>
+                  <option>Home Appliances</option>
+                  <option>Sleep & Beddings</option>
+                  <option>Travel Bags & Luggage</option>
+                </select>
 
-              <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary text-gray-600">
-                <option>ENQUIRY</option>
-                <option>Product Information</option>
-                <option>Partnership</option>
-                <option>Other</option>
-              </select>
+                <select className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-primary text-gray-600">
+                  <option>ENQUIRY</option>
+                  <option>Product Information</option>
+                  <option>Partnership</option>
+                  <option>Other</option>
+                </select>
+              </div>
 
               <textarea
                 placeholder="Leave your Message"
                 rows={3}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"
+                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"
               />
 
               <button
                 type="submit"
-                className="w-full bg-primary text-white py-3 rounded-full hover:bg-yellow-500 transition font-semibold"
+                className="w-full bg-primary text-white py-2.5 rounded-full hover:bg-yellow-500 transition font-semibold"
               >
                 SUBMIT
               </button>
