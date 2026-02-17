@@ -20,7 +20,7 @@ const Brochure = ({
             />
           </div>
           <div>
-            <h2 className="text-4xl font-baskervville mb-8">{title}</h2>
+            <h2 className="text-4xl font-rubik mb-8">{title}</h2>
             <p className="text-gray-600 mb-8">{desc}</p>
             <button className="px-5 flex items-center gap-2 py-2 bg-primary text-white">
               <Download />

@@ -220,7 +220,7 @@ const WhyChooseUs = () => {
       >
         {/* Heading */}
         <div className="text-center max-w-4xl mx-auto mb-4 lg:mb-16">
-          <h2 className="text-4xl md:text-5xl font-baskervville tracking-wide mb-6">
+          <h2 className="text-4xl md:text-5xl font-rubik tracking-wide mb-6">
             WHY CHOOSE <span className="text-primary">US</span>
           </h2>
 

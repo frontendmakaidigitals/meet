@@ -35,7 +35,7 @@ const AboutSection = ({
     <section className="py-16">
       <div className="container mx-auto px-4">
         {/* Heading */}
-        <h2 className="font-baskervville mb-12 text-4xl uppercase tracking-wider">
+        <h2 className="font-rubik mb-12 text-4xl uppercase tracking-wider">
           {renderTitle()}
         </h2>
 
@@ -58,9 +58,7 @@ const AboutSection = ({
                   <div className="w-4 h-4 border border-primary rotate-45" />
                 </div>
                 <div>
-                  <h3 className="text-2xl text-primary mb-3">
-                    {item.label}
-                  </h3>
+                  <h3 className="text-2xl text-primary mb-3">{item.label}</h3>
                   <p className="text-gray-700 leading-relaxed">{item.desc}</p>
                 </div>
               </div>
@@ -68,7 +66,6 @@ const AboutSection = ({
           </div>
         </div>
       </div>
-
     </section>
   );
 };

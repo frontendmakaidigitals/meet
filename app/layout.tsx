@@ -5,6 +5,7 @@ import {
   Baskervville,
   Inter,
   Allura,
+  Rubik,
 } from "next/font/google";
 import "./globals.css";
 import { Header } from "./header/header";
@@ -23,13 +24,19 @@ const inter = Inter({
   subsets: ["latin"],
 });
 const baskervville = Baskervville({
-  variable: "--font-baskervville",
+  variable: "--font-rubik",
   subsets: ["latin"],
 });
 const allura = Allura({
   variable: "--font-allura",
   subsets: ["latin"],
   weight: ["400"],
+});
+
+const rubik = Rubik({
+  variable: "--font-rubik",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -46,7 +53,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${baskervville.variable} ${allura.variable} antialiased`}
+        className={`${geistSans.variable} ${rubik.variable} ${geistMono.variable} ${inter.variable} ${baskervville.variable} ${allura.variable} antialiased`}
       >
         <Header />
         {children}

@@ -10,16 +10,14 @@ export default function AparaellPage() {
     {
       img: "/apparel/apparel.jpg",
       label: (
-        <h3 className="text-2xl font-baskervville">
-          Apparel & Footwear Accessories
-        </h3>
+        <h3 className="text-2xl font-rubik">Apparel & Footwear Accessories</h3>
       ),
       desc: "High-quality buckles, laces, and trims that improve fit, comfort, and durability across apparel and footwear products.",
       link: "",
     },
     {
       img: "/apparel/cooling-jacket.webp",
-      label: <h3 className="text-2xl font-baskervville">Cooling Jackets</h3>,
+      label: <h3 className="text-2xl font-rubik">Cooling Jackets</h3>,
       desc: "Lightweight air conditioned jackets designed to help regulate body temperature and keep wearers comfortable in demanding work or outdoor conditions.",
       link: "",
     },

@@ -11,13 +11,13 @@ export default function AparaellPage() {
       <Hero
         title="Travel Bags & Luggage"
         desc="At Middle East Engineering Technologies , we supply travel bags and luggage designed for durability, functionality, and everyday travel needs. We work closely with B2B partners to support consistent quality and long-term supply across global markets. "
-        image="/travel-bags/bag.avif"
+        image="/travel-bags/bag.png"
       />
       <div className="relative pb-20">
         <div className="lg:w-md  h-full absolute bg-[#FFFAEC] -z-10" />
         <div className="container grid grid-cols-1 items-center gap-9 lg:grid-cols-2 py-20">
           <div>
-            <h2 className="text-4xl font-baskervville">
+            <h2 className="text-4xl font-rubik">
               {" "}
               Our Travel Bags & Luggage Product Range
             </h2>
@@ -32,12 +32,9 @@ export default function AparaellPage() {
               luggage needs, with a focus on strong materials and functional
               design.
             </p>
-            <button className="px-5 py-2 bg-yellow-500 text-black mt-5">
-              Download Brochure
-            </button>
           </div>
 
-          <div className="relative border border-slate-200 rounded shadow h-[350px]">
+          <div className="relative h-[350px]">
             <Image
               fill
               src={"/travel-bags/trave-bags.webp"}

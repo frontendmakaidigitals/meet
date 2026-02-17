@@ -6,7 +6,7 @@ const Sustainability = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto text-center">
           {/* Heading */}
-          <h2 className="text-3xl lg:text-4xl font-baskervville mb-12 tracking-wide">
+          <h2 className="text-3xl lg:text-4xl font-rubik mb-12 tracking-wide">
             SUSTAINABILITY & RESPONSIBILITY
           </h2>
 

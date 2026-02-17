@@ -30,7 +30,7 @@ const OurPurpose = () => {
           {/* RIGHT COLUMN */}
           <div className="flex flex-col gap-6 order-1 lg:order-2">
             {/* Heading */}
-            <h2 className="text-3xl lg:text-4xl text-center font-baskervville text-black tracking-wide">
+            <h2 className="text-3xl lg:text-4xl text-center font-rubik text-black tracking-wide">
               OUR PURPOSE
             </h2>
 

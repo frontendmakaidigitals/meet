@@ -18,7 +18,7 @@ const Products = () => {
       ),
       bgColor: "bg-linear-to-b from-[#FFFDF7] to-[#FFFFFF]",
       class: "lg:col-span-2",
-      link:'/apparel'
+      link: "/apparel",
     },
     {
       label: (
@@ -40,7 +40,7 @@ const Products = () => {
       ),
       bgColor: "bg-linear-to-b from-[#F7F7F7] to-[#F7F7F7]",
       class: "col-span-1",
-      link:'/electric-vehicle'
+      link: "/electric-vehicle",
     },
     {
       label: <h2 className="text-3xl text-black">Batteries</h2>,
@@ -58,7 +58,7 @@ const Products = () => {
       ),
       bgColor: "bg-linear-to-b from-[#FFEDEE] to-[#F7F7F7]",
       class: "col-span-1",
-      link:'/batteries'
+      link: "/batteries",
     },
     {
       label: (
@@ -80,7 +80,7 @@ const Products = () => {
       ),
       bgColor: "bg-linear-to-b from-[#F7F7F7] to-[#F7F7F7]",
       class: "col-span-1",
-      link:'/home-appliance'
+      link: "/home-appliance",
     },
     {
       label: (
@@ -102,7 +102,7 @@ const Products = () => {
       ),
       bgColor: "bg-linear-to-b from-[#FFEDEE] to-[#F7F7F7]",
       class: "col-span-1",
-      link:'/matress'
+      link: "/matress",
     },
     {
       label: (
@@ -124,7 +124,7 @@ const Products = () => {
       ),
       bgColor: "bg-linear-to-b from-[#FFEDEE] to-[#F7F7F7]",
       class: "lg:col-span-2",
-      link:'/personal-electorincs'
+      link: "/personal-electorincs",
     },
     {
       label: (
@@ -146,13 +146,13 @@ const Products = () => {
       ),
       bgColor: "bg-linear-to-b from-[#B3A287] to-[#F7F7F7]",
       class: "lg:col-span-2",
-      link:'/travel-bags'
+      link: "/travel-bags",
     },
   ];
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-6 text-center">
-        <h2 className="text-4xl font-baskervville text-black mb-4">
+        <h2 className="text-4xl font-rubik text-black mb-4">
           OUR INNOVATIVE <span className="text-yellow-400">PRODUCT RANGE</span>
         </h2>
 

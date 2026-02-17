@@ -18,7 +18,7 @@ const ImageGrid = () => {
           <div className="grid grid-cols-2 items-end lg:grid-cols-5 gap-2 mb-12">
             {images.map((image, idx) => (
               <div
-                className={`w-full border rounded-xl border-gray-300 ${image.className}`}
+                className={`w-full border rounded-xl border-gray-100 ${image.className}`}
                 key={idx}
               >
                 <img

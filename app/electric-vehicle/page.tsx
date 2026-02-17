@@ -16,15 +16,15 @@ export default function EngineeringTechnologiesPage() {
   const products = [
     {
       img: "/ev/scooter.png",
-      label: <h3 className="text-2xl font-baskervville"> EV Scooters </h3>,
+      label: <h3 className="text-2xl font-rubik"> EV Scooters </h3>,
       desc: " EV scooters are made for easy, everyday movement, especially in cities.",
-      link: "",
+      link: "/electric-vehicle/detail",
     },
     {
       img: "/ev/bike.png",
-      label: <h3 className="text-2xl font-baskervville">EV Bikes</h3>,
+      label: <h3 className="text-2xl font-rubik">EV Bikes</h3>,
       desc: " EV bikes are designed for longer distances and stronger performance.",
-      link: "",
+      link: "/electric-vehicle/detail",
     },
   ];
 
@@ -34,7 +34,7 @@ export default function EngineeringTechnologiesPage() {
       <Hero
         title="EV Scooters & EV Bikes by King Kong"
         desc="At Middle East Engineering Technologies.  We help businesses around the world move towards cleaner and smarter transportation. We supply electric scooters and electric bikes under the King Kong brand, working closely with experienced manufacturers to deliver reliable EV solutions for global markets"
-        image="/ev/banner.jpg"
+        image="/ev/banner.png"
       />
 
       <div className="relative pb-20">

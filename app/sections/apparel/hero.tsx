@@ -21,7 +21,7 @@ const SplitHero = ({
         <div className="grid md:grid-cols-2 gap-10 items-center">
           {/* Text Content */}
           <div className="space-y-6">
-            <h1 className="text-4xl font-baskervville md:text-5xl font-[500] text-gray-900 leading-tight">
+            <h1 className="text-4xl font-rubik md:text-5xl font-[400] text-gray-900 leading-tight">
               {title}
             </h1>
 
@@ -30,8 +30,8 @@ const SplitHero = ({
 
           {/* Image */}
           <div className="flex justify-center">
-            <div className="relative w-full h-[300px] md:w-[380px] md:h-[420px] rounded-lg overflow-hidden shadow">
-              <Image src={image} alt={title} fill className="object-cover" />
+            <div className="relative w-full h-[300px] md:w-[380px] md:h-[420px]  overflow-hidden ">
+              <Image src={image} alt={title} fill className="object-contain" />
             </div>
           </div>
         </div>

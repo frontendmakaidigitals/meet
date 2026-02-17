@@ -30,7 +30,7 @@ const Industries = ({
     <section>
       <div className="container border border-slate-500/20 bg-white py-10 rounded-3xl">
         {/* Heading */}
-        <h2 className="text-4xl text-center uppercase font-baskervville">
+        <h2 className="text-4xl text-center uppercase font-rubik">
           {first} <span className="text-primary">{highlightWord}</span> {second}
         </h2>
 

@@ -62,9 +62,7 @@ const page = () => {
           <div className="space-y-8">
             {/* Header */}
             <div>
-              <h2 className="text-4xl md:text-5xl font-baskervville mb-4">
-                EV Bikes
-              </h2>
+              <h2 className="text-3xl font-rubik mb-4">EV Bikes</h2>
               <p className="text-lg text-gray-700 leading-relaxed">
                 Our EV bikes are built for people and businesses that need
                 strong, clean, and reliable transportation. They are a smart
@@ -75,7 +73,7 @@ const page = () => {
 
             {/* Key Features */}
             <div>
-              <h3 className="text-2xl font-semibold mb-6">Key Features</h3>
+              <h3 className="text-lg font-semibold mb-4">Key Features</h3>
               <div className="space-y-4">
                 {[
                   "Electric power with smooth performance",
@@ -96,7 +94,7 @@ const page = () => {
           {/* Right Column - Image */}
           <div className="space-y-6">
             {/* Main Product Image */}
-            <div className="h-[400px] lg:h-[500px] bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl overflow-hidden shadow-lg">
+            <div className="h-[400px] lg:h-[500px]  rounded-3xl overflow-hidden">
               <img
                 src="/ev/details/bike.png"
                 alt="EV Bike"
@@ -118,7 +116,7 @@ const page = () => {
           {/* Left Column - Image (Reversed Order) */}
           <div className="space-y-6 order-2 lg:order-1">
             {/* Main Product Image */}
-            <div className="h-[400px] lg:h-[500px] bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl overflow-hidden shadow-lg">
+            <div className="h-[400px] lg:h-[500px]  overflow-hidden">
               <img
                 src="/ev/details/scooter.png"
                 alt="EV Scooter"
@@ -131,9 +129,7 @@ const page = () => {
           <div className="space-y-8 order-1 lg:order-2">
             {/* Header */}
             <div>
-              <h2 className="text-4xl md:text-5xl font-baskervville mb-4">
-                EV Scooters
-              </h2>
+              <h2 className="text-3xl font-rubik mb-4">EV Scooters</h2>
               <p className="text-lg text-gray-700 leading-relaxed">
                 Our EV scooters are designed for easy movement and everyday
                 tasks. They are simple to use, cost-effective, and better for
@@ -143,7 +139,7 @@ const page = () => {
 
             {/* Key Features */}
             <div>
-              <h3 className="text-2xl font-semibold mb-6">Key Features</h3>
+              <h3 className="text-lg font-semibold mb-4">Key Features</h3>
               <div className="space-y-4">
                 {[
                   "Quiet and clean electric motor",
@@ -167,7 +163,7 @@ const page = () => {
         <div className="container mx-auto px-4">
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-            <h2 className="text-4xl md:text-5xl font-baskervville mb-6">
+            <h2 className="text-4xl md:text-5xl font-rubik mb-6">
               Why Choose Us?
             </h2>
             <p className="text-lg md:text-xl text-gray-700 leading-relaxed">

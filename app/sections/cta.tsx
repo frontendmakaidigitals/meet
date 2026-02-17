@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function CTASection() {
   return (
     <section className=" max-w-sm lg:max-w-6xl mx-auto rounded-xl overflow-hidden mb-20">
@@ -32,9 +34,11 @@ export default function CTASection() {
         </h2>
 
         {/* CTA Button */}
-        <button className="px-10 relative py-3 max-w-lg border border-yellow-500 text-yellow-500 text-xs tracking-widest uppercase rounded-lg hover:bg-primary hover:text-black transition-colors duration-300">
-          Get in touch
-        </button>
+        <Link className="relative z-10" href={"/contact"}>
+          <button className="px-10  py-3 max-w-lg border border-yellow-500 text-yellow-500 text-xs tracking-widest uppercase rounded-lg hover:bg-primary hover:text-black transition-colors duration-300">
+            Get in touch
+          </button>
+        </Link>
       </div>
     </section>
   );

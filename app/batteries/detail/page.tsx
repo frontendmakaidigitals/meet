@@ -151,7 +151,7 @@ const page = () => {
       <Hero
         title="BATTERIES & ENERGY STORAGE"
         desc="Automotive and energy storage solutions for mobility, backup power, and renewable systems."
-        image="/battery/detail/banner.jpg"
+        image="/battery/details/banner.jpg"
       />
 
       {/* Automotive Batteries */}

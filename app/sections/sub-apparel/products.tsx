@@ -6,7 +6,7 @@ const Products = ({ data, num }: { data: Product[]; num?: number }) => {
       <div className="container">
         {data.map((item, idx) => (
           <div key={idx} className="pb-5">
-            <h2 className="text-4xl font-baskervville mb-6">
+            <h2 className="text-4xl font-rubik mb-6">
               <span className="font-inter">{num ? num : idx + 1}.</span>{" "}
               {item.label}
             </h2>
@@ -16,10 +16,10 @@ const Products = ({ data, num }: { data: Product[]; num?: number }) => {
               {item.types.map((type, idx) => (
                 <div
                   key={idx}
-                  className="group relative bg-white rounded-xl border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow"
+                  className="group relative  rounded-xl  overflow-hidden transition-all duration-300 hover:shadow-md border border-transparent hover:border-slate-300"
                 >
                   {/* Image Container */}
-                  <div className="h-60 bg-white flex items-center justify-center p-2">
+                  <div className="h-60  flex items-center justify-center p-2">
                     {type.img ? (
                       <img
                         src={type.img}

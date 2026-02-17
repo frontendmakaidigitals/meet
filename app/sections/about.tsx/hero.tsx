@@ -16,7 +16,7 @@ const Hero = ({ title, desc, image }: HeroProps) => {
         {/* LEFT CONTENT */}{" "}
         <div className="max-w-2xl">
           {" "}
-          <h1 className="text-4xl lg:text-4xl font-baskervville mb-6">
+          <h1 className="text-4xl lg:text-4xl font-rubik mb-6">
             {title}{" "}
           </h1>{" "}
           <p className="text-gray-700 text-lg leading-relaxed"> {desc} </p>{" "}

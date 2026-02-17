@@ -14,7 +14,7 @@ const CareersPage = () => {
         />
 
         <div className="relative z-10 max-w-2xl">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-baskervville mb-6">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-rubik mb-6">
             Join Our Team
           </h1>
           <p className="text-base md:text-lg text-gray-700 leading-relaxed">
@@ -101,7 +101,7 @@ const CareersPage = () => {
 
       {/* CAREER OPPORTUNITIES */}
       <section className="container mx-auto mt-24 md:mt-32 px-4 text-center">
-        <h2 className="text-3xl md:text-4xl font-baskervville mb-6">
+        <h2 className="text-3xl md:text-4xl font-rubik mb-6">
           Career Opportunities
         </h2>
 
@@ -128,7 +128,7 @@ const CareersPage = () => {
       {/* FORM SECTION */}
       <section className="bg-[#FFFCF6] relative mb-[350px] h-[480px] mt-20 px-4 py-20">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <p className="text-2xl md:text-3xl font-baskervville mb-3">
+          <p className="text-2xl md:text-3xl font-rubik mb-3">
             Fill the form below and upload your updated C.V
           </p>
           <p className="text-gray-600 text-sm md:text-base">

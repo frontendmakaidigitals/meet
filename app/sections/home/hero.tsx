@@ -28,7 +28,7 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
-        <h1 className="text-3xl lg:text-[40px] font-baskervville font-[400] text-white mb-6 leading-tight">
+        <h1 className="text-3xl lg:text-[40px] font-rubik font-[400] text-white mb-6 leading-tight">
           SMART PRODUCTS AND PRACTICAL
           <br />
           SOLUTIONS.{" "}

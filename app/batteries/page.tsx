@@ -8,28 +8,22 @@ import CTASection from "../sections/cta";
 export default function AparaellPage() {
   const products = [
     {
-      img: "/battery/automotive-battery.jpg",
-      label: (
-        <h3 className="text-2xl font-baskervville">Automotive Batteries</h3>
-      ),
+      img: "/battery/automotive-battery.png",
+      label: <h3 className="text-2xl font-rubik">Automotive Batteries</h3>,
       desc: "High-performance batteries designed for two-wheelers, four-wheelers, and electric mobility application.",
       link: "",
     },
     {
-      img: "/battery/lead-acid-battery.webp",
+      img: "/battery/lead-acid-battery.png",
       label: (
-        <h3 className="text-2xl font-baskervville">
-          Energy Storage – Lead Acid
-        </h3>
+        <h3 className="text-2xl font-rubik">Energy Storage – Lead Acid</h3>
       ),
       desc: "Durable lead-acid battery solutions for inverters and solar systems requiring long life and stable output.",
       link: "",
     },
     {
-      img: "/battery/lithium-ion.jpg",
-      label: (
-        <h3 className="text-2xl font-baskervville">Energy Storage – Lithium</h3>
-      ),
+      img: "/battery/lithium-ion.png",
+      label: <h3 className="text-2xl font-rubik">Energy Storage – Lithium</h3>,
       desc: "Modern lithium-based energy storage systems designed for compact design, high efficiency, and advanced power management.",
       link: "",
     },
@@ -39,7 +33,7 @@ export default function AparaellPage() {
       <Hero
         title="BATTERIES "
         desc="Middle East Engineering Technologies is a B2B supplier of automotive batteries and energy storage solutions, serving mobility, backup power, and renewable energy applications across regional and global markets."
-        image="/battery/banner.jpg"
+        image="/battery/banner.png"
       />
       <div className="relative pb-20">
         <div className="lg:w-md h-full absolute bg-[#FFFAEC] -z-10" />

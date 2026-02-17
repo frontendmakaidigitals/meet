@@ -3,13 +3,18 @@ import Hero from "../sections/apparel/hero";
 import About from "../sections/apparel/about";
 import Image from "next/image";
 import Brochure from "../sections/brochure";
-import Contact from "../sections/home/contact";
 import CTASection from "../sections/cta";
 export default function AparaellPage() {
   const productCategories = [
     {
+      title: "Wireless Portable Speakers",
+      image: "/electronics/speaker.png",
+      desc: "Portable speakers designed for strong sound output, durability, and easy transport. Suitable for personal use, promotions, and retail markets.",
+      brochure: null,
+    },
+    {
       title: "Wireless Earbuds",
-      image: "/electronics/tws.jpg",
+      image: "/electronics/tws.png",
       desc: "Compact and lightweight earbuds designed for clear audio, daily use, and portability. Suitable for retail, gifting, and bulk distribution programs.",
       brochure: null,
     },
@@ -20,20 +25,20 @@ export default function AparaellPage() {
       brochure: null,
     },
     {
-      title: "Wireless Portable Speakers",
-      image: "/electronics/speaker.jpg",
-      desc: "Portable speakers designed for strong sound output, durability, and easy transport. Suitable for personal use, promotions, and retail markets.",
-      brochure: null,
-    },
-    {
       title: "Power Banks",
-      image: "/electronics/power-bank.jpg",
+      image: "/electronics/power-bank.png",
       desc: "Reliable power banks designed to support fast charging and extended device usage for travel, work, and emergency needs.",
       brochure: null,
     },
     {
-      title: "Cables & Adapters",
-      image: "/electronics/adpaters.jpg",
+      title: "Adapters",
+      image: "/electronics/adapters.png",
+      desc: "Essential charging and connectivity accessories designed for compatibility, durability, and regular daily use across devices.",
+      brochure: null,
+    },
+    {
+      title: "Cables",
+      image: "/electronics/cables.png",
       desc: "Essential charging and connectivity accessories designed for compatibility, durability, and regular daily use across devices.",
       brochure: null,
     },
@@ -44,21 +49,20 @@ export default function AparaellPage() {
       <Hero
         title=" Personal Electronics  "
         desc="Middle East Engineering Technologies  supplies essential personal electronic devices designed for everyday use, retail distribution, and bulk business requirements. We focus on reliable products, consistent quality, and long-term B2B partnerships across global markets."
-        image="/electronics/banner.jpeg"
+        image="/electronics/banner.png"
       />
-      <div className="relative pb-20">
+      <div className="relative pb-32">
         <div className="lg:w-md h-full absolute bg-[#FFFAEC] -z-10" />
-        <div className="py-12">
+        <div className="py-12 pb-24">
           <div className="container">
-            <h2 className="text-4xl font-baskervville">
-              {" "}
+            <h2 className="text-4xl font-rubik">
               Our Home Appliances Product Range
             </h2>
             <p className="mt-2">
               We supply a wide range of home appliances designed for daily
               living, residential projects, and commercial requirements.
             </p>
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mt-7">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-7">
               {productCategories.map((item, idx) => (
                 <div key={idx} className="">
                   <div className="h-[240px] relative">
@@ -66,10 +70,10 @@ export default function AparaellPage() {
                       src={item.image}
                       fill
                       alt={""}
-                      className="object-cover"
+                      className="object-contain"
                     />
                   </div>
-                  <p className="text-lg mt-2 font-baskervville font-[600]">
+                  <p className="text-lg mt-2 font-rubik font-[600]">
                     {item.title}
                   </p>
                   <p className="font-inter mt-1 text-sm">{item.desc}</p>

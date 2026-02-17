@@ -17,11 +17,7 @@ export default function AparaellPage() {
       image: "/home-appliance/cooking-stove.jpg",
       desc: "Durable cooking stoves built to support everyday use in residential and project environments.",
     },
-    {
-      title: "Refrigerators",
-      image: "/home-appliance/refrigrator.avif",
-      desc: "Efficient refrigeration solutions designed to support food storage needs across multiple settings.",
-    },
+
     {
       title: "Freezers",
       image: "/home-appliance/freezers.webp",
@@ -54,7 +50,7 @@ export default function AparaellPage() {
         <div className="lg:w-md h-full absolute bg-[#FFFAEC] -z-10" />
         <div className="py-12">
           <div className="container">
-            <h2 className="text-4xl font-baskervville">
+            <h2 className="text-4xl font-rubik">
               {" "}
               Our Home Appliances Product Range
             </h2>
@@ -62,10 +58,10 @@ export default function AparaellPage() {
               We supply a wide range of home appliances designed for daily
               living, residential projects, and commercial requirements.
             </p>
-            <div className="grid grid-cols-4 gap-6 mt-10">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-10">
               {productCategories.map((item, idx) => (
                 <div key={idx} className="">
-                  <div className="h-[240px] overflow-hidden ">
+                  <div className="h-[230px] lg:h-[300px] overflow-hidden ">
                     <Image
                       src={item.image}
                       width={300}
@@ -74,10 +70,10 @@ export default function AparaellPage() {
                       alt={""}
                     />
                   </div>
-                  <p className="text-lg font-baskervville font-[600]">
+                  <p className="text-lg font-rubik mt-2 font-[500]">
                     {item.title}
                   </p>
-                  <p className="font-inter mt-1 text-sm">{item.desc}</p>
+                  <p className="font-inter mt-1 text-sm mt-1">{item.desc}</p>
                 </div>
               ))}
             </div>

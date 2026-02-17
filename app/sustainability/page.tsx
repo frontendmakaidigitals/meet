@@ -29,7 +29,7 @@ const page = () => {
           </div>
 
           <div className="space-y-4 md:space-y-6">
-            <h2 className="text-4xl lg:text-4xl p-6 md:p-8 rounded-lg text-center lg:text-end font-baskervville">
+            <h2 className="text-4xl lg:text-4xl p-6 md:p-8 rounded-lg text-center lg:text-end font-rubik">
               Let's Talk About <br /> Sustainability
             </h2>
             <p className="text-gray-700 rounded-lg p-6 md:p-8 text-base md:text-lg bg-[#FAF4F5]">
@@ -53,7 +53,7 @@ const page = () => {
       <section className="container mx-auto py-12 md:py-20 px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
           <div className="space-y-4 md:space-y-6">
-            <h3 className="text-4xl font-baskervville">
+            <h3 className="text-4xl font-rubik">
               Our Planet. <br /> Our Responsibility.
             </h3>
 
@@ -115,7 +115,7 @@ const page = () => {
 
       {/* Section 3 - Grid Cards */}
       <section className="container mx-auto pb-10 md:pb-14 pt-6 px-4">
-        <h3 className="text-4xl text-center font-baskervville mb-6 md:mb-10">
+        <h3 className="text-4xl text-center font-rubik mb-6 md:mb-10">
           Sustainability & Responsibility
         </h3>
 
@@ -173,7 +173,7 @@ const page = () => {
 
       {/* Section 4 - Final Statement */}
       <section className="container mx-auto py-12 md:py-24 text-center px-4">
-        <h3 className="text-2xl md:text-3xl lg:text-4xl tracking-wider md:tracking-widest font-baskervville uppercase mb-6 md:mb-8">
+        <h3 className="text-2xl md:text-3xl lg:text-4xl tracking-wider md:tracking-widest font-rubik uppercase mb-6 md:mb-8">
           Sustainability & Responsibility
         </h3>
 

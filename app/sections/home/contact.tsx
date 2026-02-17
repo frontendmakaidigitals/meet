@@ -7,7 +7,7 @@ const Contact = ({ color = "bg-[#FFEDEE]" }: { color?: string }) => {
         <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* ================= LEFT: TITLE & DESCRIPTION ================= */}
           <div>
-            <h2 className="text-4xl md:text-5xl font-baskervville text-black mb-4 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-rubik text-black mb-4 leading-tight">
               Have Questions? We Have Answers
             </h2>
             <div className="space-y-3 text-gray-600 text-lg">

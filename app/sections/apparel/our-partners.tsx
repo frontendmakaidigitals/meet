@@ -26,7 +26,7 @@ const OurPartners = ({
     <section className="py-16">
       <div className="container">
         {/* Heading */}
-        <h2 className="text-4xl font-baskervville mb-5">
+        <h2 className="text-4xl font-rubik mb-5">
           {parts[0]}
           <span className="text-primary">{highlight}</span>
           {parts[1]}

@@ -6,7 +6,7 @@ const Quality = () => {
       <div className="container px-6">
         <div className="relative">
           {/* Heading */}
-          <h2 className="text-3xl lg:text-4xl font-baskervville mb-6 text-center lg:text-left">
+          <h2 className="text-3xl lg:text-4xl font-rubik mb-6 text-center lg:text-left">
             QUALITY POLICY
           </h2>
 

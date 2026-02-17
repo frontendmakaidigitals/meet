@@ -1,7 +1,6 @@
 import Hero from "../sections/apparel/hero";
 import About from "../sections/apparel/about";
 import Brochure from "../sections/brochure";
-import Contact from "../sections/home/contact";
 import CTASection from "../sections/cta";
 export default function AparaellPage() {
   return (
@@ -9,14 +8,14 @@ export default function AparaellPage() {
       <Hero
         title="Sleep & Beddings  "
         desc="At Middle East Engineering Technologies , we supply sleep and bedding products designed to improve comfort, support, and everyday sleep quality. We work with B2B partners across global markets, focusing on reliable products and long-term supply relationships. "
-        image="/mattress/banner.jpg"
+        image="/mattress/banner.png"
       />
       <div className="relative pb-20">
         <div className="lg:w-md h-full absolute bg-[#FFFAEC] -z-10" />
         <div className="container mx-auto py-16 px-4">
           {/* Heading */}
           <div className="max-w-3xl mb-12">
-            <h2 className="text-4xl font-baskervville mb-4">
+            <h2 className="text-4xl font-rubik mb-4">
               Our Sleep & Beddings Product Range
             </h2>
             <p className="text-gray-600 leading-relaxed">
@@ -28,11 +27,11 @@ export default function AparaellPage() {
 
           {/* Content Row */}
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="w-full h-[360px] rounded-lg overflow-hidden bg-gray-200">
+            <div className="w-full h-[360px] rounded-lg overflow-hidden ">
               <img
-                src="/mattress/mattresses.jpg"
+                src="/mattress/mattresses.png"
                 alt="Mattresses"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
             </div>
             {/* Left Content */}
