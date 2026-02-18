@@ -11,6 +11,7 @@ import {
   Plane,
   Briefcase,
   Package,
+  ShoppingCart,
 } from "lucide-react";
 export default function EngineeringTechnologiesPage() {
   const products = [
@@ -71,6 +72,10 @@ export default function EngineeringTechnologiesPage() {
             {
               label: "Project-based and bulk supply needs",
               icon: Package,
+            },
+            {
+              label: "E-commerce and online marketplace sales",
+              icon: ShoppingCart,
             },
           ]}
         />
