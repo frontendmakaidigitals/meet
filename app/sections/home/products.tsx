@@ -6,7 +6,7 @@ const Products = () => {
       label: <h2 className="text-4xl text-black font-rubik">APPAREL</h2>,
       desc: "Apparel accessories like Fasteners, Buckles and cooling jackets are built to improve comfort and safety in demanding work environments.",
       img: (
-        <div className="max-h-[350px] w-lg overflow-hidden">
+        <div className="h-[380px] w-lg overflow-hidden">
           <Image
             src={"/home/products/straps.png"}
             alt={""}
@@ -112,7 +112,7 @@ const Products = () => {
       ),
       desc: "Reliable personal electronics designed for everyday use, built to last long.",
       img: (
-        <div className="relative w-full h-[300px] mx-auto flex items-end justify-center">
+        <div className="relative w-full h-[380px] mx-auto flex items-end justify-center">
           <Image
             src={"/home/products/headphones.png"}
             alt={""}
@@ -122,7 +122,7 @@ const Products = () => {
           />
         </div>
       ),
-      bgColor: "bg-linear-to-b from-[#FFEDEE] to-[#F7F7F7]",
+      bgColor: " bg-linear-to-b from-[#B3A287] to-[#F7F7F7]",
       class: "lg:col-span-2",
       link: "/personal-electorincs",
     },
@@ -134,7 +134,7 @@ const Products = () => {
       ),
       desc: "Spacious and durable luggage that travels long distances withstanding every environment.",
       img: (
-        <div className="relative w-full h-[300px] mx-auto flex items-end justify-center">
+        <div className="relative w-full h-[380px] mx-auto flex items-end justify-center">
           <Image
             src={"/home/products/bag.png"}
             alt={""}
@@ -144,8 +144,8 @@ const Products = () => {
           />
         </div>
       ),
-      bgColor: "bg-linear-to-b from-[#B3A287] to-[#F7F7F7]",
-      class: "lg:col-span-2",
+      bgColor: "bg-linear-to-b from-[#FFEDEE] to-[#F7F7F7]",
+      class: "lg:col-span-2 ",
       link: "/travel-bags",
     },
   ];
@@ -169,13 +169,13 @@ const Products = () => {
             return (
               <div
                 key={idx}
-                className={`${product.bgColor} ${product.class} rounded-xl p-8`}
+                className={`${product.bgColor} ${product.class} ${isWide ? "px-8" : "p-8"} rounded-xl `}
               >
                 {isWide ? (
                   /* ===================== WIDE CARD ===================== */
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                     {/* IMAGE – top on mobile, right on desktop */}
-                    <div className="order-1 md:order-2 flex justify-center md:justify-end mb-6 md:mb-0">
+                    <div className="order-1 md:order-2 flex justify-center md:justify-end mb-6 lg:mb-0">
                       {product.img}
                     </div>
 
