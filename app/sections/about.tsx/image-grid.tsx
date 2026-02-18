@@ -7,7 +7,10 @@ const ImageGrid = () => {
       img: "/home/products/batteries.png",
       className: "h-[230px] lg:h-[320px]",
     },
-    { img: "/home/products/bike.png", className: "h-[230px] lg:h-[230px]" },
+    {
+      img: "/home/products/bike-scooter.png",
+      className: "h-[230px] lg:h-[230px]",
+    },
     {
       img: "/home/products/home-appliance.png",
       className: "h-[230px] lg:h-[230px]",
