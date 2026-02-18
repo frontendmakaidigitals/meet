@@ -18,10 +18,13 @@ const CareersPage = () => {
             Join Our Team
           </h1>
           <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-            Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-            vulputate libero et velit interdum, ac aliquet odio mattis. Class
-            aptent taciti sociosqu ad litora torquent per conubia nostra, per
-            inceptos himenaeos.
+            Be part of a dynamic and growing organization where innovation,
+            collaboration, and excellence drive everything we do. We believe in
+            empowering our people, fostering creativity, and creating
+            opportunities for professional growth. If you're passionate,
+            motivated, and ready to make an impact, we’d love to have you on our
+            journey toward building meaningful solutions and lasting success
+            together.
           </p>
         </div>
 

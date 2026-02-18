@@ -18,7 +18,7 @@ const page = () => {
               Our purpose is to help businesses access practical and reliable
               products that support long-term growth.
             </p>
-            <div className="h-64 md:h-[400px] lg:h-[500px] bg-gray-200 rounded">
+            <div className="h-64 md:h-[400px] lg:h-[500px] bg-gray-200 rounded-xl overflow-hidden">
               <img
                 className="object-cover w-full h-full"
                 src={
@@ -37,7 +37,7 @@ const page = () => {
               offering solutions that improve efficiency, reduce operating
               costs, and support responsible use of resources.
             </p>
-            <div className="h-64 md:h-[350px] lg:h-[450px] bg-gray-200 rounded">
+            <div className="h-64 md:h-[350px] lg:h-[450px] bg-gray-200 rounded-xl overflow-hidden">
               <img
                 className="object-cover w-full h-full"
                 src={
@@ -75,7 +75,7 @@ const page = () => {
             </p>
 
             <div className="flex gap-3 md:gap-4 pt-2 md:pt-4">
-              <div className="w-full h-24 md:h-32 overflow-hidden bg-gray-200 rounded-lg">
+              <div className="w-full h-24 md:h-32 overflow-hidden bg-gray-200 rounded-xl">
                 <img
                   className="object-cover w-full h-full"
                   src={
@@ -83,7 +83,7 @@ const page = () => {
                   }
                 />
               </div>
-              <div className="w-full h-24 md:h-32 overflow-hidden bg-gray-200 rounded-lg">
+              <div className="w-full h-24 md:h-32 overflow-hidden bg-gray-200 rounded-xl">
                 <img
                   className="object-cover w-full h-full"
                   src={
@@ -91,7 +91,7 @@ const page = () => {
                   }
                 />
               </div>
-              <div className="w-full h-24 md:h-32 overflow-hidden bg-gray-200 rounded-lg">
+              <div className="w-full h-24 md:h-32 overflow-hidden bg-gray-200 rounded-xl">
                 <img
                   className="object-cover w-full h-full"
                   src={
@@ -102,7 +102,7 @@ const page = () => {
             </div>
           </div>
 
-          <div className="h-64 md:h-96 lg:h-full min-h-[400px] bg-gray-200 rounded">
+          <div className="h-64 md:h-96 lg:h-full min-h-[400px] bg-gray-200 rounded-xl overflow-hidden">
             <img
               className="object-cover w-full h-full"
               src={
@@ -178,7 +178,7 @@ const page = () => {
         </h3>
 
         {/* Large Visual Block */}
-        <div className="mx-auto max-w-5xl overflow-hidden h-64 md:h-[350px] lg:h-[450px] bg-gray-200 rounded-2xl mb-6 md:mb-10">
+        <div className="mx-auto max-w-5xl overflow-hidden h-64 md:h-[350px] lg:h-[450px] bg-gray-200 rounded-xl mb-6 md:mb-10">
           <img
             src={"/sustainability/cta.jpg"}
             alt={""}
