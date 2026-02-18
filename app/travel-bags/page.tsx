@@ -11,7 +11,7 @@ export default function AparaellPage() {
       <Hero
         title="Travel Bags & Luggage"
         desc="At Middle East Engineering Technologies , we supply travel bags and luggage designed for durability, functionality, and everyday travel needs. We work closely with B2B partners to support consistent quality and long-term supply across global markets. "
-        image="/travel-bags/bag.png"
+        image="/travel-bags/banner-2.png"
       />
       <div className="relative pb-20">
         <div className="lg:w-md  h-full absolute bg-[#FFFAEC] -z-10" />

@@ -20,7 +20,7 @@ export default function AparaellPage() {
     },
     {
       title: "Wireless Headphones",
-      image: "/electronics/headphone.jpg",
+      image: "/electronics/headphone.png",
       desc: "Over-ear and on-ear wireless headphones designed for comfort, extended use, and stable connectivity across work and leisure environments.",
       brochure: null,
     },
@@ -49,7 +49,7 @@ export default function AparaellPage() {
       <Hero
         title=" Personal Electronics  "
         desc="Middle East Engineering Technologies  supplies essential personal electronic devices designed for everyday use, retail distribution, and bulk business requirements. We focus on reliable products, consistent quality, and long-term B2B partnerships across global markets."
-        image="/electronics/banner.png"
+        image="/electronics/banner-2.png"
       />
       <div className="relative pb-32">
         <div className="lg:w-md h-full absolute bg-[#FFFAEC] -z-10" />
