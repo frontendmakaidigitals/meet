@@ -16,7 +16,7 @@ const Nav = ({ path, textColor }: { path: string; textColor: string }) => {
     { label: "Apparel", href: "/apparel" },
     { label: "Home Appliances", href: "/home-appliance" },
     { label: "Batteries", href: "/batteries" },
-    { label: "Matress", href: "/matress" },
+    { label: "Mattress", href: "/mattress" },
     { label: "Personal Electronics", href: "/personal-electorincs" },
     { label: "Electric Vehicle", href: "/electric-vehicle" },
     { label: "Travel & Bags", href: "/travel-bags" },
