@@ -30,7 +30,7 @@ const SplitHero = ({
 
           {/* Image */}
           <div className="flex justify-center">
-            <div className="relative w-full h-[300px] md:w-[380px] md:h-[420px]  overflow-hidden ">
+            <div className="relative w-full  h-[300px]  md:h-[420px]  overflow-hidden ">
               <Image src={image} alt={title} fill className="object-contain" />
             </div>
           </div>

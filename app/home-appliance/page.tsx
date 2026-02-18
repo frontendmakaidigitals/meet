@@ -4,39 +4,38 @@ import About from "../sections/apparel/about";
 import Image from "next/image";
 import Brochure from "../sections/brochure";
 import CTASection from "../sections/cta";
-import Contact from "../sections/home/contact";
 export default function AparaellPage() {
   const productCategories = [
     {
       title: "Water Heaters",
-      image: "/home-appliance/water-heater.jpg", // replace when available
+      image: "/home-appliance/water-heater.png", // replace when available
       desc: "Reliable water heating solutions designed for safe, consistent, and efficient hot water supply.",
     },
     {
       title: "Cooking Stoves",
-      image: "/home-appliance/cooking-stove.jpg",
+      image: "/home-appliance/cooking-top.png",
       desc: "Durable cooking stoves built to support everyday use in residential and project environments.",
     },
 
     {
       title: "Freezers",
-      image: "/home-appliance/freezers.webp",
+      image: "/home-appliance/refridgerator.png",
       desc: "Freezing solutions designed for dependable temperature control and long-term storage requirements.",
     },
     {
       title: "Washers & Dryers",
-      image: "/home-appliance/Washers-Dryers.webp",
+      image: "/home-appliance/washing-machine.png",
       desc: "Washing and drying solutions designed for regular use with a focus on efficiency and ease of operation.",
     },
     {
       title: "Dishwashers",
-      image: "/home-appliance/dishwashers.webp",
+      image: "/home-appliance/dishwasher.png",
       desc: "Practical dishwashing solutions designed to support water efficiency and daily cleaning needs.",
     },
     {
-      title: "Water Purifiers",
-      image: "/home-appliance/water-purifier.webp",
-      desc: "Water purification solutions designed to support clean and safe drinking water requirements.",
+      title: "Multi-Function Microwave Oven",
+      image: "/home-appliance/oven.png",
+      desc: "Engineered for speed and convenience, our microwave ovens provide fast heating, defrosting, and cooking with precise power control.",
     },
   ];
   return (
@@ -58,19 +57,19 @@ export default function AparaellPage() {
               We supply a wide range of home appliances designed for daily
               living, residential projects, and commercial requirements.
             </p>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-10">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-10">
               {productCategories.map((item, idx) => (
                 <div key={idx} className="">
                   <div className="h-[230px] lg:h-[300px] overflow-hidden ">
                     <Image
                       src={item.image}
                       width={300}
-                      className="object-cover w-full h-full"
+                      className="object-contain w-full h-full"
                       height={300}
                       alt={""}
                     />
                   </div>
-                  <p className="text-lg font-rubik mt-2 font-[500]">
+                  <p className="text-lg font-rubik mt-4 font-[500]">
                     {item.title}
                   </p>
                   <p className="font-inter mt-1 text-sm mt-1">{item.desc}</p>

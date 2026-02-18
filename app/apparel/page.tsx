@@ -3,14 +3,21 @@ import Industries from "../sections/apparel/industries";
 import Supplies from "../sections/apparel/supplies";
 import About from "../sections/apparel/about";
 import OurPartners from "../sections/apparel/our-partners";
-import { Zap, Shirt, Footprints, Backpack, ShieldCheck } from "lucide-react";
+import {
+  Zap,
+  Shirt,
+  Footprints,
+  Backpack,
+  ShieldCheck,
+  Scissors,
+} from "lucide-react";
 import CTASection from "../sections/cta";
 export default function AparaellPage() {
   const products = [
     {
-      img: "/apparel/apparel.png",
+      img: "/apparel/apperls.png",
       label: (
-        <h3 className="text-2xl font-rubik">
+        <h3 className="text-3xl font-rubik">
           Apparel & Footwear <span className="font-allura">Accessories</span>
         </h3>
       ),
@@ -20,7 +27,7 @@ export default function AparaellPage() {
     {
       img: "/apparel/cooling-jacket.png",
       label: (
-        <h3 className="text-2xl font-rubik">
+        <h3 className="text-3xl font-rubik">
           Cooling <span className="font-allura">Jackets</span>
         </h3>
       ),
@@ -33,7 +40,7 @@ export default function AparaellPage() {
       <Hero
         title="Apparel Accessories"
         desc="Middle East Engineering Technologies delivers trusted apparel components and advanced cooling jackets to global clothing brands, manufacturers, and B2B partners."
-        image="/apparel/banner.png"
+        image="/apparel/banner-2.png"
       />
       <div className="relative pb-20">
         <div className="lg:w-md h-full absolute bg-[#FFFAEC] -z-10" />
@@ -64,6 +71,10 @@ export default function AparaellPage() {
             {
               label: "Safety and Working Clothes",
               icon: ShieldCheck,
+            },
+            {
+              label: "Apparel Accessories",
+              icon: Scissors,
             },
           ]}
         />

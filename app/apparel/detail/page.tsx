@@ -33,7 +33,7 @@ const products = [
         id: 1,
         name: "Side Release Buckles",
         usage: "Used in jackets, backpacks, belts, and outdoor sportswear.",
-        img: "/apparel/detail/buckels/side-release-buckles.png",
+        img: "/apparel/new/Side-Release-Buckles.png",
       },
       {
         id: 2,
@@ -118,13 +118,13 @@ const products = [
         id: 1,
         name: "Cord Locks / Cord Stoppers",
         usage: "Used in hoodies, jackets, and bags.",
-        img: "/apparel/detail/buckels/card-lock.webp",
+        img: "/apparel/new/Cord-Lock-Lace.jpg",
       },
       {
         id: 2,
         name: "Lace Locks",
         usage: "Used in footwear, sportswear, and outdoor apparel.",
-        img: "/apparel/detail/buckels/lace-locks.webp",
+        img: "/apparel/new/Lace-Lock.png",
       },
       {
         id: 3,
