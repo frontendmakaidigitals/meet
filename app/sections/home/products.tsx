@@ -3,7 +3,7 @@ import Image from "next/image";
 const Products = () => {
   const productList = [
     {
-      label: <h2 className="text-3xl text-black font-rubik">APPAREL</h2>,
+      label: <h2 className="text-4xl text-black font-rubik">APPAREL</h2>,
       desc: "Apparel accessories like Fasteners, Buckles and cooling jackets are built to improve comfort and safety in demanding work environments.",
       img: (
         <div className="max-h-[350px] w-lg overflow-hidden">
@@ -22,7 +22,7 @@ const Products = () => {
     },
     {
       label: (
-        <h2 className="text-3xl text-black font-rubik">
+        <h2 className="text-4xl text-black font-rubik">
           EV <span className="font-allura">Vehicles</span>
         </h2>
       ),
@@ -30,7 +30,7 @@ const Products = () => {
       img: (
         <div className="relative w-full  h-[250px] mx-auto flex items-end justify-center">
           <Image
-            src={"/home/products/bike.png"}
+            src={"/home/products/bike-scooter.png"}
             alt={""}
             width={500}
             height={500}
@@ -43,12 +43,12 @@ const Products = () => {
       link: "/electric-vehicle",
     },
     {
-      label: <h2 className="text-3xl font-rubik text-black">Batteries</h2>,
+      label: <h2 className="text-4xl font-rubik text-black">Batteries</h2>,
       desc: "From automotive batteries to energy storage systems, we provide dependable power for mobility, backup, and daily operations.",
       img: (
         <div className="relative w-full  overflow-hidden h-[250px] mx-auto flex items-end justify-center">
           <Image
-            src={"/home/products/batteries.png"}
+            src={"/home/products/battery.png"}
             alt={""}
             width={500}
             height={500}
@@ -62,7 +62,7 @@ const Products = () => {
     },
     {
       label: (
-        <h2 className="text-3xl font-rubik text-black">
+        <h2 className="text-4xl font-rubik text-black">
           Home <span className="font-allura">Appliances</span>
         </h2>
       ),
@@ -84,7 +84,7 @@ const Products = () => {
     },
     {
       label: (
-        <h2 className="text-3xl font-rubik text-black">
+        <h2 className="text-4xl font-rubik text-black">
           Sleep <span className="font-allura">&</span> Beddings
         </h2>
       ),
@@ -92,7 +92,7 @@ const Products = () => {
       img: (
         <div className="relative w-full overflow-hidden  h-[250px] max-h-[250px] flex items-end justify-center">
           <Image
-            src={"/home/products/sleep-and-beddings.png"}
+            src={"/home/products/mattress-1.png"}
             alt={""}
             width={500}
             height={500}
@@ -106,7 +106,7 @@ const Products = () => {
     },
     {
       label: (
-        <h2 className="text-3xl font-rubik text-black">
+        <h2 className="text-4xl font-rubik text-black">
           Personal <span className="font-allura">Electronics devices</span>
         </h2>
       ),
@@ -114,7 +114,7 @@ const Products = () => {
       img: (
         <div className="relative w-full h-[300px] mx-auto flex items-end justify-center">
           <Image
-            src={"/home/products/personal-electronics.png"}
+            src={"/home/products/headphones.png"}
             alt={""}
             width={500}
             height={500}
@@ -128,7 +128,7 @@ const Products = () => {
     },
     {
       label: (
-        <h2 className="text-3xl font-rubik text-black">
+        <h2 className="text-4xl font-rubik text-black">
           Travel Bags <span className="font-allura">&</span> Luggage
         </h2>
       ),
@@ -136,7 +136,7 @@ const Products = () => {
       img: (
         <div className="relative w-full h-[300px] mx-auto flex items-end justify-center">
           <Image
-            src={"/home/products/bags.png"}
+            src={"/home/products/bag.png"}
             alt={""}
             width={500}
             height={500}
@@ -162,7 +162,7 @@ const Products = () => {
           with growth.
         </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-7">
+        <div className="grid max-w-6xl mx-auto grid-cols-1 lg:grid-cols-2 gap-6 mt-7">
           {productList.map((product, idx) => {
             const isWide = product.class.includes("col-span-2");
 
@@ -205,7 +205,7 @@ const Products = () => {
                   /* ===================== NORMAL CARD ===================== */
                   <div className="flex flex-col items-center text-center">
                     {/* IMAGE – top on mobile */}
-                    <div className="order-1 lg:hidden w-full flex justify-center mb-4">
+                    <div className="order-1  lg:hidden w-full flex justify-center mb-4">
                       {product.img}
                     </div>
 
@@ -230,7 +230,7 @@ const Products = () => {
                         </button>
                       </Link>
                     </div>
-                    <div className=" lg:order-4  w-full hidden lg:flex justify-center mb-4">
+                    <div className=" lg:order-4  w-full hidden lg:flex justify-center mt-5">
                       {product.img}
                     </div>
                   </div>

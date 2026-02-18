@@ -78,7 +78,7 @@ const Nav = ({ path, textColor }: { path: string; textColor: string }) => {
                       key={i}
                       href={item.href}
                       onClick={() => setOpen(false)}
-                      className="block px-5 py-2 text-gray-700 hover:bg-yellow-50 hover:text-yellow-500 transition"
+                      className="block px-5 py-2 text-gray-700 hover:bg-[#f8e39f] hover:text-primary transition"
                     >
                       {item.label}
                     </Link>

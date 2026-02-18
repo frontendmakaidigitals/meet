@@ -3,9 +3,15 @@ import React from "react";
 const ImageGrid = () => {
   const images = [
     { img: "/home/products/bags.png", className: "h-[230px] lg:h-[250px]" },
-    { img: "/home/products/batteries.png", className: "h-[230px] lg:h-[320px]" },
+    {
+      img: "/home/products/batteries.png",
+      className: "h-[230px] lg:h-[320px]",
+    },
     { img: "/home/products/bike.png", className: "h-[230px] lg:h-[230px]" },
-    { img: "/home/products/home-appliance.png", className: "h-[230px] lg:h-[230px]" },
+    {
+      img: "/home/products/home-appliance.png",
+      className: "h-[230px] lg:h-[230px]",
+    },
     {
       img: "/home/products/sleep-and-beddings.png",
       className: "col-span-2 lg:col-span-1 h-[230px] lg:h-[350px]",

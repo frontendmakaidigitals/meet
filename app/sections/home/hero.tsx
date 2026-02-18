@@ -2,7 +2,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-
 const Hero = () => {
   const logos = [
     { img: "google.png" },
@@ -21,7 +20,7 @@ const Hero = () => {
           muted
           playsInline
         >
-          <source src="/home/preview.mp4" type="video/mp4" />
+          <source src="/home/website-header.mp4" type="video/mp4" />
         </video>
 
         {/* Optional overlay */}
