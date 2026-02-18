@@ -20,7 +20,7 @@ const Hero = () => {
           muted
           playsInline
         >
-          <source src="/home/website-header.mp4" type="video/mp4" />
+          <source src="/home/Website-Header.mp4" type="video/mp4" />
         </video>
 
         {/* Optional overlay */}
