@@ -51,9 +51,9 @@ export default function AparaellPage() {
         desc="Middle East Engineering Technologies  supplies essential personal electronic devices designed for everyday use, retail distribution, and bulk business requirements. We focus on reliable products, consistent quality, and long-term B2B partnerships across global markets."
         image="/electronics/banner-2.png"
       />
-      <div className="relative pb-32">
+      <div className="relative pb-16">
         <div className="lg:w-md h-full absolute bg-[#FFFAEC] -z-10" />
-        <div className="py-12 pb-24">
+        <div className="py-12 ">
           <div className="container">
             <h2 className="text-4xl font-rubik">
               Our Home Appliances Product Range

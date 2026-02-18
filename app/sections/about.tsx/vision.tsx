@@ -18,7 +18,7 @@ const Vision = () => {
                   className="w-full h-full object-cover rounded-lg"
                 />
               </div>
-              <p className="text-lg">
+              <p className="text-lg text-slate-700">
                 We present innovation and Technology driven products focusing on
                 B2B needs. Supporting companies as they work towards their goal.
                 We maintain efficiency so that there is nothing stopping you.

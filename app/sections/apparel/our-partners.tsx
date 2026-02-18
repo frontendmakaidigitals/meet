@@ -23,7 +23,7 @@ const OurPartners = ({
   const parts = title.split(highlight);
 
   return (
-    <section className="py-16">
+    <section className="pb-16">
       <div className="container">
         {/* Heading */}
         <h2 className="text-4xl font-rubik mb-5">

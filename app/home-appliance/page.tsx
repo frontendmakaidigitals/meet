@@ -45,9 +45,9 @@ export default function AparaellPage() {
         desc="At Middle East Engineering Technologies , we supply essential home appliances to businesses across global markets. Our focus is simple reliable products and long-term partnerships."
         image="/home-appliance/banner.jpg"
       />
-      <div className="relative pb-20">
+      <div className="relative  ">
         <div className="lg:w-md h-full absolute bg-[#FFFAEC] -z-10" />
-        <div className="py-12">
+        <div className="pt-12 ">
           <div className="container">
             <h2 className="text-4xl font-rubik">
               {" "}

@@ -38,7 +38,7 @@ const Quality = () => {
             {/* RIGHT – IMAGES */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {/* Image 1 */}
-              <div className="h-[240px] sm:h-[300px] lg:h-[370px] rounded-2xl overflow-hidden shadow-sm">
+              <div className="h-[240px] sm:h-[300px] lg:h-[370px] rounded-2xl mt-10 overflow-hidden shadow-sm">
                 <img
                   src="/about/quality/img-1.jpg"
                   alt="Modern kitchen"

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const OurPurpose = () => {
   return (
-    <section className="py-16 lg:py-24 bg-white">
+    <section className="py-16 lg:py-5 bg-white">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-[.7fr_1.5fr] gap-6 lg:gap-10 items-start">
           {/* LEFT COLUMN */}
