@@ -216,7 +216,7 @@ const WhyChooseUs = () => {
     >
       <div
         ref={contentWrapperRef}
-        className="container mx-auto px-6 pt-24 lg:pt-0"
+        className="container  mx-auto px-6 pt-24 lg:pt-0"
       >
         {/* Heading */}
         <div className="text-center max-w-4xl mx-auto mb-4 lg:mb-16">
@@ -224,7 +224,7 @@ const WhyChooseUs = () => {
             WHY CHOOSE <span className="text-primary">US</span>
           </h2>
 
-          <p className="text-lg text-gray-600 mb-4">
+          <p className="text-lg text-gray-600 ">
             A simple approach, built around real business needs.
           </p>
 

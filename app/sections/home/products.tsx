@@ -6,13 +6,13 @@ const Products = () => {
       label: <h2 className="text-4xl text-black font-rubik">APPAREL</h2>,
       desc: "Apparel accessories like Fasteners, Buckles and cooling jackets are built to improve comfort and safety in demanding work environments.",
       img: (
-        <div className="h-[380px] w-lg overflow-hidden">
+        <div className="h-[380px] w-lg overflow-hidden ">
           <Image
-            src={"/home/products/straps.png"}
+            src={"/home/products/shoelace-1.png"}
             alt={""}
             width={500}
             height={500}
-            className="object-contain w-full h-full rotate-90"
+            className="object-contain w-full h-full"
           />
         </div>
       ),
@@ -195,7 +195,7 @@ const Products = () => {
                         </Link>
                         <Link href={"/contact"}>
                           <button className="px-5 py-1.5  rounded-full text-black border border-yellow-600">
-                            Buy now
+                            Request a quote
                           </button>
                         </Link>
                       </div>
@@ -226,7 +226,7 @@ const Products = () => {
                       </Link>
                       <Link href={"/contact"}>
                         <button className="px-5 py-1.5 rounded-full text-black border border-yellow-600">
-                          Buy now
+                          Request a quote
                         </button>
                       </Link>
                     </div>

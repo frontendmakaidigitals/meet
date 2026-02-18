@@ -40,7 +40,7 @@ export const Header = () => {
   const colorMode = scrolled ? false : isDark ? true : false;
   return (
     <nav
-      className={`fixed py-3 top-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-black" : ""}`}
+      className={`fixed py-5 top-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-black" : ""}`}
     >
       <div className="container mx-auto  flex items-center justify-between">
         <div className=" w-40">

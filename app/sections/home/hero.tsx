@@ -37,10 +37,10 @@ const Hero = () => {
         </h1>
 
         <p className="text-gray-200 max-w-3xl mx-auto mb-8 lg:text-lg">
-          Middle East Engineering Technologies (MEET) is a B2B trading and
-          solutions company based in Dubai, working globally. We bring reliable
-          products and technologies that help businesses work better, save
-          energy, and grow responsibly.
+          Middle East Engineering Technologies is a B2B trading and solutions
+          company based in Dubai, working globally. We bring reliable products
+          and technologies that help businesses work better, save energy, and
+          grow responsibly.
         </p>
 
         <div className="flex flex-col max-w-2xs mx-auto lg:max-w-lg  sm:flex-row gap-4 justify-center items-center">
