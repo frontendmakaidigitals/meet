@@ -420,7 +420,6 @@ export default function WhyChooseUs() {
               width: "100%",
               maxWidth: 480,
             }}
-            className="mt-10"
           >
             {CARDS.map((item) => (
               <MobileListItem
@@ -459,6 +458,16 @@ export default function WhyChooseUs() {
           </div>
 
           {/* Center */}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              padding: "30px 0",
+            }}
+          >
+            {CardStack}
+          </div>
 
           {/* Right */}
           <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
