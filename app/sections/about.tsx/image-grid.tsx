@@ -16,8 +16,8 @@ const ImageGrid = () => {
       className: "h-[230px] lg:h-[230px]",
     },
     {
-      img: "/home/products/sleep-and-beddings.png",
-      className: "col-span-2 lg:col-span-1 h-[230px] lg:h-[350px]",
+      img: "/about/mattress.png",
+      className: "col-span-2 lg:col-span-1 h-[230px] lg:h-[250px]",
     },
   ];
   return (

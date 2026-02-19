@@ -25,7 +25,8 @@ export const Header = () => {
     };
   }, []);
   useEffect(() => {
-    if (pathName.toLowerCase() !== "/") {
+    const normalizedPath = pathName.toLowerCase();
+    if (normalizedPath !== "/" && normalizedPath !== "/about" && normalizedPath !== "/sustainability") {
       setIsDark(true);
     } else {
       setIsDark(false);

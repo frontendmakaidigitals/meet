@@ -7,7 +7,8 @@ const page = () => {
       <Hero
         title="SUSTAINABILITY"
         desc="Middle East Engineering Technologies (MEET) is a global B2B trading and solutions company. We work with trusted international partners to supply practical products that support business growth while encouraging responsible use of resources"
-        image="/about/hero.jpg"
+        image="/sustainability/banner-2.jpg"
+        mode="dark"
       />
 
       {/* Section 1 - Two Column Grid */}

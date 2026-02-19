@@ -6,7 +6,7 @@ const Products = () => {
       label: <h2 className="text-4xl text-black font-rubik">APPAREL</h2>,
       desc: "Apparel accessories like Fasteners, Buckles and cooling jackets are built to improve comfort and safety in demanding work environments.",
       img: (
-        <div className="h-[380px] w-lg overflow-hidden ">
+        <div className="h-[220px] lg:h-[380px] w-lg overflow-hidden ">
           <Image
             src={"/home/products/shoelace-1.png"}
             alt={""}
@@ -28,7 +28,7 @@ const Products = () => {
       ),
       desc: "Supplying electric scooters and bikes designed for daily business use. These solutions support cleaner transport and lower running costs.",
       img: (
-        <div className="relative w-full  h-[250px] mx-auto flex items-end justify-center">
+        <div className="relative w-full h-[180px] lg:h-[250px] mx-auto flex items-end justify-center">
           <Image
             src={"/home/products/bike-scooter.png"}
             alt={""}
@@ -90,7 +90,7 @@ const Products = () => {
       ),
       desc: "Quality mattresses designed to support comfort, rest, and long-term use across residential and commercial needs.",
       img: (
-        <div className="relative w-full overflow-hidden  h-[250px] max-h-[250px] flex items-end justify-center">
+        <div className="relative w-full overflow-hidden  h-[200px] max-h-[250px] flex items-end justify-center">
           <Image
             src={"/home/products/mattress-1.png"}
             alt={""}
@@ -112,7 +112,7 @@ const Products = () => {
       ),
       desc: "Reliable personal electronics designed for everyday use, built to last long.",
       img: (
-        <div className="relative w-full h-[380px] mx-auto flex items-end justify-center">
+        <div className="relative w-full h-[200px] lg:h-[380px] mx-auto flex items-end justify-center">
           <Image
             src={"/home/products/headphones.png"}
             alt={""}
@@ -134,7 +134,7 @@ const Products = () => {
       ),
       desc: "Spacious and durable luggage that travels long distances withstanding every environment.",
       img: (
-        <div className="relative w-full h-[380px] mx-auto flex items-end justify-center">
+        <div className="relative w-full h-[240px] lg:h-[380px] mx-auto flex items-end justify-center">
           <Image
             src={"/home/products/bag.png"}
             alt={""}
@@ -173,9 +173,9 @@ const Products = () => {
               >
                 {isWide ? (
                   /* ===================== WIDE CARD ===================== */
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-3 items-center">
                     {/* IMAGE – top on mobile, right on desktop */}
-                    <div className="order-1 md:order-2 flex justify-center md:justify-end mb-6 lg:mb-0">
+                    <div className="order-1 md:order-2 flex justify-center md:justify-end lg:mb-0">
                       {product.img}
                     </div>
 

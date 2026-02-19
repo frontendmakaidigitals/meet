@@ -10,10 +10,11 @@ const AboutPage = () => {
     <div className="bg-white">
       {/* Hero Section with leaf image */}
       <Hero
+        mode="dark"
         title="About Us"
         desc="Middle East Engineering Technologies is a global B2B trading company.
 We work with trusted international partners to supply practical products that support business growth while encouraging responsible use of resources."
-        image="/about/hero.jpg"
+        image="/about/banner.jpg"
       />
       {/* Four Image Grid Section */}
       <ImageGrid />

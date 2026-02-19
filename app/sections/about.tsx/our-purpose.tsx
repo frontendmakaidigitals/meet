@@ -19,7 +19,7 @@ const OurPurpose = () => {
             {/* Left Image */}
             <div className="relative w-full h-[260px] lg:h-[420px] rounded-xl overflow-hidden">
               <Image
-                src="/about/purpose/img-2.jpg"
+                src="/about/purpose/graph.avif"
                 alt="Innovation"
                 fill
                 className="object-cover"
@@ -36,7 +36,7 @@ const OurPurpose = () => {
 
             {/* Description Box */}
             <div className="bg-[#F8EFEF] w-full rounded-2xl p-6">
-              <p className="text-gray-800 text-base lg:text-lg text-center leading-relaxed">
+              <p className="text-gray-800 text-base lg:text-lg text-center lg:text-right leading-relaxed">
                 We aim to bridge the gap between innovation and real-world use
                 by offering solutions that improve efficiency, reduce operating
                 costs, and support responsible use of resources.
@@ -46,7 +46,7 @@ const OurPurpose = () => {
             {/* Right Image */}
             <div className="relative w-full h-[280px] lg:h-[440px] rounded-xl overflow-hidden">
               <Image
-                src="/about/purpose/img-1.jpg"
+                src="/about/purpose/img-3.jpg"
                 alt="Connected ideas"
                 fill
                 className="object-cover"

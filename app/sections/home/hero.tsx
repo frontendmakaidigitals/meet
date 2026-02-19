@@ -10,7 +10,7 @@ const Hero = () => {
     { img: "dell.png" },
   ];
   return (
-    <section className="relative min-h-[calc(100dvh)] lg:min-h-[calc(90vh+5rem)] flex items-end pb-20 justify-center overflow-hidden">
+    <section className="relative h-[90dvh] lg:min-h-[calc(90vh+5rem)] flex items-end pb-20 justify-center overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0">
         <video
