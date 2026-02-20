@@ -35,7 +35,7 @@ const AboutSection = ({
     <section className="py-16">
       <div className="container mx-auto px-4">
         {/* Heading */}
-        <h2 className="font-rubik mb-5 text-4xl uppercase tracking-wider">
+        <h2 className="font-rubik text-center lg:text-start mb-5 text-4xl uppercase tracking-wider">
           {renderTitle()}
         </h2>
 

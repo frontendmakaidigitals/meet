@@ -13,7 +13,7 @@ export default function AparaellPage() {
         desc="At Middle East Engineering Technologies , we supply travel bags and luggage designed for durability, functionality, and everyday travel needs. We work closely with B2B partners to support consistent quality and long-term supply across global markets. "
         image="/travel-bags/banner-2.png"
       />
-      <div className="relative pb-20">
+      <div className="relative lg:pb-20">
         <div className="lg:w-md  h-full absolute bg-[#FFFAEC] -z-10" />
         <div className="container grid grid-cols-1 items-center gap-9 lg:grid-cols-2 py-20">
           <div>
@@ -44,7 +44,7 @@ export default function AparaellPage() {
           </div>
         </div>
 
-        <section className="mt-10 mb-20">
+        <section className="lg:mt-10 lg:mb-20">
           <Brochure
             title={"Travel Solutions Built for Every Journey"}
             desc={

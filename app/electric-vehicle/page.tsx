@@ -38,7 +38,7 @@ export default function EngineeringTechnologiesPage() {
         image="/ev/banner.png"
       />
 
-      <div className="relative pb-20">
+      <div className="relative lg:pb-20">
         {/* Background Accent */}
         <div className="lg:w-md h-full absolute bg-[#FFFAEC] -z-10" />
 

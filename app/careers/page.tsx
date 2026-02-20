@@ -4,7 +4,7 @@ const CareersPage = () => {
   return (
     <main>
       {/* HERO */}
-      <section className="relative flex flex-col items-center justify-center min-h-[70vh] md:min-h-[calc(100vh-100px)] text-center px-4 pb-32 md:pb-20">
+      <section className="relative flex flex-col items-center justify-center py-32 md:min-h-[calc(100vh-100px)] text-center px-4 pb-32 md:pb-20">
         <Image
           src="/careers/hero.jpg"
           alt=""
@@ -13,7 +13,7 @@ const CareersPage = () => {
           priority
         />
 
-        <div className="relative z-10 max-w-2xl">
+        <div className="relative z-10 max-w-2xl pb-10">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-rubik mb-6">
             Join Our Team
           </h1>
@@ -103,7 +103,7 @@ const CareersPage = () => {
       </section>
 
       {/* CAREER OPPORTUNITIES */}
-      <section className="container mx-auto mt-24 md:mt-32 px-4 text-center">
+      <section className="container mx-auto mt-44 md:mt-32 px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-rubik mb-6">
           Career Opportunities
         </h2>

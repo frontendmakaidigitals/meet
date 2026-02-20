@@ -10,7 +10,7 @@ interface HeroProps {
 
 const Hero = ({ title, desc, image, mode = "light" }: HeroProps) => {
   return (
-    <section className="min-h-[calc(70vh)] lg:min-h-[calc(100vh-5rem)] relative flex">
+    <section className="h-[calc(60vh)] lg:min-h-[calc(100vh-5rem)] relative flex items-end lg:items-center">
       <div className="absolute inset-0 z-10 w-full h-full bg-black/50" />
       <div className="container relative z-10 flex flex-col justify-center pb-20">
         <div className="max-w-2xl">

@@ -10,7 +10,7 @@ export default function AparaellPage() {
         desc="At Middle East Engineering Technologies , we supply sleep and bedding products designed to improve comfort, support, and everyday sleep quality. We work with B2B partners across global markets, focusing on reliable products and long-term supply relationships. "
         image="/mattress/banner.png"
       />
-      <div className="relative pb-20">
+      <div className="relative lg:pb-20">
         <div className="lg:w-md h-full absolute bg-[#FFFAEC] -z-10" />
         <div className="container mx-auto py-16 px-4">
           {/* Heading */}

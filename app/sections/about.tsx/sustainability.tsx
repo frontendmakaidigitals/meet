@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 const Sustainability = () => {
   return (
-    <section className="py-24 bg-white">
+    <section className="pt-12 pb-12 lg:pb-24 bg-white">
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto text-center">
           {/* Heading */}

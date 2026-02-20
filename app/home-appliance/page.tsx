@@ -98,7 +98,7 @@ export default function AparaellPage() {
             },
           ]}
         />
-        <section className="my-10 mb-20">
+        <section className=" lg:my-10 lg:mb-20">
           <Brochure
             title={"Smarter Appliances for Modern Living"}
             desc={

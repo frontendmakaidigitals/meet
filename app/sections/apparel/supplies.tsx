@@ -12,7 +12,7 @@ const Supplies = ({
   return (
     <div className="py-16">
       <div className="container">
-        <h2 className="text-4xl font-rubik mb-8">{heading}</h2>
+        <h2 className="text-4xl text-center lg:text-start font-rubik mb-8">{heading}</h2>
         <div className="space-y-24 w-full">
           {products.map((product, idx) => (
             <div

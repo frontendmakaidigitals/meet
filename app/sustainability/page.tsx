@@ -51,7 +51,7 @@ const page = () => {
       </section>
 
       {/* Section 2 - Planet Responsibility */}
-      <section className="container mx-auto py-12 md:py-20 px-4">
+      <section className="container mx-auto py-8 md:py-20 px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
           <div className="space-y-4 md:space-y-6">
             <h3 className="text-4xl font-rubik">
@@ -173,8 +173,8 @@ const page = () => {
       </section>
 
       {/* Section 4 - Final Statement */}
-      <section className="container mx-auto py-12 md:py-24 text-center px-4">
-        <h3 className="text-2xl md:text-3xl lg:text-4xl tracking-wider md:tracking-widest font-rubik uppercase mb-6 md:mb-8">
+      <section className="container mx-auto py-12 lg:pb-24 text-center px-4">
+        <h3 className="text-4xl tracking-wider md:tracking-widest font-rubik uppercase mb-6 md:mb-8">
           Sustainability & Responsibility
         </h3>
 
