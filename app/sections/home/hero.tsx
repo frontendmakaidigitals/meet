@@ -4,13 +4,19 @@ import Link from "next/link";
 
 const Hero = () => {
   const logos = [
-    { img: "google.png" },
-    { img: "amazon.png" },
-    { img: "X.avif" },
-    { img: "dell.png" },
+    { img: "Nifco-Japan.png" },
+    { img: "Heinrich.png" },
+    { img: "Indesit.png" },
+    { img: "beko.png" },
+    { img: "YAMAGO.png" },
+    { img: "Ariston.png" },
+    { img: "Autolite.png" },
+    { img: "jackson-mattress.png" },
+    { img: "King-kong.png" },
+    { img: "Lucas.png" },
   ];
   return (
-    <section className="relative h-[90dvh] lg:min-h-[calc(90vh+5rem)] flex items-end pb-20 justify-center overflow-hidden">
+    <section className="relative h-[80dvh] lg:min-h-[calc(90vh+5rem)] flex items-end pb-20 justify-center overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0">
         <video
@@ -29,7 +35,7 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
-        <h1 className="text-3xl lg:text-5xl font-rubik font-[500] text-slate-50 mb-6 leading-tight">
+        <h1 className="text-2xl lg:text-5xl font-rubik font-[500] text-slate-50 mb-6 leading-tight">
           SMART PRODUCTS AND PRACTICAL
           <br />
           SOLUTIONS.{" "}
@@ -79,10 +85,10 @@ const Hero = () => {
               {[...logos, ...logos].map((logo, index) => (
                 <div
                   key={index}
-                  className="size-14 bg-white p-2 rounded-full shrink-0"
+                  className="size-17 p-1 bg-white rounded-full shrink-0"
                 >
                   <Image
-                    src={`/home/hero-brand-logo/${logo.img}`}
+                    src={`/partner-logo/${logo.img}`}
                     alt=""
                     width={100}
                     height={100}

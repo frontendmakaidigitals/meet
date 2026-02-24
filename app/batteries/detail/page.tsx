@@ -152,26 +152,69 @@ const page = () => {
         title="BATTERIES & ENERGY STORAGE"
         desc="Automotive and energy storage solutions for mobility, backup power, and renewable systems."
         image="/battery/details/banner.jpg"
+        background="/battery/details/background.jpg"
+        partnerLogo={["/partner-logo/Lucas.png"]}
       />
 
       {/* Automotive Batteries */}
-      <section className="mt-20">
-        <Products num={1} data={automotiveProducts} />
-      </section>
+      <div className="mt-16 space-y-10">
+        <section className="">
+          <div className="mb-10 text-center space-y-2 container max-w-4xl">
+            <h2 className="text-4xl   font-rubik">
+              <span className="text-primary">AUTOMOTIVE</span> BATTERIES
+            </h2>
+            <p className="max-w-2xl mx-auto">
+              {" "}
+              automotive battery solutions are built for durability and
+              dependable output, making them suitable for daily driving, fleet
+              operations, and demanding mobility environments
+            </p>
+          </div>
+          <Products num={1} data={automotiveProducts} />
+        </section>
 
-      {/* Lead Acid Energy Storage */}
-      <section className="">
-        <Products num={2} data={leadAcidProducts} />
-      </section>
+        {/* Lead Acid Energy Storage */}
+        <section className="">
+          <div className="mb-10 text-center space-y-2 container max-w-4xl">
+            <h2 className="text-4xl   font-rubik">
+              <span className="text-primary">LEAD ACID </span> ENERGY STORAGE
+            </h2>
+            <p className="max-w-2xl mx-auto">
+              {" "}
+              automotive battery solutions are built for durability and
+              dependable output, making them suitable for daily driving, fleet
+              operations, and demanding mobility environments
+            </p>
+          </div>
+          <Products num={2} data={leadAcidProducts} />
+        </section>
 
-      {/* Lithium Energy Storage */}
-      <section className=" mb-28">
-        <Products num={3} data={lithiumProducts} />
-      </section>
+        {/* Lithium Energy Storage */}
+        <section className=" ">
+          <div className="mb-10 text-center space-y-2 container max-w-4xl">
+            <h2 className="text-4xl   font-rubik">
+              <span className="text-primary">LITHIUM ENERGY </span>
+              STORAGE
+            </h2>
+            <p className="max-w-2xl mx-auto">
+              {" "}
+              automotive battery solutions are built for durability and
+              dependable output, making them suitable for daily driving, fleet
+              operations, and demanding mobility environments
+            </p>
+          </div>
+          <Products num={3} data={lithiumProducts} />
+        </section>
+      </div>
 
       <section className="mt-10 mb-20">
         <Brochure
-          title={"Reliable Power for Every Application"}
+          title={
+            <h2 className="text-3xl mb-3 font-rubik">
+              <span className="text-primary">Smart Energy</span> Storage
+              Batteries for Everyday Performance
+            </h2>
+          }
           desc={
             "We offer advanced battery solutions that ensure consistent performance, long life, and dependable energy storage. Built to support critical operations, our batteries enable efficient power management across industries."
           }

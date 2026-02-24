@@ -3,10 +3,6 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { Playfair_Display, DM_Sans } from "next/font/google";
 
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "700", "900"],
-});
 const dmSans = DM_Sans({ subsets: ["latin"], weight: ["300", "400", "500"] });
 
 // ── DATA ──
@@ -15,7 +11,7 @@ const CARDS = [
     id: 0,
     image:
       "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=560&q=80",
-    label: "Global B2B solutions partner",
+    label: "Multiple category Products",
     side: "left" as const,
   },
   {
@@ -29,28 +25,28 @@ const CARDS = [
     id: 2,
     image:
       "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=560&q=80",
-    label: "Multi category products",
+    label: "Region based Products and Pricing",
     side: "left" as const,
   },
   {
     id: 3,
     image:
       "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=560&q=80",
-    label: "Durable quality products",
+    label: "Extended Warranty on Products",
     side: "right" as const,
   },
   {
     id: 4,
     image:
       "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=560&q=80",
-    label: "Impactful approach and communication",
+    label: "Strong global sourcing and supply network",
     side: "right" as const,
   },
   {
     id: 5,
     image:
       "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=560&q=80",
-    label: "Transparent, reliable processes",
+    label: "Practical approach, clear communication",
     side: "right" as const,
   },
 ];

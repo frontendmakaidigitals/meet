@@ -1,106 +1,129 @@
 import Hero from "../sections/apparel/hero";
-import About from "../sections/apparel/about";
 import Image from "next/image";
 import Brochure from "../sections/brochure";
-import OurPartners from "../sections/apparel/our-partners";
-import Contact from "../sections/home/contact";
+import WhyChooseUs from "../sections/apparel/about";
+import { Award, Layers, Building2, Globe } from "lucide-react";
 import CTASection from "../sections/cta";
 export default function AparaellPage() {
   return (
     <>
       <Hero
-        title="Travel Bags & Luggage"
-        desc="At Middle East Engineering Technologies , we supply travel bags and luggage designed for durability, functionality, and everyday travel needs. We work closely with B2B partners to support consistent quality and long-term supply across global markets. "
+        logo={["/partner-logo/YAMAGO.png"]}
+        titleText=""
+        title={
+          <h1 className="text-4xl font-rubik md:text-5xl font-[400] text-gray-800 leading-tight tracking-tight">
+            Travel Bags<span className="font-allura text-6xl"> & </span>Luggage
+          </h1>
+        }
+        desc="At Middle East Engineering Technologies , we supply travel bags and luggage designed for durability, functionality, and everyday travel needs. We work closely with B2B partners to support consistent quality and long-term supply across global markets."
         image="/travel-bags/banner-2.png"
+        background="/travel-bags/background.jpg"
       />
-      <div className="relative lg:pb-20">
-        <div className="lg:w-md  h-full absolute bg-[#FFFAEC] -z-10" />
-        <div className="container grid grid-cols-1 items-center gap-9 lg:grid-cols-2 py-20">
-          <div>
-            <h2 className="text-4xl font-rubik">
-              {" "}
-              Our Travel Bags & Luggage Product Range
-            </h2>
-            <p className="mt-5 mb-3">
-              MEET supply travel bags designed for personal travel, retail
-              distribution, and project-based requirements.
-            </p>
+      <section className="container font-inter text-center mt-20 mb-2">
+        <p>
+          Our travel bags and luggage are designed for durability,
+          functionality, and long-lasting performance across personal,
+          corporate, and commercial travel. From backpacks to rolling suitcases,
+          each product is built to withstand frequent use while keeping
+          belongings organized and protected.
+        </p>
+        <p>
+          Engineered for practical use in diverse conditions, these bags combine
+          robust materials, secure construction, and user-friendly design. They
+          are ideal for business travel, leisure, and logistics, providing
+          reliable solutions for daily and long-distance journeys.
+        </p>
+      </section>
+      <div className="relative lg:pb-20 ">
+        <div className="container py-20">
+          <div className="rounded-xl bg-linear-to-b from-amber-50 to-white grid grid-cols-1 items-center gap-9 lg:grid-cols-2 border border-gray-300 p-8">
+            <div>
+              <h2 className="text-4xl font-rubik">
+                {" "}
+                Our Travel Bags & Luggage Product Range
+              </h2>
+              <p className="mt-5 mb-3">
+                MEET supply travel bags designed for personal travel, retail
+                distribution, and project-based requirements.
+              </p>
 
-            <p>
-              Durable travel bags designed for comfort, storage efficiency, and
-              repeated use. Suitable for short trips, daily travel, and general
-              luggage needs, with a focus on strong materials and functional
-              design.
-            </p>
-          </div>
+              <p>
+                Durable travel bags designed for comfort, storage efficiency,
+                and repeated use. Suitable for short trips, daily travel, and
+                general luggage needs, with a focus on strong materials and
+                functional design.
+              </p>
+            </div>
 
-          <div className="relative h-[350px]">
-            <Image
-              fill
-              src={"/travel-bags/trave-bags.webp"}
-              className="object-contain"
-              alt={""}
-            />
+            <div className="relative h-[350px]">
+              <Image
+                fill
+                src={"/travel-bags/trave-bags.webp"}
+                className="object-contain"
+                alt={""}
+              />
+            </div>
           </div>
         </div>
 
-        <section className="lg:mt-10 lg:mb-20">
+        <section className="">
           <Brochure
-            title={"Travel Solutions Built for Every Journey"}
+            title={
+              <h2 className="text-3xl font-rubik mb-5">
+                <span className="text-primary">Smart Travel Bags</span> for
+                Everyday Performance
+              </h2>
+            }
             desc={
-              "Our travel bags are designed for durability, functionality, and style. With smart storage and robust construction, they support both business and personal travel with ease and reliability."
+              <>
+                Discover travel bags and luggage designed to withstand long
+                journeys while maintaining strength, organization, and
+                functionality. Built for frequent travel and diverse
+                environments, these products combine practical design with
+                long-lasting performance.
+                <br />
+                <br />
+                The brochure includes product specifications, material insights,
+                storage capacity details, and travel-ready features to help you
+                select the right luggage solutions for business or leisure.
+              </>
             }
             btn={""}
           />
         </section>
 
-        <About
-          title="Why Global Leaders Work with Us"
-          highlight="Global Leaders"
-          image="/apparel/team.jpg"
-          items={[
+        <WhyChooseUs
+          title="WHY GLOBAL LEADERS WORK WITH US"
+          highlightWords={["GLOBAL", "LEADERS"]}
+          image="/apparel/why-choose.jpg"
+          description="MEET supplies durable travel bags and luggage that meet international quality and performance standards. From business travel to long-distance journeys, our portfolio supports practical storage, easy portability, and lasting reliability. Every product is selected with strength, organization, and usability in mind, helping global partners maintain convenience and protection across travel needs."
+          features={[
             {
-              label: "Trusted Quality",
-              desc: "MEET supplies engineered buckles, fasteners, and cooling jackets that meet international quality and performance standards.",
+              icon: Award,
+              title: "Trusted Quality",
+              desc: "Built with carefully selected materials and strict quality standards, ensuring long-lasting durability, reliable protection, and dependable performance across demanding travel conditions.",
             },
             {
-              label: "Wide Product Coverage",
-              desc: "From plastic buckles and fastening systems to industrial cooling jackets, our portfolio supports both apparel design and workwear performance needs.",
+              icon: Layers,
+              title: "Wide Product Coverage",
+              desc: "A diverse range covering backpacks, suitcases, and travel accessories designed to meet both functional and practical requirements across multiple segments.",
             },
             {
-              label: "Reliable B2B Supply",
-              desc: "We manage sourcing, quality checks, and delivery to support smooth production and long-term supply requirements.",
-            },
-          ]}
-        />
-        <OurPartners
-          desc={[
-            "Middle East Engineering Technologies (MEET) works with globally recognised companies such as NIFCO, Japan, and SEFT Technologies, Japan manufacturing leaders known for their innovation and technical expertise.",
-            "These collaborations reflect our commitment to quality, consistency, and long-term B2B partnerships.",
-          ]}
-          partners={[
-            {
-              image: "/partners/nifco.jpg",
-              alt: "NIFCO Japan",
-              className: "row-span-2 col-span-2",
+              icon: Building2,
+              title: "Reliable B2B Supply",
+              desc: "Structured sourcing and coordinated production processes that support consistent availability, scalable volumes, and stable long-term partnerships for travel retailers and corporate clients.",
             },
             {
-              image: "/partners/seft.jpg",
-              alt: "SEFT Technologies",
-            },
-            {
-              image: "/partners/manufacturing.png",
-              alt: "Manufacturing Partner",
-            },
-            {
-              image: "/partners/global-business.jpg",
-              alt: "Global Partner",
-              className: "col-span-2",
+              icon: Globe,
+              title: "Global Market Readiness",
+              desc: "Experience serving international markets ensures alignment with global quality expectations, compliance standards, and commercial requirements of established brands and businesses.",
             },
           ]}
         />
       </div>
-      <CTASection />
+      <div className="mt-16 lg:mt-0">
+        <CTASection />
+      </div>
     </>
   );
 }

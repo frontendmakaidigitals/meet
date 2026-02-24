@@ -17,7 +17,7 @@ const Nav = ({ path, textColor }: { path: string; textColor: string }) => {
     { label: "Home Appliances", href: "/home-appliance" },
     { label: "Batteries", href: "/batteries" },
     { label: "Mattress", href: "/mattress" },
-    { label: "Personal Electronics", href: "/personal-electorincs" },
+    { label: "Personal Electronics", href: "/personal-electronics" },
     { label: "Electric Vehicle", href: "/electric-vehicle" },
     { label: "Travel & Bags", href: "/travel-bags" },
   ];
@@ -78,7 +78,7 @@ const Nav = ({ path, textColor }: { path: string; textColor: string }) => {
                       key={i}
                       href={item.href}
                       onClick={() => setOpen(false)}
-                      className="block px-5 py-2 text-gray-700 hover:bg-[#f8e39f] hover:text-primary transition"
+                      className="block px-5 py-2 text-gray-700 hover:bg-[#fef8e7] hover:text-primary transition"
                     >
                       {item.label}
                     </Link>

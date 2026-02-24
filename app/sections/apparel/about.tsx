@@ -1,73 +1,96 @@
-import Image from "next/image";
+import React from "react";
+import { LucideIcon } from "lucide-react";
 
-type AboutItem = {
-  label: string;
+type Feature = {
+  icon: LucideIcon;
+  title: string;
   desc: string;
 };
 
-type AboutSectionProps = {
+type WhyChooseUsProps = {
   title: string;
-  highlight?: string;
+  highlightWords?: string[]; // words to highlight
   image: string;
-  items: AboutItem[];
+  description: string;
+  features: Feature[];
 };
 
-const AboutSection = ({
+const WhyChooseUs = ({
   title,
-  highlight,
+  highlightWords = [],
   image,
-  items,
-}: AboutSectionProps) => {
+  description,
+  features,
+}: WhyChooseUsProps) => {
+  // Highlight specific words in title
   const renderTitle = () => {
-    if (!highlight) return title;
+    let words = title.split(" ");
 
-    const parts = title.split(highlight);
-    return (
-      <>
-        {parts[0]}
-        <span className="text-primary">{highlight}</span>
-        {parts[1]}
-      </>
-    );
+    return words.map((word, i) => {
+      const clean = word.replace(/[^a-zA-Z]/g, "");
+      const isHighlight = highlightWords.includes(clean);
+
+      return (
+        <span key={i} className={isHighlight ? "text-[#c6a622]" : ""}>
+          {word}{" "}
+        </span>
+      );
+    });
   };
 
   return (
-    <section className="py-16">
-      <div className="container mx-auto px-4">
-        {/* Heading */}
-        <h2 className="font-rubik text-center lg:text-start mb-5 text-4xl uppercase tracking-wider">
+    <section className="pt-14 pb-1 lg:pt-16 ">
+      <div className="container mx-auto px-4 space-y-10">
+        {/* ===== HEADING ===== */}
+        <h2 className="text-center text-3xl md:text-4xl font-rubik uppercase text-slate-900">
           {renderTitle()}
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Image */}
-          <div className="relative h-[500px] overflow-hidden md:h-[550px]">
-            <Image
-              src={image}
-              alt={title}
-              fill
-              className="rounded-lg shadow-lg object-cover"
-            />
-          </div>
+        {/* ===== IMAGE ===== */}
+        <div className="w-full overflow-hidden rounded-sm">
+          <img
+            src={image}
+            alt="Why choose us"
+            className="w-full h-[250px] lg:h-[380px] object-cover"
+          />
+        </div>
 
-          {/* Content */}
-          <div className="space-y-6">
-            {items.map((item, idx) => (
-              <div key={idx} className="flex items-start gap-4">
-                <div className="mt-2">
-                  <div className="w-4 h-4 border border-primary rotate-45" />
+        {/* ===== DESCRIPTION ===== */}
+        <p className="max-w-4xl mx-auto text-center text-slate-600 leading-relaxed">
+          {description}
+        </p>
+
+        {/* ===== FEATURES GRID ===== */}
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {features.map((feature, idx) => {
+            const Icon = feature.icon;
+
+            return (
+              <div
+                key={idx}
+                className="bg-amber-50/80 shadow border border-amber-100 rounded-xl p-6 space-y-4 hover:shadow-sm transition"
+              >
+                {/* Icon */}
+                <div className="w-10 h-10 rounded-full bg-[#c6a622] flex items-center justify-center">
+                  <Icon className="w-5 h-5 text-white" />
                 </div>
-                <div>
-                  <h3 className="text-2xl text-primary mb-3">{item.label}</h3>
-                  <p className="text-gray-700 leading-relaxed">{item.desc}</p>
-                </div>
+
+                {/* Title */}
+                <h3 className="font-rubik text-lg text-slate-900">
+                  {feature.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  {feature.desc}
+                </p>
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
       </div>
     </section>
   );
 };
 
-export default AboutSection;
+export default WhyChooseUs;

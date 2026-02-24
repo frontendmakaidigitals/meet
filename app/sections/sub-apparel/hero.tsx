@@ -6,11 +6,14 @@ type HeroProps = {
   desc?: string;
   image: string;
   height?: string;
+  background: string;
+  partnerLogo?: string[];
 };
 
-const Hero = ({ title, desc, image }: HeroProps) => {
+const Hero = ({ title, desc, image, background, partnerLogo }: HeroProps) => {
   return (
-    <section className="mt-26 px-4 lg:px-0">
+    <section className="pt-26 px-4 lg:px-0 relative">
+      <Image src={background} alt="Background" fill className="object-cover" />
       <div
         className={`relative container overflow-hidden rounded-2xl flex items-end justify-center pb-18 h-[50dvh] lg:h-[80dvh]`}
       >
@@ -22,10 +25,29 @@ const Hero = ({ title, desc, image }: HeroProps) => {
 
         {/* Content */}
         <div className="relative z-10 text-slate-50 text-center max-w-3xl px-4">
-          <h1 className="text-4xl md:text-5xl font-semibold">{title}</h1>
+          <h1 className="text-4xl md:text-5xl font-rubik font-[500]">
+            {title}
+          </h1>
           {desc && <p className="text-lg md:text-xl mt-3 opacity-90">{desc}</p>}
         </div>
       </div>
+      {partnerLogo && (
+        <div className=" relative py-10 flex justify-center items-center space-x-4">
+          <h3 className="text-xl font-rubik font-[400]">
+            Our Sucessfull partners
+          </h3>
+          <div className="flex items-center gap-4">
+            {partnerLogo.map((logo, index) => (
+              <div
+                key={index}
+                className="size-16 flex justify-center p-1 items-center bg-white rounded-full"
+              >
+                <Image src={logo} alt="Partner Logo" width={100} height={50} />
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </section>
   );
 };

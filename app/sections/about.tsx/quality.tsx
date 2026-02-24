@@ -1,60 +1,49 @@
+import Image from "next/image";
 import React from "react";
 
-const Quality = () => {
+const QualityPolicy = () => {
   return (
-    <section className="pb-10 lg:py-24 bg-white">
-      <div className="container px-6">
-        <div className="relative">
-          {/* Heading */}
-          <h2 className="text-3xl lg:text-4xl font-rubik mb-6 text-center lg:text-left">
-            QUALITY POLICY
-          </h2>
+    <section className="py-10 lg:py-20 bg-white">
+      <div className="container mx-auto px-6">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* ===== IMAGE (Top on mobile) ===== */}
+          <div className="relative h-[300px] lg:h-[380px] rounded-2xl overflow-hidden order-1 lg:order-2">
+            <Image
+              src="/about/quality/img-2.jpg"
+              alt="Quality Policy"
+              fill
+              className="object-cover"
+            />
+          </div>
 
-          {/* Divider */}
-          <div className="w-full hidden lg:block h-px bg-black/40  mb-12 lg:mb-16 lg:absolute lg:top-20" />
+          {/* ===== TEXT ===== */}
+          <div className="order-2 lg:order-1">
+            <h2 className="text-4xl font-rubik uppercase font-light text-gray-900 mb-6">
+              Quality Policy
+            </h2>
 
-          <div className="grid grid-cols-1 relative lg:grid-cols-2 gap-12 lg:gap-16 items-start lg:items-center">
-            {/* LEFT – TEXT */}
-            <div className="max-w-xl space-y-5 text-center lg:text-left">
-              <p className="text-lg lg:text-xl text-gray-800">
-                Quality is{" "}
-                <span className="font-allura text-yellow-600 mx-1">
-                  central
-                </span>{" "}
-                to everything we do.
-              </p>
+            <hr className="border-gray-300 mb-8 w-full" />
 
-              <p className="text-gray-700 leading-relaxed text-sm lg:text-base">
-                We carefully select products and technologies that meet strict
-                quality and performance standards. By working closely with
-                trusted manufacturers, we ensure consistent supply, dependable
-                performance, and solutions that deliver real value over time.
-                Our commitment to quality also includes responsible sourcing and
-                a focus on products that support efficiency, safety, and
-                long-term sustainability.
-              </p>
-            </div>
+            <p className="text-gray-800 text-lg mb-5">
+              Quality is{" "}
+              <span className="italic text-primary font-allura text-2xl font-normal mr-2">
+                central
+              </span>{" "}
+              to everything we do.
+            </p>
 
-            {/* RIGHT – IMAGES */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {/* Image 1 */}
-              <div className="h-[240px] sm:h-[300px] lg:h-[370px] rounded-2xl mt-10 overflow-hidden shadow-sm">
-                <img
-                  src="/about/quality/img-1.jpg"
-                  alt="Modern kitchen"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+            <p className="text-gray-600 leading-relaxed mb-3">
+              We carefully select products and technologies that meet strict
+              quality and performance standards. By working closely with trusted
+              manufacturers, we ensure consistent supply, dependable
+              performance, and solutions that deliver real value over time.
+            </p>
 
-              {/* Image 2 (offset only on desktop) */}
-              <div className="h-[240px] sm:h-[300px] lg:h-[370px] rounded-2xl overflow-hidden shadow-sm lg:mt-16">
-                <img
-                  src="/about/quality/img-2.jpg"
-                  alt="Workspace"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
+            <p className="text-gray-600 leading-relaxed">
+              Our commitment to quality also includes responsible sourcing and a
+              focus on products that support efficiency, safety, and long-term
+              sustainability.
+            </p>
           </div>
         </div>
       </div>
@@ -62,4 +51,4 @@ const Quality = () => {
   );
 };
 
-export default Quality;
+export default QualityPolicy;

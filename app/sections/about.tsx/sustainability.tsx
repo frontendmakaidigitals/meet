@@ -1,43 +1,45 @@
-import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 const Sustainability = () => {
   return (
     <section className="pt-12 pb-12 lg:pb-24 bg-white">
-      <div className="container mx-auto px-6">
-        <div className="max-w-5xl mx-auto text-center">
-          {/* Heading */}
-          <h2 className="text-3xl lg:text-4xl font-rubik mb-12 tracking-wide">
-            SUSTAINABILITY & RESPONSIBILITY
-          </h2>
-
-          {/* Image */}
-          <div className="w-full rounded-3xl overflow-hidden mb-10">
-            <img
+      <div className="container ">
+        <div className="">
+          {/* Image with overlay */}
+          <div className="relative w-full rounded-3xl overflow-hidden h-[380px] lg:h-[480px]">
+            <Image
               src="/about/sustainability/img.jpg"
               alt="Sustainability"
-              className="w-full h-[250px] lg:h-[420px] object-cover"
+              fill
+              className="object-cover"
             />
+            {/* Gradient overlay — stronger at bottom */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/60 to-black/75" />
+
+            {/* Overlaid text content */}
+            <div className="absolute inset-0 flex flex-col items-center justify-end text-center px-6 pb-12">
+              <h2 className="text-2xl lg:text-4xl font-rubik uppercase font-light text-white mb-4">
+                Sustainability &amp; Responsibility
+              </h2>
+              <p className="italic text-white/90 font-inter text-sm lg:text-base mb-4 max-w-3xl">
+                Sustainability guides everyday decisions from product selection
+                to supplier partnerships.
+              </p>
+              <p className="text-white/80 hidden lg:block font-inter leading-relaxed text-sm lg:text-base max-w-3xl mb-8">
+                We actively support energy-efficient technologies, cleaner
+                mobility solutions, and responsible manufacturing practices that
+                help businesses reduce environmental impact without compromising
+                operational performance. By promoting practical sustainability,
+                we help our partners align commercial success with environmental
+                responsibility.
+              </p>
+              <Link href="/sustainability">
+                <button className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-primary text-white text-sm font-medium hover:bg-yellow-300 transition">
+                  Learn more about our approach
+                </button>
+              </Link>
+            </div>
           </div>
-
-          {/* Intro line */}
-          <p className="italic text-gray-700 mb-6">
-            Sustainability is part of our daily decisions, from product
-            selection to supplier partnerships.
-          </p>
-
-          {/* Description */}
-          <p className="text-gray-700 leading-relaxed max-w-3xl mx-auto mb-10">
-            We support energy-efficient technologies, cleaner mobility
-            solutions, and responsible sourcing practices that help businesses
-            reduce their environmental impact without affecting performance.
-          </p>
-
-          {/* CTA */}
-          <Link href={"/sustainability"}>
-            <button className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-primary text-white text-sm hover:bg-yellow-600 transition">
-              Learn more about our approach
-            </button>
-          </Link>
         </div>
       </div>
     </section>

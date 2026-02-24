@@ -1,31 +1,24 @@
 import Hero from "../sections/apparel/hero";
 import Industries from "../sections/apparel/industries";
 import Supplies from "../sections/apparel/supplies";
-import About from "../sections/apparel/about";
-import OurPartners from "../sections/apparel/our-partners";
-import Contact from "../sections/home/contact";
+import WhyChooseUs from "../sections/apparel/about";
 import CTASection from "../sections/cta";
-import {
-  Store, // for Retail and private label distribution
-  Gift, // for Corporate gifting and promotions
-  Plane,
-  Briefcase,
-  Package,
-  ShoppingCart,
-} from "lucide-react";
+import { Award, Layers, Building2, Globe } from "lucide-react";
 export default function EngineeringTechnologiesPage() {
   const products = [
     {
       img: "/ev/scooter.png",
-      label: <h3 className="text-2xl font-rubik"> EV Scooters </h3>,
-      desc: " EV scooters are made for easy, everyday movement, especially in cities.",
+      label: <h3 className="text-3xl font-rubik"> EV Scooters </h3>,
+      desc: " High-performance electric bikes designed for reliable urban commuting, fleet operations, and commercial mobility. Engineered for B2B partners, delivery services, and corporate fleets, these bikes combine durable construction, efficient battery performance, and low maintenance requirements. Ideal for daily use in demanding environments while supporting cleaner and cost-effective transportation.",
       link: "/electric-vehicle/detail",
+      cardBg: "bg-linear-to-b from-[#FFFDF7] to-[#FFFFFF]",
     },
     {
       img: "/ev/bike.png",
-      label: <h3 className="text-2xl font-rubik">EV Bikes</h3>,
-      desc: " EV bikes are designed for longer distances and stronger performance.",
+      label: <h3 className="text-3xl font-rubik">EV Bikes</h3>,
+      desc: " Efficient electric scooters developed for last-mile delivery, corporate fleets, and commercial mobility solutions. Designed for reliability, ease of use, and practical daily operation, these scooters offer consistent performance, low operating costs, and environmentally friendly transport. Built to handle frequent use without compromising safety, comfort, or efficiency.",
       link: "/electric-vehicle/detail",
+      cardBg: "bg-linear-to-b from-[#FFFDF7] to-[#FFFFFF]",
     },
   ];
 
@@ -33,103 +26,94 @@ export default function EngineeringTechnologiesPage() {
     <>
       {/* Hero Section */}
       <Hero
-        title="EV Scooters & EV Bikes by King Kong"
-        desc="At Middle East Engineering Technologies.  We help businesses around the world move towards cleaner and smarter transportation. We supply electric scooters and electric bikes under the King Kong brand, working closely with experienced manufacturers to deliver reliable EV solutions for global markets"
+        dark
+        titleText=""
+        title={
+          <h1 className="text-4xl font-rubik lg:text-5xl font-[400] text-gray-100 leading-tight tracking-tight">
+            EV Scooters{" "}
+            <span className="font-allura text-5xl lg:text-6xl">&</span> EV Bikes
+            by King Kong
+          </h1>
+        }
+        desc="Middle East Engineering Technologies delivers reliable electric scooters and bikes to global fleet operators, commercial partners, and B2B mobility clients."
         image="/ev/banner.png"
+        background="/ev/background.jpg"
       />
 
-      <div className="relative lg:pb-20">
-        {/* Background Accent */}
-        <div className="lg:w-md h-full absolute bg-[#FFFAEC] -z-10" />
-
+      <div className="relative lg:pb-12">
         {/* Product Range */}
         <Supplies
           link={"/electric-vehicle/detail"}
-          heading="Our Electric Vehicle Products"
+          heading={
+            <h2 className="text-4xl font-rubik text-center">
+              Our Electric Vehicle Products
+            </h2>
+          }
           products={products}
         />
 
         {/* Who is this for */}
         <Industries
-          desc="Our electronics portfolio supports brands, distributors, and project buyers looking for practical, well-built devices that meet daily consumer and commercial needs."
+          image="/apparel/industry.jpg"
+          desc="Our electric scooters and bikes are supplied for many real-world uses, including:
+"
           items={[
             {
-              label: "Retail and private label distribution",
-              icon: Store,
+              label: "Urban commuting solutions",
             },
             {
-              label: "Corporate gifting and promotions",
-              icon: Gift,
+              label: "Delivery and logistics companies",
             },
             {
-              label: "Travel and mobility use",
-              icon: Plane,
+              label: "Corporate and industrial facilities",
             },
             {
-              label: "Office and everyday personal use",
-              icon: Briefcase,
+              label: "Residential communities and campuses",
             },
             {
-              label: "Project-based and bulk supply needs",
-              icon: Package,
+              label: "Shared and rental mobility services",
             },
             {
-              label: "E-commerce and online marketplace sales",
-              icon: ShoppingCart,
+              label: "Government and institutional projects",
             },
           ]}
         />
 
         {/* Why MEET */}
-        <About
-          title="Why Businesses Choose MEET"
-          highlight="MEET"
-          image="/apparel/team.jpg"
-          items={[
+        <WhyChooseUs
+          title="WHY GLOBAL LEADERS WORK WITH US"
+          highlightWords={["GLOBAL", "LEADERS"]}
+          image="/apparel/why-choose.jpg"
+          description="MEET supplies high-performance electric bikes and scooters that meet international quality and reliability standards. From efficient battery-powered mobility solutions to durable, low-maintenance vehicles, the portfolio supports both commercial operations and urban transport needs. Every product is selected with durability, consistency, and real-world performance in mind, helping global partners maintain reliability across fleet and daily-use applications."
+          features={[
             {
-              label: "Trusted Quality",
-              desc: "We work with established manufacturers to ensure products meet international quality standards and performance expectations.",
+              icon: Award,
+              title: "Trusted Quality",
+              desc: "Built with carefully selected components and strict quality standards, ensuring long-term durability and dependable performance across demanding urban, commercial, and industrial mobility environments.",
             },
             {
-              label: "Wide Variety",
-              desc: "Our electronics range supports multiple categories and specifications, allowing flexibility for different markets and project needs.",
+              icon: Layers,
+              title: "Wide Product Coverage",
+              desc: "A diverse range covering buckles, fasteners, trims, and cooling jackets.A diverse range covering electric bikes and scooters designed to meet both functional performance and operational efficiency requirements across multiple mobility segments.",
             },
             {
-              label: "Reliable Supply",
-              desc: "MEET manages sourcing, coordination, and delivery to support consistent and scalable B2B supply requirements.",
+              icon: Building2,
+              title: "Reliable B2B Supply",
+              desc: "Structured sourcing and coordinated production processes that support consistent availability, scalable volumes, and long-term partnerships with corporate, fleet, and commercial clients.",
+            },
+            {
+              icon: Globe,
+              title: "Global Market Readiness",
+              desc: "Experience across international markets ensures alignment with quality expectations, compliance standards, and commercial requirements of established fleet operators and mobility partners.",
             },
           ]}
         />
 
         {/* Partners */}
-        <OurPartners
-          desc={[
-            "Middle East Engineering Technologies (MEET) collaborates with experienced manufacturing partners to deliver reliable personal electronics for global B2B markets.",
-            "These partnerships support quality consistency, scalable supply, and long-term business relationships.",
-          ]}
-          partners={[
-            {
-              image: "/partners/nifco.jpg",
-              alt: "NIFCO Japan",
-              className: "row-span-2 col-span-2",
-            },
-            {
-              image: "/partners/seft.jpg",
-              alt: "SEFT Technologies",
-            },
-            {
-              image: "/partners/manufacturing.png",
-              alt: "Manufacturing Partner",
-            },
-            {
-              image: "/partners/global-business.jpg",
-              alt: "Global Partner",
-              className: "col-span-2",
-            },
-          ]}
-        />
       </div>
-      <CTASection />
+      <div className="mt-16 lg:mt-0">
+        <CTASection />
+      </div>
     </>
   );
 }

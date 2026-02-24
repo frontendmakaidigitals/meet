@@ -16,7 +16,7 @@ const Products = () => {
           />
         </div>
       ),
-      bgColor: "bg-linear-to-b from-[#FFFDF7] to-[#FFFFFF]",
+      bgColor: "bg-linear-to-b from-amber-50 to-[#FFFFFF]",
       class: "lg:col-span-2",
       link: "/apparel",
     },

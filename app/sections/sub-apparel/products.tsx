@@ -1,22 +1,15 @@
 import React from "react";
-import type { Product } from "@/app/apparel/detail/page";
-const Products = ({ data, num }: { data: Product[]; num?: number }) => {
+const Products = ({ data, num }: { data: any; num?: number }) => {
   return (
-    <section className="py-16">
+    <section className="">
       <div className="container">
-        {data.map((item, idx) => (
+        {data.map((item: any, idx: number) => (
           <div key={idx} className="pb-5">
-            <h2 className="text-4xl font-rubik mb-6">
-              <span className="font-inter">{num ? num : idx + 1}.</span>{" "}
-              {item.label}
-            </h2>
-            <div className="mt-4 mb-8 text-gray-700">{item.desc}</div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-              {item.types.map((type, idx) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-2">
+              {item.types.map((type: any, idx: number) => (
                 <div
                   key={idx}
-                  className="group relative  rounded-xl  overflow-hidden transition-all duration-300 hover:shadow-md border border-transparent hover:border-slate-300"
+                  className="group relative   rounded-xl  overflow-hidden transition-all duration-300 hover:shadow-md border border-slate-200"
                 >
                   {/* Image Container */}
                   <div className="h-60  flex items-center justify-center p-2">

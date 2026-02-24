@@ -1,47 +1,72 @@
-import React from "react";
+import Image from "next/image";
 import Link from "next/link";
-const Supplies = ({
-  products,
-  heading,
-  link,
-}: {
-  products: any[];
-  heading: string;
+
+type SuppliesProps = {
   link: string;
-}) => {
+  products: any[];
+  heading: React.ReactNode;
+  cardBg?: string;
+};
+
+const Supplies = ({ link, products, heading }: SuppliesProps) => {
   return (
-    <div className="py-16">
-      <div className="container">
-        <h2 className="text-4xl text-center lg:text-start font-rubik mb-8">{heading}</h2>
-        <div className="space-y-24 w-full">
-          {products.map((product, idx) => (
-            <div
-              key={idx}
-              className="grid items-center grid-cols-1 lg:grid-cols-2 gap-5"
-            >
-              <div className="w-full h-[350px] ">
-                <img
-                  src={product.img}
-                  className="w-full h-full object-contain"
-                  alt=""
-                />
-              </div>
-              <div className="space-y-6">
-                <div className="space-y-3">
-                  {product.label}
-                  <p className=" text-gray-500">{product.desc}</p>
+    <section className="py-20">
+      <div className="container mx-auto px-4 space-y-12">
+        {/* ===== SECTION HEADING ===== */}
+        {heading}
+
+        <div className="space-y-8">
+          {products.map((product, index) => {
+            const isEven = index % 2 === 0; // 0,2,4...
+
+            return (
+              <div
+                key={index}
+                className={`rounded-3xl border border-gray-400 overflow-hidden ${product.cardBg}`}
+              >
+                <div className="grid lg:grid-cols-2 items-center gap-10 p-8 md:p-14">
+                  {/* ===== IMAGE ===== */}
+                  <div
+                    className={`relative flex items-center justify-center
+                    ${isEven ? "lg:order-1" : "lg:order-2"}
+                    order-1`}
+                  >
+                    <div className="relative w-full h-[320px]">
+                      <Image
+                        fill
+                        src={product.img}
+                        alt="Product Image"
+                        className="object-contain"
+                      />
+                    </div>
+                  </div>
+
+                  {/* ===== CONTENT ===== */}
+                  <div
+                    className={`space-y-5
+                    ${isEven ? "lg:order-2" : "lg:order-1"}
+                    order-2`}
+                  >
+                    {product.label}
+
+                    <p className="text-slate-600 leading-relaxed ">
+                      {product.desc}
+                    </p>
+
+                    <Link
+                      href={product.link}
+                      className="inline-block bg-primary text-white text-sm font-medium px-7 py-3 rounded-full hover:opacity-90 transition"
+                    >
+                      VIEW MORE
+                    </Link>
+                  </div>
                 </div>
-                <Link href={link} className="  font-medium">
-                  <button className="px-5 py-2 rounded-full bg-primary text-slate-50">
-                    View more
-                  </button>
-                </Link>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

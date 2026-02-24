@@ -3,7 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary-color: #c6a544;
+  --primary-color: #DBBD36;
 }
 
 @theme inline {
@@ -23,7 +23,7 @@ body {
 }
 
 @utility container {
-  max-width: 1300px;
+  max-width: 1120px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1rem;

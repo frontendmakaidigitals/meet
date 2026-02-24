@@ -55,11 +55,17 @@ const page = () => {
         title="EV Mobility Solutions"
         desc="Electric bikes and scooters designed for clean, efficient, and reliable everyday transportation."
         image="/ev/details/banner.png"
+        background="/ev/details/background.jpg"
+        partnerLogo={[
+          "/partner-logo/Autolite.png",
+          "/partner-logo/King-Kong.png",
+          "/partner-logo/Lucas.png",
+        ]}
       />
-      <section className="container mx-auto px-4 py-16 md:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+      <section className="container mx-auto px-4 mt-10 lg:mt-0 py-8 md:py-24">
+        <div className="grid border border-gray-300 rounded-xl p-8 bg-gradient-to-b from-amber-50 to-white grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left Column - Content */}
-          <div className="space-y-8">
+          <div className=" lg:space-y-8">
             {/* Header */}
             <div>
               <h2 className="text-3xl font-rubik mb-4">EV Bikes</h2>
@@ -94,7 +100,7 @@ const page = () => {
           {/* Right Column - Image */}
           <div className="space-y-6">
             {/* Main Product Image */}
-            <div className="h-[400px] lg:h-[500px]  rounded-3xl overflow-hidden">
+            <div className="h-[300px] lg:h-[500px]  rounded-3xl overflow-hidden">
               <img
                 src="/ev/details/bike.png"
                 alt="EV Bike"
@@ -104,19 +110,13 @@ const page = () => {
           </div>
         </div>
       </section>
-
-      {/* DIVIDER */}
-      <div className="container mx-auto px-4">
-        <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
-      </div>
-
       {/* EV SCOOTERS SECTION */}
-      <section className="container mx-auto px-4 py-16 md:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+      <section className="container mx-auto px-4 py-8 lg:py-0 ">
+        <div className="grid border border-gray-300 rounded-xl p-8 bg-gradient-to-b from-blue-50 to-white grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left Column - Image (Reversed Order) */}
           <div className="space-y-6 order-2 lg:order-1">
             {/* Main Product Image */}
-            <div className="h-[400px] lg:h-[500px]  overflow-hidden">
+            <div className="h-[300px] lg:h-[500px]  overflow-hidden">
               <img
                 src="/ev/details/scooter.png"
                 alt="EV Scooter"
@@ -159,60 +159,29 @@ const page = () => {
         </div>
       </section>
 
-      <section className="bg-gradient-to-b from-gray-50 to-white py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          {/* Header */}
-          <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-            <h2 className="text-4xl md:text-5xl font-rubik mb-6">
-              Why Choose Us?
-            </h2>
-            <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-              Middle East Engineering Technologies (MEET) is your trusted
-              partner for high-quality industrial and commercial solutions. We
-              bridge the gap between global innovation and regional business
-              needs.
-            </p>
-          </div>
-
-          {/* Main Content Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left - Image */}
-            <div className="relative h-[400px] md:h-[500px] lg:h-full rounded-3xl overflow-hidden shadow order-2 lg:order-1">
-              <Image
-                src="/ev/details/why-choose.png"
-                fill
-                alt="MEET - Middle East Engineering Technologies team and facilities"
-                className="object-cover"
-              />
-            </div>
-
-            {/* Right - Reasons Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 order-1 lg:order-2">
-              {reasons.map((reason, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
-                >
-                  <div className="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center mb-4">
-                    <reason.icon className="w-6 h-6 text-yellow-600" />
-                  </div>
-                  <h3 className="text-lg font-semibold mb-2 text-gray-900">
-                    {reason.title}
-                  </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    {reason.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
       <section className="mt-10 mb-20">
         <Brochure
-          title={"Driving the Future of Electric Mobility"}
+          title={
+            <h2 className="text-3xl font-rubik mb-5">
+              <span className="text-primary">Smart Electronic Vehicle</span> for{" "}
+              Everyday Performance
+            </h2>
+          }
           desc={
-            "Our electric mobility solutions support cleaner transportation through reliable, energy-efficient vehicles and infrastructure. Designed to reduce emissions and operating costs, they help businesses move toward a more sustainable future."
+            <>
+              Explore engineered electric scooters built to deliver dependable
+              last-mile transport, low operating costs, and consistent
+              performance across commercial and corporate fleets. Designed for
+              frequent use in urban environments, these scooters combine
+              durability, ease of handling, and practical design for reliable
+              daily operation.
+              <br />
+              <br />
+              The brochure includes product specifications, battery performance,
+              charging guidance, load capacity, and operational tips to help you
+              choose the right EV scooter solutions for B2B and commercial
+              mobility projects.
+            </>
           }
           btn={""}
         />
