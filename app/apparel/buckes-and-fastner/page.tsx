@@ -367,7 +367,7 @@ const page = () => {
               egestas, ac scelerisque ante pulvinar.
             </>
           }
-          btn={""}
+          btn={"/apparel/NIFCO Apparel Range.pdf"}
         />
       </section>
 

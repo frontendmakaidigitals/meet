@@ -45,10 +45,14 @@ export default function AparaellPage() {
       <Hero
         title={
           <h1 className="text-4xl font-rubik md:text-5xl font-[400] text-gray-900 leading-tight tracking-tight">
-            Home <span className="font-allura text-6xl">Appliances</span>
+            Home <span className="font-allura text-5xl lg:text-6xl">Appliances</span>
           </h1>
         }
-        logo={["/partner-logo/Indesit.png", "/partner-logo/beko.png", "/partner-logo/Ariston.png"]}
+        logo={[
+          "/partner-logo/Indesit.png",
+          "/partner-logo/beko.png",
+          "/partner-logo/Ariston.png",
+        ]}
         desc="At Middle East Engineering Technologies , we supply essential home appliances to businesses across global markets. Our focus is simple reliable products and long-term partnerships."
         image="/home-appliance/banner.png"
         background="/home-appliance/bg.jpg"
@@ -131,7 +135,7 @@ export default function AparaellPage() {
                 requirements.
               </>
             }
-            btn={""}
+            btn={"/home-appliance/Ariston-Catalouge.pdf"}
           />
         </section>
         <Industries

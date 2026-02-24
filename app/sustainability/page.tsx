@@ -13,8 +13,10 @@ const page = () => {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="bg-white shadow-md container rounded-xl absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 max-w-sm lg:max-w-5xl p-10 ">
-          <h1 className="text-4xl mb-6 font-rubik">Sustainability</h1>
+        <div className="bg-white shadow-md container rounded-xl absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 max-w-xs lg:max-w-5xl p-6 lg:p-10 ">
+          <h1 className="text-3xl lg:text-4xl mb-6 font-rubik">
+            Sustainability
+          </h1>
           <p className="font-inter ">
             Middle East Engineering Technologies (MEET) integrates
             sustainability into every aspect of business. From product selection
@@ -22,7 +24,7 @@ const page = () => {
             energy use, promote cleaner mobility, and support efficient resource
             management.
           </p>
-          <p className="font-inter ">
+          <p className="font-inter hidden lg:block">
             Our sustainable approach ensures that all offerings—from apparel
             accessories and cooling jackets to electric bikes, scooters, and
             energy storage solutions—deliver real-world performance while

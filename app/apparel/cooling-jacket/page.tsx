@@ -164,7 +164,7 @@ const page = () => {
               needs.
             </>
           }
-          btn={""}
+          btn={"/apparel/Hikari-Cooling-Jacket.pdf"}
         />
       </section>
 

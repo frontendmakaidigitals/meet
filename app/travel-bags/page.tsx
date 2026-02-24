@@ -12,7 +12,7 @@ export default function AparaellPage() {
         titleText=""
         title={
           <h1 className="text-4xl font-rubik md:text-5xl font-[400] text-gray-800 leading-tight tracking-tight">
-            Travel Bags<span className="font-allura text-6xl"> & </span>Luggage
+            Travel Bags<span className="font-allura text-5xl lg:text-6xl"> & </span>Luggage
           </h1>
         }
         desc="At Middle East Engineering Technologies , we supply travel bags and luggage designed for durability, functionality, and everyday travel needs. We work closely with B2B partners to support consistent quality and long-term supply across global markets."
@@ -88,7 +88,7 @@ export default function AparaellPage() {
                 select the right luggage solutions for business or leisure.
               </>
             }
-            btn={""}
+            btn={"/travel-bags/Yamago-Brochure.pdf"}
           />
         </section>
 

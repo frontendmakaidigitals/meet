@@ -370,7 +370,7 @@ export default function WhyChooseUs() {
       />
 
       {/* ── HEADER ── */}
-      <div className="text-center max-w-4xl mx-auto mb-4 lg:mb-16">
+      <div className="text-center container max-w-4xl mx-auto mb-4 lg:mb-16">
         <h2 className="text-4xl md:text-5xl font-rubik tracking-wide mb-6">
           WHY CHOOSE <span className="text-primary">US</span>
         </h2>
@@ -416,6 +416,7 @@ export default function WhyChooseUs() {
               width: "100%",
               maxWidth: 480,
             }}
+            className="mt-10 lg:mt-0"
           >
             {CARDS.map((item) => (
               <MobileListItem

@@ -39,7 +39,7 @@ export default function AparaellPage() {
         titleText=""
         title={
           <h1 className="text-4xl font-rubik md:text-5xl font-[400] text-gray-900 leading-tight tracking-tight">
-            Apparel <span className="font-allura text-6xl">Accessories</span>
+            Apparel <span className="font-allura text-5xl lg:text-6xl">Accessories</span>
           </h1>
         }
         desc="Middle East Engineering Technologies  delivers trusted apparel components and advanced cooling jackets to global clothing brands, manufacturers, and B2B partners"

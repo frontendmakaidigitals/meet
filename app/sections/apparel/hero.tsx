@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Link from "next/link";
 type SplitHeroProps = {
   title: React.ReactNode;
   titleText: string;
@@ -57,34 +57,36 @@ const SplitHero = ({
               {desc}
             </p>
 
-            <button className="px-14 mt-4 bg-primary text-white rounded-full py-3">
-              {logo && (
-                <div className="lg:flex absolute hidden bottom-0 left-5 items-center gap-4">
-                  <h3
-                    className={`font-rubik ${!dark ? "text-black" : "text-white"}`}
-                  >
-                    Our Successful partners
-                  </h3>
+            <Link href={"/contact"}>
+              <button className="px-14 mt-4 bg-primary text-white rounded-full py-3">
+                Get Started
+              </button>
+            </Link>
+            {logo && (
+              <div className="lg:flex absolute hidden bottom-0 left-5 items-center gap-4">
+                <h3
+                  className={`font-rubik ${!dark ? "text-black" : "text-white"}`}
+                >
+                  Our Successful partners
+                </h3>
 
-                  <div className="flex items-center gap-2">
-                    {logo.map((logo, index) => (
-                      <div
-                        key={index}
-                        className="size-16 bg-white flex justify-center items-center p-1 rounded-full"
-                      >
-                        <Image
-                          src={logo}
-                          alt="Partner Logo"
-                          width={100}
-                          height={50}
-                        />
-                      </div>
-                    ))}
-                  </div>
+                <div className="flex items-center gap-2">
+                  {logo.map((logo, index) => (
+                    <div
+                      key={index}
+                      className="size-16 bg-white flex justify-center items-center p-1 rounded-full"
+                    >
+                      <Image
+                        src={logo}
+                        alt="Partner Logo"
+                        width={100}
+                        height={50}
+                      />
+                    </div>
+                  ))}
                 </div>
-              )}
-              Get Started
-            </button>
+              </div>
+            )}
           </div>
         </div>
       </div>

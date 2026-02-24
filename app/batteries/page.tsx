@@ -35,7 +35,7 @@ export default function AparaellPage() {
         titleText=""
         title={
           <h1 className="text-4xl font-rubik md:text-5xl font-[400] text-gray-100 leading-tight tracking-tight">
-            Battery <span className="font-allura text-6xl">Solutions</span>
+            Battery <span className="font-allura text-5xl lg:text-6xl">Solutions</span>
           </h1>
         }
         desc="Middle East Engineering Technologies is a B2B supplier of automotive batteries and energy storage solutions, serving mobility, backup power, and renewable energy applications across regional and global markets."

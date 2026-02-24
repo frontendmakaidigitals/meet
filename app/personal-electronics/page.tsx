@@ -52,8 +52,8 @@ export default function AparaellPage() {
         dark
         titleText=""
         title={
-          <h1 className="text-4xl font-rubik md:text-5xl font-[400] text-gray-100 leading-tight tracking-tight">
-            Personal <span className="font-allura text-6xl">Electronics</span>
+          <h1 className="text-4xl font-rubik lg:text-5xl font-[400] text-gray-100 leading-tight tracking-tight">
+            Personal <span className="font-allura text-5xl lg:text-6xl">Electronics</span>
           </h1>
         }
         desc="Middle East Engineering Technologies  supplies essential personal electronic devices designed for everyday use, retail distribution, and bulk business requirements.

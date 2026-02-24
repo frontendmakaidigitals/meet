@@ -12,7 +12,7 @@ export default function AparaellPage() {
         titleText=""
         title={
           <h1 className="text-4xl font-rubik md:text-5xl font-[400] text-black leading-tight tracking-tight">
-            Sleep & <span className="font-allura text-6xl">Beddings</span>
+            Sleep & <span className="font-allura text-5xl lg:text-6xl">Beddings</span>
           </h1>
         }
         desc="At Middle East Engineering Technologies , we supply sleep and bedding products designed to improve comfort, support, and everyday sleep quality. We work with B2B partners across global markets, focusing on reliable products and long-term supply relationships.
@@ -52,7 +52,7 @@ export default function AparaellPage() {
 
           {/* Content Row */}
           <div className="grid border bg-linear-to-b from-[#FFFDF7] to-[#FFFFFF] p-4 rounded-xl border-gray-400 md:grid-cols-2 gap-12 items-center">
-            <div className="w-full h-[360px] rounded-lg overflow-hidden ">
+            <div className="w-full h-[230px] lg:h-[360px] rounded-lg overflow-hidden ">
               <img
                 src="/mattress/mattresses.png"
                 alt="Mattresses"

@@ -25,10 +25,10 @@ const Hero = ({ title, desc, image, background, partnerLogo }: HeroProps) => {
 
         {/* Content */}
         <div className="relative z-10 text-slate-50 text-center max-w-3xl px-4">
-          <h1 className="text-4xl md:text-5xl font-rubik font-[500]">
+          <h1 className="text-3xl md:text-5xl font-rubik font-[500]">
             {title}
           </h1>
-          {desc && <p className="text-lg md:text-xl mt-3 opacity-90">{desc}</p>}
+          {desc && <p className="text-md md:text-xl mt-3 opacity-90">{desc}</p>}
         </div>
       </div>
       {partnerLogo && (
@@ -36,7 +36,7 @@ const Hero = ({ title, desc, image, background, partnerLogo }: HeroProps) => {
           <h3 className="text-xl font-rubik font-[400]">
             Our Sucessfull partners
           </h3>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center gap-4">
             {partnerLogo.map((logo, index) => (
               <div
                 key={index}

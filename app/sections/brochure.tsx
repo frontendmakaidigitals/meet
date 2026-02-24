@@ -1,4 +1,5 @@
 import { Download } from "lucide-react";
+import Link from "next/link";
 const Brochure = ({
   title,
   desc,
@@ -22,10 +23,12 @@ const Brochure = ({
           <div>
             {title}
             {desc}
-            <button className="px-5 mt-5 flex items-center gap-2 py-2 bg-primary text-white">
-              <Download />
-              Download Brochure
-            </button>
+            <Link href={btn} target="_blank">
+              <button className="px-5 mt-5 flex items-center gap-2 py-2 bg-primary text-white">
+                <Download />
+                Download Brochure
+              </button>
+            </Link>
           </div>
         </div>
       </div>

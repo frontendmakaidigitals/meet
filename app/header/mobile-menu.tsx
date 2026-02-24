@@ -21,7 +21,7 @@ const MobileMenu = ({ textColor }: { textColor: string }) => {
     { label: "Home Appliances", href: "/home-appliance" },
     { label: "Batteries", href: "/batteries" },
     { label: "Mattress", href: "/mattress" },
-    { label: "Personal Electronics", href: "/personal-electorincs" },
+    { label: "Personal Electronics", href: "/personal-electronics" },
     { label: "Electric Vehicle", href: "/electric-vehicle" },
     { label: "Travel & Bags", href: "/travel-bags" },
   ];

@@ -31,7 +31,7 @@ const Supplies = ({ link, products, heading }: SuppliesProps) => {
                     ${isEven ? "lg:order-1" : "lg:order-2"}
                     order-1`}
                   >
-                    <div className="relative w-full h-[320px]">
+                    <div className="relative w-full h-[200px] lg:h-[320px]">
                       <Image
                         fill
                         src={product.img}
