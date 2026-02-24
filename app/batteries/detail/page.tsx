@@ -165,9 +165,9 @@ const page = () => {
             </h2>
             <p className="max-w-2xl mx-auto">
               {" "}
-              automotive battery solutions are built for durability and
-              dependable output, making them suitable for daily driving, fleet
-              operations, and demanding mobility environments
+              Battery solutions are built for durability and dependable output,
+              making them suitable for daily driving, fleet operations, and
+              demanding mobility environments
             </p>
           </div>
           <Products num={1} data={automotiveProducts} />
@@ -181,9 +181,9 @@ const page = () => {
             </h2>
             <p className="max-w-2xl mx-auto">
               {" "}
-              automotive battery solutions are built for durability and
-              dependable output, making them suitable for daily driving, fleet
-              operations, and demanding mobility environments
+              battery solutions are built for durability and dependable output,
+              making them suitable for daily driving, fleet operations, and
+              demanding mobility environments
             </p>
           </div>
           <Products num={2} data={leadAcidProducts} />
@@ -198,9 +198,9 @@ const page = () => {
             </h2>
             <p className="max-w-2xl mx-auto">
               {" "}
-              automotive battery solutions are built for durability and
-              dependable output, making them suitable for daily driving, fleet
-              operations, and demanding mobility environments
+              Battery solutions are built for durability and dependable output,
+              making them suitable for daily driving, fleet operations, and
+              demanding mobility environments
             </p>
           </div>
           <Products num={3} data={lithiumProducts} />

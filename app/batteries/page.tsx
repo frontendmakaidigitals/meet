@@ -35,7 +35,8 @@ export default function AparaellPage() {
         titleText=""
         title={
           <h1 className="text-4xl font-rubik md:text-5xl font-[400] text-gray-100 leading-tight tracking-tight">
-            Battery <span className="font-allura text-5xl lg:text-6xl">Solutions</span>
+            Battery{" "}
+            <span className="font-allura text-5xl lg:text-6xl">Solutions</span>
           </h1>
         }
         desc="Middle East Engineering Technologies is a B2B supplier of automotive batteries and energy storage solutions, serving mobility, backup power, and renewable energy applications across regional and global markets."
@@ -43,7 +44,6 @@ export default function AparaellPage() {
         background="/battery/background.jpg"
       />
       <div className="relative pb-5">
-        <div className="lg:w-md h-full absolute bg-[#FFFAEC] -z-10" />
         <Supplies
           link={"/batteries/detail"}
           products={products}
@@ -78,33 +78,32 @@ export default function AparaellPage() {
           title="WHY GLOBAL LEADERS WORK WITH US"
           highlightWords={["GLOBAL", "LEADERS"]}
           image="/apparel/why-choose.jpg"
-          description="MEET delivers engineered buckles, fasteners, and cooling jackets that meet international quality and performance benchmarks. From precision fastening systems to advanced cooling solutions, the portfolio supports both apparel functionality and high-performance workwear demands. Each product is developed with durability, consistency, and real-world application in focus, enabling global brands to maintain reliability across production, supply, and end-use environments.
-."
+          description="MEET delivers advanced power and automotive batteries that meet international quality and performance benchmarks. From reliable energy storage systems to high-efficiency backup solutions, the portfolio supports automotive, industrial, and commercial power demands. Each product is developed with durability, safety, and real-world performance in focus, enabling global brands to maintain reliability across distribution, installation, and end-use environments"
           features={[
             {
               icon: Award,
               title: "Trusted Quality",
-              desc: "Manufactured using carefully selected materials and controlled quality processes to ensure long-term durability and dependable performance in demanding apparel and industrial applications.",
+              desc: "Manufactured using advanced cell technology, high-grade materials, and controlled production processes to ensure long-term durability, safety, and dependable performance across automotive, industrial, and energy storage applications.",
             },
             {
               icon: Layers,
               title: "Wide Product Coverage",
-              desc: "A comprehensive portfolio of buckles, fastening systems, trims, and cooling jackets designed to meet both technical performance needs and aesthetic requirements across diverse segments.",
+              desc: "A comprehensive portfolio of automotive, industrial, and backup power batteries designed to meet diverse capacity, voltage, and performance requirements across multiple sectors and operating conditions.",
             },
             {
               icon: Building2,
               title: "Reliable B2B Supply",
-              desc: "Streamlined sourcing and coordinated production systems that ensure consistent availability, scalable volumes, and strong long-term business partnerships.",
+              desc: "Streamlined sourcing, coordinated production, and structured distribution systems that ensure consistent availability, scalable volumes, and strong long-term business partnerships.",
             },
             {
               icon: Globe,
               title: "Global Market Readiness",
-              desc: "Experience serving international markets ensures alignment with global quality standards, compliance requirements, and the commercial expectations of established brands.",
+              desc: "Experience serving international markets ensures alignment with global quality standards, safety compliance requirements, and the commercial expectations of established brands and distributors.",
             },
           ]}
         />
       </div>
-      <div className="mt-14 lg:mt-0">
+      <div className="mt-14 lg:mt-14">
         <CTASection />
       </div>
     </>

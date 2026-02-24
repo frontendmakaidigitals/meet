@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function CTASection() {
   return (
-    <section className="  mx-auto  max-w-sm lg:max-w-full mb-20">
+    <section className=" mb-20 max-w-sm lg:max-w-full mx-auto">
       <div className="container  flex flex-col rounded-2xl overflow-hidden justify-center items-center py-20 relative  text-center">
         <div className="absolute inset-0">
           <video

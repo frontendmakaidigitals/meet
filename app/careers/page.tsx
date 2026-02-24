@@ -1,6 +1,102 @@
+"use client";
 import Image from "next/image";
-import { Users } from "lucide-react";
+import { User, User2Icon, Users } from "lucide-react";
+import { useState } from "react";
+
+type FormData = {
+  name: string;
+  contact: string;
+  email: string;
+  file: File | null;
+  country: string;
+  message: string;
+};
+
+type FormErrors = Partial<Record<keyof FormData, string>>;
 const CareersPage = () => {
+  const [form, setForm] = useState<FormData>({
+    name: "",
+    contact: "",
+    email: "",
+    file: null,
+    country: "",
+    message: "",
+  });
+
+  const [errors, setErrors] = useState<FormErrors>({});
+  const [submitted, setSubmitted] = useState(false);
+
+  const validate = (): FormErrors => {
+    const newErrors: FormErrors = {};
+
+    if (!form.name.trim()) {
+      newErrors.name = "Name is required.";
+    }
+
+    if (!form.contact.trim()) {
+      newErrors.contact = "Contact number is required.";
+    } else if (!/^\+?[0-9\s\-]{7,15}$/.test(form.contact.trim())) {
+      newErrors.contact = "Enter a valid contact number.";
+    }
+
+    if (!form.email.trim()) {
+      newErrors.email = "Email is required.";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) {
+      newErrors.email = "Enter a valid email address.";
+    }
+
+    if (!form.file) {
+      newErrors.file = "Please upload your CV.";
+    } else {
+      const allowedTypes = [
+        "application/pdf",
+        "application/msword",
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      ];
+      if (!allowedTypes.includes(form.file.type)) {
+        newErrors.file = "Only PDF or Word documents are accepted.";
+      } else if (form.file.size > 5 * 1024 * 1024) {
+        newErrors.file = "File size must be under 5MB.";
+      }
+    }
+
+    if (!form.country || form.country === "") {
+      newErrors.country = "Please select your country.";
+    }
+
+    return newErrors;
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+    // Clear error on change
+    if (errors[name as keyof FormData]) {
+      setErrors((prev) => ({ ...prev, [name]: undefined }));
+    }
+  };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0] ?? null;
+    setForm((prev) => ({ ...prev, file }));
+    if (errors.file) setErrors((prev) => ({ ...prev, file: undefined }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+    setErrors({});
+    setSubmitted(true);
+    // TODO: submit form data to your API here
+  };
   return (
     <main>
       {/* HERO */}
@@ -13,7 +109,7 @@ const CareersPage = () => {
           priority
         />
 
-        <div className="relative z-10 max-w-2xl pb-10">
+        <div className="relative z-10 max-w-4xl pb-10">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-rubik mb-6">
             Join Our Team
           </h1>
@@ -33,12 +129,8 @@ const CareersPage = () => {
           <div className="bg-white rounded-3xl shadow-lg px-8 md:px-12 py-8 flex flex-col md:flex-row gap-8 md:gap-16 w-full max-w-4xl">
             {/* Card 1 - Syed Rizvi */}
             <div className="flex items-center gap-5 flex-1">
-              <div className="flex-shrink-0">
-                <img
-                  src="/careers/user.png"
-                  alt="Syed Rizvi"
-                  className="w-20 h-20 md:w-24 md:h-24 rounded-full object-contain ring-2 ring-gray-100"
-                />
+              <div className="flex-shrink-0 border rounded-full p-3">
+                <User2Icon className="size-20" />
               </div>
               <div className="text-left">
                 <p className="font-semibold text-lg mb-2">Syed Rizvi</p>
@@ -67,12 +159,8 @@ const CareersPage = () => {
 
             {/* Card 2 - Shaik Hassain */}
             <div className="flex items-center gap-5 flex-1">
-              <div className="flex-shrink-0">
-                <img
-                  src="/careers/user.png"
-                  alt="Shaik Hassain"
-                  className="w-20 h-20 md:w-24 md:h-24 rounded-full object-contain ring-2 ring-gray-100"
-                />
+              <div className="flex-shrink-0 border rounded-full p-3">
+                <User2Icon className="size-20" />
               </div>
               <div className="text-left">
                 <p className="font-semibold text-lg mb-2">Shaik Hassain</p>
@@ -132,7 +220,7 @@ const CareersPage = () => {
       <section className="bg-[#FFFCF6] relative mb-[350px] h-[480px] mt-20 px-4 py-20">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <p className="text-2xl md:text-3xl font-rubik mb-3">
-            Fill the form below and upload your updated C.V
+            Fill the form below and upload your updated C.V.
           </p>
           <p className="text-gray-600 text-sm md:text-base">
             It doesn’t matter if we have a vacancy or not — if you are talented,
@@ -141,42 +229,140 @@ const CareersPage = () => {
         </div>
 
         {/* FORM */}
-        <div className=" lg:absolute left-1/2 lg:-translate-x-1/2 bottom-0 lg:translate-y-1/2 ">
-          <form className="bg-white border rounded-2xl p-6 md:p-10 w-full max-w-lg">
-            <div className="space-y-4 text-sm">
-              <input
-                type="text"
-                placeholder="Name*"
-                className="w-full border rounded px-3 py-2"
-              />
-              <input
-                type="text"
-                placeholder="Contact Number*"
-                className="w-full border rounded px-3 py-2"
-              />
-              <input
-                type="email"
-                placeholder="Email*"
-                className="w-full border rounded px-3 py-2"
-              />
-              <input type="file" className="w-full border rounded px-3 py-2" />
-              <select className="w-full border rounded px-3 py-2">
-                <option>Your Country</option>
-              </select>
-              <textarea
-                placeholder="Message"
-                rows={4}
-                className="w-full border rounded px-3 py-2"
-              />
-
-              <button
-                type="submit"
-                className="block mx-auto mt-6 bg-yellow-500 hover:bg-yellow-600 transition text-white px-6 py-2 rounded-md text-sm"
-              >
-                Submit
-              </button>
+        <div className=" lg:absolute left-1/2 lg:min-w-xl lg:-translate-x-1/2 bottom-0 lg:translate-y-1/2 ">
+          {submitted ? (
+            <div className="bg-white border rounded-2xl p-10 w-full max-w-lg text-center">
+              <div className="text-4xl mb-4">🎉</div>
+              <h3 className="text-xl font-semibold mb-2">
+                Application Submitted!
+              </h3>
+              <p className="text-gray-500 text-sm">
+                Thank you for your interest. We'll be in touch soon.
+              </p>
             </div>
-          </form>
+          ) : (
+            <form
+              onSubmit={handleSubmit}
+              noValidate
+              className="bg-white border rounded-2xl p-6 md:p-10 w-full max-w-lg"
+            >
+              <div className="space-y-4 text-sm">
+                {/* Name */}
+                <div>
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Name*"
+                    value={form.name}
+                    onChange={handleChange}
+                    className={`w-full border rounded px-3 py-2 outline-none focus:ring-2 focus:ring-yellow-400 ${
+                      errors.name ? "border-red-400 bg-red-50" : ""
+                    }`}
+                  />
+                  {errors.name && (
+                    <p className="text-red-500 text-xs mt-1">{errors.name}</p>
+                  )}
+                </div>
+
+                {/* Contact */}
+                <div>
+                  <input
+                    type="text"
+                    name="contact"
+                    placeholder="Contact Number*"
+                    value={form.contact}
+                    onChange={handleChange}
+                    className={`w-full border rounded px-3 py-2 outline-none focus:ring-2 focus:ring-yellow-400 ${
+                      errors.contact ? "border-red-400 bg-red-50" : ""
+                    }`}
+                  />
+                  {errors.contact && (
+                    <p className="text-red-500 text-xs mt-1">
+                      {errors.contact}
+                    </p>
+                  )}
+                </div>
+
+                {/* Email */}
+                <div>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email*"
+                    value={form.email}
+                    onChange={handleChange}
+                    className={`w-full border rounded px-3 py-2 outline-none focus:ring-2 focus:ring-yellow-400 ${
+                      errors.email ? "border-red-400 bg-red-50" : ""
+                    }`}
+                  />
+                  {errors.email && (
+                    <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+                  )}
+                </div>
+
+                {/* File */}
+                <div>
+                  <input
+                    type="file"
+                    name="file"
+                    accept=".pdf,.doc,.docx"
+                    onChange={handleFileChange}
+                    className={`w-full border rounded px-3 py-2 ${
+                      errors.file ? "border-red-400 bg-red-50" : ""
+                    }`}
+                  />
+                  <p className="text-gray-400 text-xs mt-1">
+                    Accepted: PDF, DOC, DOCX — max 5MB
+                  </p>
+                  {errors.file && (
+                    <p className="text-red-500 text-xs mt-1">{errors.file}</p>
+                  )}
+                </div>
+
+                {/* Country */}
+                <div>
+                  <select
+                    name="country"
+                    value={form.country}
+                    onChange={handleChange}
+                    className={`w-full border rounded px-3 py-2 outline-none focus:ring-2 focus:ring-yellow-400 ${
+                      errors.country ? "border-red-400 bg-red-50" : ""
+                    }`}
+                  >
+                    <option value="">Your Country*</option>
+                    <option value="UAE">UAE</option>
+                    <option value="India">India</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="Other">Other</option>
+                  </select>
+                  {errors.country && (
+                    <p className="text-red-500 text-xs mt-1">
+                      {errors.country}
+                    </p>
+                  )}
+                </div>
+
+                {/* Message */}
+                <div>
+                  <textarea
+                    name="message"
+                    placeholder="Message"
+                    rows={4}
+                    value={form.message}
+                    onChange={handleChange}
+                    className="w-full border rounded px-3 py-2 outline-none focus:ring-2 focus:ring-yellow-400"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="block mx-auto mt-6 bg-yellow-500 hover:bg-yellow-600 transition text-white px-6 py-2 rounded-md text-sm"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          )}
         </div>
       </section>
     </main>

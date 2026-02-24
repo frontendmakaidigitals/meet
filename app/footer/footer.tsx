@@ -13,8 +13,8 @@ const Footer = () => {
             <Logo src={"/Logo/logo-light.png"} className="mb-5" />
 
             <p className="text-sm leading-relaxed mb-6">
-              Middle East Engineering Technologies (MEET) is a Dubai-based B2B
-              trading and solutions company and a subsidiary of ME Universal.
+              Middle East Engineering Technologies is a Dubai-based B2B trading
+              and solutions company and a subsidiary of ME Universal.
               <br />
               <br />
               We serve businesses across globally with products focused on
@@ -40,7 +40,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-yellow-500 text-xs tracking-widest mb-6">
+            <h4 className="text-primary text-xs tracking-widest mb-6">
               QUICK LINKS
             </h4>
             <ul className="space-y-3 text-sm">
@@ -64,7 +64,7 @@ const Footer = () => {
 
           {/* Legal Links */}
           <div>
-            <h4 className="text-yellow-500 text-xs tracking-widest mb-6">
+            <h4 className="text-primary text-xs tracking-widest mb-6">
               LEGAL LINKS
             </h4>
             <ul className="space-y-3 text-sm">
@@ -85,13 +85,13 @@ const Footer = () => {
           <div className="text-sm space-y-6">
             {/* Phone */}
             <div className="flex items-center gap-3">
-              <Phone size={16} className="text-yellow-500" />
+              <Phone size={16} className="text-primary" />
               <span>+971 50 1483346</span>
             </div>
 
             {/* Email */}
             <div className="flex items-center gap-3">
-              <Mail size={16} className="text-yellow-500" />
+              <Mail size={16} className="text-primary" />
               <a
                 href="mailto:info@meuniversal.com"
                 className="hover:text-yellow-500 transition"
@@ -103,7 +103,7 @@ const Footer = () => {
             {/* Head Office */}
             <div className="flex items-start gap-3">
               <div>
-                <MapPin size={16} className="text-yellow-500 mt-1" />
+                <MapPin size={16} className="text-primary mt-1" />
               </div>
               <p className="leading-relaxed">
                 Office 7, Bel Resheed Building 2, Nad Al Hamar, Deira Dubai,
@@ -114,7 +114,7 @@ const Footer = () => {
             {/* APAC Office */}
             <div className="flex items-start gap-3">
               <div>
-                <MapPin size={16} className="text-yellow-500 mt-1" />
+                <MapPin size={16} className="text-primary mt-1" />
               </div>
               <p className="leading-relaxed">
                 Ground Floor, Network Bldg, Road No 9, Jubilee Hills, Hyderabad

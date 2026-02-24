@@ -17,7 +17,7 @@ const Mission = () => {
             {/* Dark overlay */}
             <div className="absolute inset-0 bg-black/40" />
             {/* Centered text */}
-            <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
+            <div className="relative z-10 flex flex-col items-center justify-end pb-12 h-full text-center px-6">
               <h2 className="text-2xl lg:text-4xl font-rubik uppercase font-light text-white mb-4">
                 Our Mission
               </h2>

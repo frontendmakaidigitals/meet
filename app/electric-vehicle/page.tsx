@@ -9,14 +9,15 @@ export default function EngineeringTechnologiesPage() {
     {
       img: "/ev/scooter.png",
       label: <h3 className="text-3xl font-rubik"> EV Scooters </h3>,
-      desc: " High-performance electric bikes designed for reliable urban commuting, fleet operations, and commercial mobility. Engineered for B2B partners, delivery services, and corporate fleets, these bikes combine durable construction, efficient battery performance, and low maintenance requirements. Ideal for daily use in demanding environments while supporting cleaner and cost-effective transportation.",
+      desc: " Efficient electric scooters developed for last-mile delivery, corporate fleets, and commercial mobility solutions. Designed for reliability, ease of use, and practical daily operation, these scooters offer consistent performance, low operating costs, and environmentally friendly transport. Built to handle frequent use without compromising safety, comfort, or efficiency.",
       link: "/electric-vehicle/detail",
       cardBg: "bg-linear-to-b from-[#FFFDF7] to-[#FFFFFF]",
     },
     {
       img: "/ev/bike.png",
       label: <h3 className="text-3xl font-rubik">EV Bikes</h3>,
-      desc: " Efficient electric scooters developed for last-mile delivery, corporate fleets, and commercial mobility solutions. Designed for reliability, ease of use, and practical daily operation, these scooters offer consistent performance, low operating costs, and environmentally friendly transport. Built to handle frequent use without compromising safety, comfort, or efficiency.",
+      desc: " High-performance electric bikes designed for reliable urban commuting, fleet operations, and commercial mobility. Engineered for B2B partners, delivery services, and corporate fleets, these bikes combine durable construction, efficient battery performance, and low maintenance requirements. Ideal for daily use in demanding environments while supporting cleaner and cost-effective transportation.",
+
       link: "/electric-vehicle/detail",
       cardBg: "bg-linear-to-b from-[#FFFDF7] to-[#FFFFFF]",
     },
@@ -46,7 +47,8 @@ export default function EngineeringTechnologiesPage() {
           link={"/electric-vehicle/detail"}
           heading={
             <h2 className="text-4xl font-rubik text-center">
-              Our Electric Vehicle Products
+              Our <span className="text-blue-500">Electric Vehicle </span>{" "}
+              Products
             </h2>
           }
           products={products}

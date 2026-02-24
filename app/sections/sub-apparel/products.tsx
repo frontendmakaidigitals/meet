@@ -5,11 +5,13 @@ const Products = ({ data, num }: { data: any; num?: number }) => {
       <div className="container">
         {data.map((item: any, idx: number) => (
           <div key={idx} className="pb-5">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-2">
+            <div
+              className={` ${num === 2 ? "flex flex-col lg:flex-row justify-center" : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"} gap-6 md:gap-2`}
+            >
               {item.types.map((type: any, idx: number) => (
                 <div
                   key={idx}
-                  className="group relative   rounded-xl  overflow-hidden transition-all duration-300 hover:shadow-md border border-slate-200"
+                  className="group relative rounded-xl overflow-hidden transition-all duration-300 hover:shadow-md border border-slate-200"
                 >
                   {/* Image Container */}
                   <div className="h-60  flex items-center justify-center p-2">

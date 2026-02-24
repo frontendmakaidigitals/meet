@@ -12,28 +12,52 @@ export default function AparaellPage() {
         titleText=""
         title={
           <h1 className="text-4xl font-rubik md:text-5xl font-[400] text-black leading-tight tracking-tight">
-            Sleep & <span className="font-allura text-5xl lg:text-6xl">Beddings</span>
+            Sleep &{" "}
+            <span className="font-allura text-5xl lg:text-6xl">Beddings</span>
           </h1>
         }
         desc="At Middle East Engineering Technologies , we supply sleep and bedding products designed to improve comfort, support, and everyday sleep quality. We work with B2B partners across global markets, focusing on reliable products and long-term supply relationships.
 "
-        image="/mattress/banner.png"
+        image="/mattress/mattress-1.png"
         background="/mattress/background.jpg"
       />
 
-      <section className="text-center container font-inter mt-14 mb-2">
+      <section className="text-center text-lg container font-inter mt-14 mb-2 space-y-4">
         <p>
-          Our sleep and bedding solutions are designed to meet comfort
-          expectations, durability standards, and operational needs across
-          residential and commercial projects. From foam and spring mattresses
-          to hybrid designs, each product is crafted to provide consistent
-          support and long-term performance.
+          Our sleep and bedding solutions are designed to meet{" "}
+          <span className="text-primary font-semibold">
+            comfort expectations
+          </span>
+          ,{" "}
+          <span className="text-primary font-semibold">
+            durability standards
+          </span>
+          , and{" "}
+          <span className="text-primary font-semibold">operational needs</span>{" "}
+          across residential and commercial projects. From foam and spring
+          mattresses to hybrid designs, each product is crafted to provide{" "}
+          <span className="text-primary font-semibold">consistent support</span>{" "}
+          and{" "}
+          <span className="text-primary font-semibold">
+            long-term performance
+          </span>
+          .
         </p>
+
         <p>
           Built for practical use in diverse environments, these mattresses
-          combine ergonomic design, premium materials, and reliable comfort.
-          They are ideal for homes, hotels, and commercial spaces, providing
-          dependable solutions that support restful sleep and daily use.
+          combine{" "}
+          <span className="text-primary font-semibold">ergonomic design</span>,{" "}
+          <span className="text-primary font-semibold">premium materials</span>,
+          and{" "}
+          <span className="text-primary font-semibold">reliable comfort</span>.
+          They are ideal for homes, hotels, and commercial spaces, providing{" "}
+          <span className="text-primary font-semibold">
+            dependable solutions
+          </span>{" "}
+          that support{" "}
+          <span className="text-primary font-semibold">restful sleep</span> and
+          daily use.
         </p>
       </section>
       <div className="relative lg:pb-20">
@@ -41,7 +65,8 @@ export default function AparaellPage() {
           {/* Heading */}
           <div className="max-w-3xl mx-auto mb-12">
             <h2 className="text-4xl text-center font-rubik mb-4">
-              Our Sleep & Beddings Product Range
+              Our <span className="text-primary">Sleep & Beddings</span> Product
+              Range
             </h2>
             <p className="text-gray-600 text-center leading-relaxed">
               We supply American engineered mattresses designed to support body

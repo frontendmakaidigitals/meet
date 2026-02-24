@@ -1,6 +1,7 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-
+import { usePathname } from "next/navigation";
 type SuppliesProps = {
   link: string;
   products: any[];
@@ -9,6 +10,7 @@ type SuppliesProps = {
 };
 
 const Supplies = ({ link, products, heading }: SuppliesProps) => {
+  const pathname = usePathname();
   return (
     <section className="py-20">
       <div className="container mx-auto px-4 space-y-12">
@@ -24,14 +26,18 @@ const Supplies = ({ link, products, heading }: SuppliesProps) => {
                 key={index}
                 className={`rounded-3xl border border-gray-400 overflow-hidden ${product.cardBg}`}
               >
-                <div className="grid lg:grid-cols-2 items-center gap-10 p-8 md:p-14">
+                <div
+                  className={`grid lg:grid-cols-2 items-center gap-10  ${pathname.toLowerCase() === "/batteries" ? "p-8" : "p-8 md:p-14"}`}
+                >
                   {/* ===== IMAGE ===== */}
                   <div
                     className={`relative flex items-center justify-center
                     ${isEven ? "lg:order-1" : "lg:order-2"}
                     order-1`}
                   >
-                    <div className="relative w-full h-[200px] lg:h-[320px]">
+                    <div
+                      className={`relative  ${pathname.toLowerCase() === "/batteries" ? "bg-gray-100 p-7 rounded-2xl" : ""} w-full h-[200px] lg:h-[320px]`}
+                    >
                       <Image
                         fill
                         src={product.img}

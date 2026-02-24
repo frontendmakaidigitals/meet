@@ -11,27 +11,54 @@ export default function AparaellPage() {
         logo={["/partner-logo/YAMAGO.png"]}
         titleText=""
         title={
-          <h1 className="text-4xl font-rubik md:text-5xl font-[400] text-gray-800 leading-tight tracking-tight">
-            Travel Bags<span className="font-allura text-5xl lg:text-6xl"> & </span>Luggage
+          <h1 className="text-4xl font-rubik lg:text-5xl font-[400] text-gray-800 leading-tight tracking-tight">
+            Travel Bags
+            <span className="font-allura text-5xl lg:text-6xl"> & </span>Luggage
           </h1>
         }
         desc="At Middle East Engineering Technologies , we supply travel bags and luggage designed for durability, functionality, and everyday travel needs. We work closely with B2B partners to support consistent quality and long-term supply across global markets."
         image="/travel-bags/banner-2.png"
         background="/travel-bags/background.jpg"
       />
-      <section className="container font-inter text-center mt-20 mb-2">
+      <section className="container text-lg font-inter text-center mt-20 mb-2 space-y-4">
         <p>
-          Our travel bags and luggage are designed for durability,
-          functionality, and long-lasting performance across personal,
-          corporate, and commercial travel. From backpacks to rolling suitcases,
-          each product is built to withstand frequent use while keeping
-          belongings organized and protected.
+          Our travel bags and luggage are designed for{" "}
+          <span className="text-primary font-semibold">durability</span>,{" "}
+          <span className="text-primary font-semibold">functionality</span>, and{" "}
+          <span className="text-primary font-semibold">
+            long-lasting performance
+          </span>{" "}
+          across personal, corporate, and commercial travel. From backpacks to
+          rolling suitcases, each product is built to withstand{" "}
+          <span className="text-primary font-semibold">frequent use</span> while
+          keeping belongings{" "}
+          <span className="text-primary font-semibold">
+            organized and protected
+          </span>
+          .
         </p>
+
         <p>
-          Engineered for practical use in diverse conditions, these bags combine
-          robust materials, secure construction, and user-friendly design. They
-          are ideal for business travel, leisure, and logistics, providing
-          reliable solutions for daily and long-distance journeys.
+          Engineered for practical use in diverse conditions, these bags combine{" "}
+          <span className="text-primary font-semibold">robust materials</span>,{" "}
+          <span className="text-primary font-semibold">
+            secure construction
+          </span>
+          , and{" "}
+          <span className="text-primary font-semibold">
+            user-friendly design
+          </span>
+          . They are ideal for{" "}
+          <span className="text-primary font-semibold">business travel</span>,{" "}
+          <span className="text-primary font-semibold">leisure</span>, and{" "}
+          <span className="text-primary font-semibold">logistics</span>,
+          providing{" "}
+          <span className="text-primary font-semibold">reliable solutions</span>{" "}
+          for{" "}
+          <span className="text-primary font-semibold">
+            daily and long-distance journeys
+          </span>
+          .
         </p>
       </section>
       <div className="relative lg:pb-20 ">
@@ -40,7 +67,10 @@ export default function AparaellPage() {
             <div>
               <h2 className="text-4xl font-rubik">
                 {" "}
-                Our Travel Bags & Luggage Product Range
+                Our Travel <span className="text-primary">
+                  Bags & Luggage
+                </span>{" "}
+                Product Range
               </h2>
               <p className="mt-5 mb-3">
                 MEET supply travel bags designed for personal travel, retail
@@ -55,10 +85,10 @@ export default function AparaellPage() {
               </p>
             </div>
 
-            <div className="relative h-[350px]">
+            <div className="relative h-[260px] lg:h-[350px]">
               <Image
                 fill
-                src={"/travel-bags/trave-bags.webp"}
+                src={"/travel-bags/trave-bags.png"}
                 className="object-contain"
                 alt={""}
               />

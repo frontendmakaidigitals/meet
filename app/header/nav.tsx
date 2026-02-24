@@ -94,7 +94,9 @@ const Nav = ({ path, textColor }: { path: string; textColor: string }) => {
             key={idx}
             href={link.href}
             className={`hover:text-primary transition ${textColor} ${
-              path.toLowerCase() === link.href.toLowerCase() ? "underline" : ""
+              path.toLowerCase() === link.href.toLowerCase()
+                ? "underline text-yellow-500"
+                : ""
             }`}
           >
             {link.label}

@@ -45,7 +45,8 @@ export default function AparaellPage() {
       <Hero
         title={
           <h1 className="text-4xl font-rubik md:text-5xl font-[400] text-gray-900 leading-tight tracking-tight">
-            Home <span className="font-allura text-5xl lg:text-6xl">Appliances</span>
+            Home{" "}
+            <span className="font-allura text-5xl lg:text-6xl">Appliances</span>
           </h1>
         }
         logo={[
@@ -60,20 +61,38 @@ export default function AparaellPage() {
       />
 
       <section className="container font-inter text-center mt-20 mb-2">
-        <p>
-          Our home appliances are designed for efficiency, reliability, and
-          everyday convenience across residential, commercial, and project-based
-          applications. From refrigerators and dishwashers to washers, dryers,
-          and water heaters, each product is engineered to simplify daily
-          routines while delivering consistent performance and long-term
-          durability.
+        <p className="text-lg">
+          Our home appliances are designed for{" "}
+          <span className="text-primary font-medium">efficiency</span>,{" "}
+          <span className="text-primary font-medium">reliability</span>, and{" "}
+          <span className="text-primary font-medium">everyday convenience</span>{" "}
+          across residential, commercial, and project-based applications. From{" "}
+          <span className="text-primary font-medium">refrigerators</span> and{" "}
+          <span className="text-primary font-medium">dishwashers</span> to{" "}
+          <span className="text-primary font-medium">washers</span>,{" "}
+          <span className="text-primary font-medium">dryers</span>, and{" "}
+          <span className="text-primary font-medium">water heaters</span>, each
+          product is engineered to simplify daily routines while delivering{" "}
+          <span className="text-primary font-medium">
+            consistent performance
+          </span>{" "}
+          and{" "}
+          <span className="text-primary font-medium">long-term durability</span>
+          .
         </p>
-        <p>
+
+        <p className="mt-4">
           Built for practical use in diverse environments, these appliances
-          combine energy efficiency, safety, and user-friendly functionality.
-          They are ideal for modern homes, offices, and commercial spaces,
-          providing dependable solutions that support daily living and
-          operational needs..
+          combine{" "}
+          <span className="text-primary font-medium">energy efficiency</span>,{" "}
+          <span className="text-primary font-medium">safety</span>, and{" "}
+          <span className="text-primary font-medium">
+            user-friendly functionality
+          </span>
+          . They are ideal for modern homes, offices, and commercial spaces,
+          providing{" "}
+          <span className="text-primary font-medium">dependable solutions</span>{" "}
+          that support daily living and operational needs.
         </p>
       </section>
       <div className="relative  ">
@@ -124,9 +143,7 @@ export default function AparaellPage() {
               <>
                 Discover essential home appliances designed for efficiency,
                 durability, and everyday convenience. From refrigerators and
-                dishwashers to washers, dryers, and water heaters, these
-                products support residential, commercial, and project-based
-                needs.
+                dishwashers to washers, dryers, and wat
                 <br />
                 <br />
                 The brochure outlines product specifications, energy efficiency
@@ -140,25 +157,25 @@ export default function AparaellPage() {
         </section>
         <Industries
           image="/apparel/industry.jpg"
-          desc="Our apparel solutions include both functional components and cooling workwear designed to improve fit, safety, and comfort in demanding environments."
+          desc="MEET supplies home appliances to a wide range of B2B clients, including:"
           items={[
             {
-              label: "Outdoor and sportswear",
+              label: "Appliance brands and private labels",
             },
             {
-              label: "Fashion Garments",
+              label: "Distributors and wholesalers",
             },
             {
-              label: "Footwear",
+              label: " Retail chains",
             },
             {
-              label: "Bags and Backpacks",
+              label: "Real estate and housing projects",
             },
             {
-              label: "Safety and Working Clothes",
+              label: "Hospitality and serviced apartments",
             },
             {
-              label: "Apparel Accessories",
+              label: "Government and institutional buyers",
             },
           ]}
         />
@@ -181,7 +198,7 @@ export default function AparaellPage() {
             {
               icon: Building2,
               title: "Reliable B2B Supply",
-              desc: "Structured sourcing and coordinated production processes that support consistent availability, scalable volumes, and long-term partnerships for project and commercial supply needs.",
+              desc: "Reliable B2B Supply Structured sourcing and coordinated production processes that support consistent availability, scalable volumes, and long-term partnerships for project and commercial supply needs.",
             },
             {
               icon: Globe,
@@ -191,7 +208,7 @@ export default function AparaellPage() {
           ]}
         />
       </div>
-      <div className="mt-16 lg:mt-5">
+      <div className="mt-16 lg:mt-16">
         <CTASection />
       </div>
     </>

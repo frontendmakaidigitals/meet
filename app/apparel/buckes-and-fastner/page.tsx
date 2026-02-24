@@ -153,19 +153,6 @@ const fasteners = [
         usage: "Used in apparel, bags, and accessories.",
         img: "/apparel/detail/buckels/eyelets.jpg",
       },
-      {
-        id: 7,
-        name: "Snaps & Small Fasteners",
-        usage: "Used in clothing panels, accessories, and light garments.",
-        img: "/apparel/detail/buckels/snaps.jpg",
-      },
-      {
-        id: 8,
-        name: "GN Series & Special Fasteners",
-        usage:
-          "Used in custom designs, technical apparel, and special applications.",
-        img: "/apparel/detail/buckels/special-fastners.jpg",
-      },
     ],
     brochure: null,
     images: [],
@@ -191,7 +178,7 @@ const page = () => {
   return (
     <div>
       <Hero
-        title="Buckles & Fasteners"
+        title="Buckles"
         desc="Secure fastening solutions for apparel and gear"
         image="/apparel/detail/banner.jpg"
         background="/apparel/detail/apparel-bg.jpg"
@@ -274,6 +261,15 @@ const page = () => {
             fill
             className="object-cover"
           />
+          <div className="absolute inset-0 w-full h-full bg-black/70" />
+
+          <div className="flex relative z-10 text-white flex-col pb-18 justify-end h-full items-center">
+            <h2 className="text-4xl font-rubik mb-2 font-[600]">Fastner</h2>
+            <p>
+              We supply a comprehensive range of high-quality fasteners for
+              industrial and commercial applications.
+            </p>
+          </div>
         </div>
       </section>
       <section className="space-y-3 container mt-10 mb-6 font-inter text-lg text-center">
@@ -356,15 +352,17 @@ const page = () => {
           }
           desc={
             <>
-              Vorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-              turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
-              nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
-              tellus elit sed risus. Maecenas eget condimentum velit, sit amet
-              feugiat lectus.
+              Discover engineered plastic and metal buckles designed to deliver
+              strength, secure locking, and long-term durability across apparel,
+              footwear, tactical gear, and industrial applications. Built to
+              withstand repeated use and demanding environments, these buckles
+              combine structural reliability with clean finishing suitable for
+              large-scale production.
               <br />
-              Class aptent taciti sociosqu ad litora torquent per conubia
-              nostra, per inceptos himenaeos. Praesent auctor purus luctus enim
-              egestas, ac scelerisque ante pulvinar.
+              The brochure outlines material options, load capacities, design
+              variations, and application guidance to help you select the right
+              buckle solutions for both functional performance and product
+              aesthetics.
             </>
           }
           btn={"/apparel/NIFCO Apparel Range.pdf"}

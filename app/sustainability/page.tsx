@@ -74,7 +74,7 @@ const page = () => {
             className="object-cover"
             fill
           />
-          <div className="flex relative h-full flex-col items-center justify-end pb-16 gap-4">
+          <div className="flex relative h-full flex-col items-center justify-center  gap-4">
             <h3 className="text-2xl md:text-4xl text-center lg:text-start font-rubik text-white">
               OUR PLANET. OUR RESPONSIBILITY.
             </h3>

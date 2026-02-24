@@ -63,7 +63,7 @@ const SplitHero = ({
               </button>
             </Link>
             {logo && (
-              <div className="lg:flex absolute hidden bottom-0 left-5 items-center gap-4">
+              <div className="lg:flex absolute hidden -bottom-5 left-5 items-center gap-4">
                 <h3
                   className={`font-rubik ${!dark ? "text-black" : "text-white"}`}
                 >

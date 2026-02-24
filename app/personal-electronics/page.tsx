@@ -53,7 +53,10 @@ export default function AparaellPage() {
         titleText=""
         title={
           <h1 className="text-4xl font-rubik lg:text-5xl font-[400] text-gray-100 leading-tight tracking-tight">
-            Personal <span className="font-allura text-5xl lg:text-6xl">Electronics</span>
+            Personal{" "}
+            <span className="font-allura text-5xl lg:text-6xl">
+              Electronics
+            </span>
           </h1>
         }
         desc="Middle East Engineering Technologies  supplies essential personal electronic devices designed for everyday use, retail distribution, and bulk business requirements.
@@ -61,20 +64,43 @@ We focus on reliable products, consistent quality, and long-term B2B partnership
         image="/electronics/banner-2.png"
         background="/electronics/background.jpg"
       />
-      <section className="container font-inter text-center mt-20 mb-2">
+      <section className="container text-lg font-inter text-center mt-20 mb-2 space-y-4">
         <p>
-          Our personal electronic devices are selected for reliability, ease of
-          use, and consistent performance in both residential and commercial
-          applications. From daily-use gadgets to professional tools, each
-          product is engineered to meet practical requirements while delivering
-          long-term durability.
+          Our personal electronic devices are selected for{" "}
+          <span className="text-primary font-semibold">reliability</span>,{" "}
+          <span className="text-primary font-semibold">ease of use</span>, and{" "}
+          <span className="text-primary font-semibold">
+            consistent performance
+          </span>{" "}
+          in both residential and commercial applications. From daily-use
+          gadgets to professional tools, each product is engineered to meet{" "}
+          <span className="text-primary font-semibold">
+            practical requirements
+          </span>{" "}
+          while delivering{" "}
+          <span className="text-primary font-semibold">
+            long-term durability
+          </span>
+          .
         </p>
+
         <p>
           Built for practical use across various environments, these electronics
-          combine functional design, dependable performance, and safe operation.
+          combine{" "}
+          <span className="text-primary font-semibold">functional design</span>,{" "}
+          <span className="text-primary font-semibold">
+            dependable performance
+          </span>
+          , and{" "}
+          <span className="text-primary font-semibold">safe operation</span>.
           They are ideal for homes, offices, and professional settings,
-          providing trusted solutions that support everyday efficiency and
-          productivity
+          providing{" "}
+          <span className="text-primary font-semibold">trusted solutions</span>{" "}
+          that support{" "}
+          <span className="text-primary font-semibold">
+            everyday efficiency
+          </span>{" "}
+          and <span className="text-primary font-semibold">productivity</span>.
         </p>
       </section>
       <div className="relative lg:pb-16">

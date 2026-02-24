@@ -26,7 +26,7 @@ const OurPurpose = () => {
     <section className="py-4 bg-white">
       <div className="container">
         {/* Heading */}
-        <h2 className="text-center text-4xl lg:text-5xl font-rubik uppercase font-light text-gray-900 mb-10">
+        <h2 className="text-center text-4xl lg:text-4xl font-rubik uppercase font-light text-gray-900 mb-6">
           Our Purpose
         </h2>
 
@@ -42,7 +42,7 @@ const OurPurpose = () => {
           {/* Dark overlay */}
           <div className="absolute inset-0 bg-black/10" />
           {/* Quote text */}
-          <div className="relative z-10 flex items-center justify-center h-full px-10 text-center">
+          <div className="relative pb-16 z-10 flex items-end justify-center h-full px-10 text-center">
             <p className="text-white text-md lg:text-2xl font-semibold leading-snug max-w-2xl">
               To connect businesses with practical, future-ready solutions that
               improve performance while supporting responsible growth.
