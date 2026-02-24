@@ -2,8 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 const Sustainability = () => {
   return (
-    <section className=" pt-12 pb-12 lg:pb-24 max-w-sm lg:max-w-full mx-auto bg-white">
-      <div className="relative container  w-full rounded-3xl overflow-hidden h-[380px] lg:h-[480px]">
+    <section className=" pt-12 pb-12 lg:pb-24  lg:max-w-full mx-auto bg-white">
+      <div className="relative container  w-full lg:rounded-3xl overflow-hidden h-[380px] lg:h-[480px]">
         <Image
           src="/about/sustainability/img.jpg"
           alt="Sustainability"

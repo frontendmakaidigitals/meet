@@ -100,10 +100,9 @@ const page = () => {
           reliability.
         </p>
       </div>
-
-      <Sustainability />
-
-      <CTASection />
+      <div className="mt-20">
+        <CTASection />
+      </div>
     </div>
   );
 };

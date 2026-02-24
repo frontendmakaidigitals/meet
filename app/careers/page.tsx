@@ -111,16 +111,14 @@ const CareersPage = () => {
 
         <div className="relative z-10 max-w-4xl pb-10">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-rubik mb-6">
-            Join Our Team
+            Join Our <span className="text-primary">Team</span>
           </h1>
           <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-            Be part of a dynamic and growing organization where innovation,
-            collaboration, and excellence drive everything we do. We believe in
-            empowering our people, fostering creativity, and creating
-            opportunities for professional growth. If you're passionate,
-            motivated, and ready to make an impact, we’d love to have you on our
-            journey toward building meaningful solutions and lasting success
-            together.
+            Be part of a dynamic, growing organization where innovation,
+            collaboration, and excellence drive everything we do. We empower our
+            people, nurture creativity, and offer real opportunities for
+            professional growth. If you’re passionate and ready to make an
+            impact, we’d love to have you join our journey.
           </p>
         </div>
 
@@ -191,9 +189,9 @@ const CareersPage = () => {
       </section>
 
       {/* CAREER OPPORTUNITIES */}
-      <section className="container mx-auto mt-44 md:mt-32 px-4 text-center">
+      <section className="container mx-auto mt-54 md:mt-32 px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-rubik mb-6">
-          Career Opportunities
+          <span className="text-primary">Career</span> Opportunities
         </h2>
 
         <div className="max-w-5xl mx-auto text-left text-gray-700 space-y-4 ">
