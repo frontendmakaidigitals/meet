@@ -37,7 +37,7 @@ export default function EngineeringTechnologiesPage() {
           </h1>
         }
         desc="Middle East Engineering Technologies delivers reliable electric scooters and bikes to global fleet operators, commercial partners, and B2B mobility clients."
-        image="/ev/banner-4.png"
+        image="/ev/banner-5.png"
         background="/ev/background.jpg"
       />
 
