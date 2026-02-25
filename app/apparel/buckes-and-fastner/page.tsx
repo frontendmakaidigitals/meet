@@ -12,11 +12,11 @@ const buckles = [
     subLabel: "Secure fastening solutions for apparel and gear",
     desc: (
       <>
-        Middle East Engineering Technologies (MEET) supplies high-quality
-        buckles to global companies like NIFCO Japan, a globally recognised
-        leader in fastening technology. Our buckles are developed to meet
-        international quality standards and are used across a wide range of
-        apparel and performance products.
+        Middle East Engineering Technologies supplies high-quality buckles to
+        global companies like NIFCO Japan, a globally recognised leader in
+        fastening technology. Our buckles are developed to meet international
+        quality standards and are used across a wide range of apparel and
+        performance products.
         <br />
         <br />
         Buckles are used to connect straps, adjust fit, and allow quick opening
@@ -100,10 +100,10 @@ const fasteners = [
     subLabel: "Small components that control cords, laces, and attachments",
     desc: (
       <>
-        Middle East Engineering Technologies (MEET) also supplies fasteners to
-        NIFCO Japan for use in apparel, footwear, and accessory applications.
-        These components play a critical role in the function, comfort, and
-        finish of everyday and technical products.
+        Middle East Engineering Technologies also supplies fasteners to NIFCO
+        Japan for use in apparel, footwear, and accessory applications. These
+        components play a critical role in the function, comfort, and finish of
+        everyday and technical products.
         <br />
         <br />
         Fasteners are used to lock cords, guide laces, finish edges, or attach

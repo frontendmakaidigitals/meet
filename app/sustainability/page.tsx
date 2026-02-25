@@ -18,7 +18,7 @@ const page = () => {
             Sustainability
           </h1>
           <p className="font-inter ">
-            Middle East Engineering Technologies (MEET) integrates
+            Middle East Engineering Technologies integrates
             sustainability into every aspect of business. From product selection
             to partner engagement, we focus on responsible choices that reduce
             energy use, promote cleaner mobility, and support efficient resource

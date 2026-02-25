@@ -14,9 +14,9 @@ const automotiveProducts = [
     desc: (
       <>
         Automotive batteries supplied by Middle East Engineering Technologies
-        (MEET) are designed to deliver reliable starting power and stable
-        performance for daily mobility needs. We support both conventional
-        vehicles and electric mobility applications through trusted brands.
+        are designed to deliver reliable starting power and stable performance
+        for daily mobility needs. We support both conventional vehicles and
+        electric mobility applications through trusted brands.
         <br />
         <br />
         Middle East Engineering Technologies supplies high-quality batteries of

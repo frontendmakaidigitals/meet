@@ -10,9 +10,9 @@ const jacket = [
     subLabel: "Advanced cooling wear for hot working environments",
     desc: (
       <>
-        Middle East Engineering Technologies (MEET) supplies selected Japanese
-        cooling jackets designed to help reduce heat stress and improve comfort
-        in hot working environments.
+        Middle East Engineering Technologies supplies selected Japanese cooling
+        jackets designed to help reduce heat stress and improve comfort in hot
+        working environments.
         <br />
         <br />
         These cooling wear products are suitable for industrial, logistics, and

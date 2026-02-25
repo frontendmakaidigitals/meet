@@ -41,9 +41,9 @@ const ImageGrid = () => {
 
           <div className="max-w-5xl mt-28 mx-auto space-y-6">
             <p className="text-gray-700 leading-relaxed">
-              Middle East Engineering Technologies (MEET) is a trading and
-              solutions company and a subsidiary of ME Universal. We work with
-              businesses to deliver specialised products that are practical,
+              Middle East Engineering Technologies is a trading and solutions
+              company and a subsidiary of ME Universal. We work with businesses
+              to deliver specialised products that are practical,
               cost-effective, and built for real working conditions.
             </p>
             <p className="text-gray-700 leading-relaxed">
