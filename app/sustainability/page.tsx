@@ -18,11 +18,10 @@ const page = () => {
             Sustainability
           </h1>
           <p className="font-inter ">
-            Middle East Engineering Technologies integrates
-            sustainability into every aspect of business. From product selection
-            to partner engagement, we focus on responsible choices that reduce
-            energy use, promote cleaner mobility, and support efficient resource
-            management.
+            Middle East Engineering Technologies integrates sustainability into
+            every aspect of business. From product selection to partner
+            engagement, we focus on responsible choices that reduce energy use,
+            promote cleaner mobility, and support efficient resource management.
           </p>
           <p className="font-inter hidden lg:block">
             Our sustainable approach ensures that all offerings—from apparel

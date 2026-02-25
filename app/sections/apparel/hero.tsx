@@ -34,7 +34,7 @@ const SplitHero = ({
       <div className="container z-10 relative mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-5 items-center">
           {/* ===== IMAGE — Top on mobile ===== */}
-          <div className="relative w-full h-[250px] lg:h-[450px] order-1 md:order-2">
+          <div className="relative w-full  h-[250px] lg:h-[450px] order-1 md:order-2">
             <Image
               src={image}
               alt={titleText}
