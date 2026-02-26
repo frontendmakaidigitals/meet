@@ -13,7 +13,7 @@ type IndustriesProps = {
 };
 
 const Industries = ({
-  title = "Industries and Applications",
+  title = "Who we supply to",
   highlightWord = "and",
   desc,
   items,
@@ -38,8 +38,8 @@ const Industries = ({
           <div className="space-y-6">
             {/* Title */}
             <h2 className="text-3xl lg:text-4xl font-rubik uppercase text-slate-900 leading-tight">
-              {first} <span className="text-[#c6a622]">{highlightWord}</span>{" "}
-              {second}
+              Who We <span className="text-primary">Supply To</span>
+              
             </h2>
 
             {/* Description */}
