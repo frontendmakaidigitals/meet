@@ -63,7 +63,7 @@ export default function AparaellPage() {
 We focus on reliable products, consistent quality, and long-term B2B partnerships across global markets."
         image={
           typeof window !== "undefined" && window.innerWidth >= 1024
-            ? "/electronics/banner.png"
+            ? "/electronics/electronic.png"
             : "/electronics/mobile-banner.png"
         }
         background="/electronics/background.jpg"
