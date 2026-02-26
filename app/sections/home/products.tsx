@@ -124,7 +124,7 @@ const Products = () => {
       ),
       bgColor: " bg-linear-to-b from-[#B3A287] to-[#F7F7F7]",
       class: "lg:col-span-2",
-      link: "/personal-electorincs",
+      link: "/personal-electronics",
     },
     {
       label: (
