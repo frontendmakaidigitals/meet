@@ -14,12 +14,12 @@ const Nav = ({ path, textColor }: { path: string; textColor: string }) => {
 
   const productLinks = [
     { label: "Apparel", href: "/apparel" },
-    { label: "Home Appliances", href: "/home-appliance" },
-    { label: "Batteries", href: "/batteries" },
-    { label: "Mattress", href: "/mattress" },
-    { label: "Personal Electronics", href: "/personal-electronics" },
-    { label: "Electric Vehicle", href: "/electric-vehicle" },
     { label: "Travel & Bags", href: "/travel-bags" },
+    { label: "Sleep & Beddings", href: "/mattress" },
+    { label: "Batteries", href: "/batteries" },
+    { label: "Electric Vehicle", href: "/electric-vehicle" },
+    { label: "Personal Electronics", href: "/personal-electronics" },
+    { label: "Home Appliances", href: "/home-appliance" },
   ];
 
   const [open, setOpen] = useState(false);
