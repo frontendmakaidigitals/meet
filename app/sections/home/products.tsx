@@ -102,7 +102,7 @@ const Products = () => {
       ),
       bgColor: "bg-linear-to-b from-[#FFEDEE] to-[#F7F7F7]",
       class: "col-span-1",
-      link: "/matress",
+      link: "/mattress",
     },
     {
       label: (
