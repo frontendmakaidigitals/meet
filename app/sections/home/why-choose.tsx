@@ -136,8 +136,8 @@ function ListItem({ label, active, align, onClick }: ListItemProps) {
         }}
       />
       <span
+        className="text-md lg:text-lg"
         style={{
-          fontSize: 15,
           fontWeight: isHighlighted ? 500 : 400,
           color: isHighlighted ? "#1A1612" : "#3D3530",
           lineHeight: 1.4,

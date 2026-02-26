@@ -143,11 +143,22 @@ export default function AparaellPage() {
                 <span className="text-primary">Everyday Performance</span>
               </h2>
             }
+            multi
+            donwloadLink={[
+              {
+                label: "Ariston Brochure",
+                link: "/home-appliance/Ariston-Catalouge.pdf",
+              },
+              {
+                label: "Beko Brochure",
+                link: "/home-appliance/beko.pdf",
+              },
+            ]}
             desc={
               <>
                 Discover essential home appliances designed for efficiency,
                 durability, and everyday convenience. From refrigerators and
-                dishwashers to washers, dryers, and wat
+                dishwashers to washers, dryers, and water heaters.
                 <br />
                 <br />
                 The brochure outlines product specifications, energy efficiency
