@@ -61,7 +61,11 @@ export default function AparaellPage() {
         }
         desc="Middle East Engineering Technologies  supplies essential personal electronic devices designed for everyday use, retail distribution, and bulk business requirements.
 We focus on reliable products, consistent quality, and long-term B2B partnerships across global markets."
-        image="/electronics/banner-2.png"
+        image={
+          typeof window !== "undefined" && window.innerWidth >= 1024
+            ? "/electronics/banner.png"
+            : "/electronics/mobile-banner.png"
+        }
         background="/electronics/background.jpg"
       />
       <section className="container text-lg font-inter text-center mt-20 mb-2 space-y-4">
