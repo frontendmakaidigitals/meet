@@ -184,7 +184,7 @@ We focus on reliable products, consistent quality, and long-term B2B partnership
             },
             {
               icon: Globe,
-              title: "Global Market Readiness",
+              title: "Market Readiness",
               desc: "Experience serving international markets ensures alignment with global quality expectations, compliance standards, and commercial requirements of established brands and businesses.",
             },
           ]}

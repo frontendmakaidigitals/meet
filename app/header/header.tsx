@@ -32,7 +32,8 @@ export const Header = () => {
       normalizedPath !== "/sustainability" &&
       normalizedPath !== "/batteries" &&
       normalizedPath !== "/personal-electronics" &&
-      normalizedPath !== "/electric-vehicle"
+      normalizedPath !== "/electric-vehicle" && 
+      normalizedPath !== "/careers"
     ) {
       setIsDark(true);
     } else {

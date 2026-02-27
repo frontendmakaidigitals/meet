@@ -107,7 +107,7 @@ export default function AparaellPage() {
             },
             {
               icon: Globe,
-              title: "Global Market Readiness",
+              title: "Market Readiness",
               desc: "Experience across international markets ensures alignment with quality expectations, compliance standards, and commercial requirements of established brands.",
             },
           ]}

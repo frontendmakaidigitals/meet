@@ -34,19 +34,18 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 text-center">
-        <h1 className="text-2xl lg:text-5xl font-rubik font-[500] text-slate-50 mb-6 leading-tight">
-          SMART PRODUCTS AND PRACTICAL
+      <div className="relative z-10 container mx-auto text-center">
+        <h1 className="text-2xl lg:text-[44px] 3xl:text-5xl font-rubik tracking-tight font-[500] text-slate-50 mb-6 leading-tight">
+          ENERGY EFFICIENT AND SUSTAINABLE PRODUCTS
           <br />
-          SOLUTIONS.{" "}
           <span className="text-yellow-400">BUILT FOR BUSINESSES.</span>
         </h1>
 
         <p className="text-gray-200 max-w-3xl mx-auto mb-8 lg:text-lg">
-          Middle East Engineering Technologies is a B2B trading and solutions
-          company based in Dubai, working globally. We bring reliable products
-          and technologies that help businesses work better, save energy, and
-          grow responsibly.
+          Middle East Engineering Technologies is B2B Commercial Distribution
+          and Trading company based in Dubai, operating globally. We deal in
+          reliable products to ensure our partners penetrate the market and
+          offer the consumer a value for money offering.
         </p>
 
         <div className="flex flex-col max-w-2xs mx-auto lg:max-w-lg  sm:flex-row gap-4 justify-center items-center">

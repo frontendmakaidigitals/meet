@@ -49,7 +49,7 @@ const WhyChooseUs = ({
         {/* ===== IMAGE ===== */}
         <div className="w-full overflow-hidden rounded-xl">
           <img
-            src={image}
+            src={"/why-choose.jpg"}
             alt="Why choose us"
             className="w-full h-[250px] lg:h-[380px] object-cover"
           />

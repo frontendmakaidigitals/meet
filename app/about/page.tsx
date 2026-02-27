@@ -14,9 +14,7 @@ const AboutPage = () => {
       <Hero
         mode="dark"
         title="About Us"
-        desc="Middle East Engineering Technologies is a global B2B trading company.
-We work with trusted international partners to supply practical products that support business growth while encouraging responsible use of resources.
-"
+        desc="Middle East Engineering Technologies is a global B2B Distribution and trading company. We work with trusted international partners to supply practical and reliable products that support business growth while encouraging responsible use of resources."
         image={
           <Image
             className="w-full h-full object-cover object-bottom-left lg:object-bottom-right lg:scale-[1.6] lg:origin-bottom-left "
@@ -41,7 +39,7 @@ We work with trusted international partners to supply practical products that su
         {/* ===== TEXT ===== */}
         <div className="space-y-4 order-2 lg:order-1">
           <p>
-            MEET is a trading and solutions company and a subsidiary of ME
+            MEET is a Distribution and trading company, a subsidiary of ME
             Universal. We partner with businesses to deliver specialised
             products that are practical, cost-effective, and designed for real
             working conditions. Our role is to connect advanced technologies
@@ -57,7 +55,7 @@ We work with trusted international partners to supply practical products that su
           </p>
 
           <p>
-            MEET serves industrial and commercial customers across multiple
+            MEET serves commercial customers and partners across multiple
             regions through a diversified and growing portfolio.
           </p>
         </div>

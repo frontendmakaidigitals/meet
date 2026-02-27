@@ -28,7 +28,7 @@ const Industries = ({
           {/* ===== LEFT — IMAGE ===== */}
           <div className="w-full h-[250px] lg:h-[540px] rounded-xl overflow-hidden">
             <img
-              src={image}
+              src={'/industry.jpg'}
               alt="Industries"
               className="w-full h-full object-cover "
             />

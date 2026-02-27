@@ -13,12 +13,13 @@ const Footer = () => {
             <Logo src={"/Logo/logo-light.png"} className="mb-5" />
 
             <p className="text-sm leading-relaxed mb-6">
-              Middle East Engineering Technologies is a Dubai-based B2B trading
-              and solutions company and a subsidiary of ME Universal.
+              Middle East Engineering Technologies in United Arab Emirates based
+              B2B Commercial Distribution and Trading company, a Subsidiary of
+              ME Universal.
               <br />
-              <br />
-              We serve businesses across globally with products focused on
-              performance and responsible growth.
+              We serve businesses globally with curated products to cater to the
+              targeted segments with primary focus on reliability, durability,
+              performance and quality.
             </p>
 
             {/* Social Icons */}
@@ -76,10 +77,10 @@ const Footer = () => {
             <div className="flex items-center gap-3">
               <Mail size={16} className="text-primary" />
               <a
-                href="mailto:info@meuniversal.com"
+                href="mailto:support@tradingmeet.com"
                 className="hover:text-yellow-500 transition"
               >
-                info@meuniversal.com
+                support@tradingmeet.com
               </a>
             </div>
 

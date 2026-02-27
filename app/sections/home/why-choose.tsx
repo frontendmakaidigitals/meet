@@ -9,43 +9,37 @@ const dmSans = DM_Sans({ subsets: ["latin"], weight: ["300", "400", "500"] });
 const CARDS = [
   {
     id: 0,
-    image:
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=560&q=80",
+    image: "/home/why-choose/Why Choose Us 1.jpg",
     label: "Multiple category Products",
     side: "left" as const,
   },
   {
     id: 1,
-    image:
-      "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=560&q=80",
+    image: "/home/why-choose/Why Choose Us 2.jpg",
     label: "Quality products built for everyday use",
     side: "left" as const,
   },
   {
     id: 2,
-    image:
-      "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=560&q=80",
+    image: "/home/why-choose/Why Choose Us 3.jpg",
     label: "Region based Products and Pricing",
     side: "left" as const,
   },
   {
     id: 3,
-    image:
-      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=560&q=80",
+    image: "/home/why-choose/Why Choose Us 4.jpg",
     label: "Extended Warranty on Products",
     side: "right" as const,
   },
   {
     id: 4,
-    image:
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=560&q=80",
+    image: "/home/why-choose/Why Choose Us 5.jpg",
     label: "Strong global sourcing and supply network",
     side: "right" as const,
   },
   {
     id: 5,
-    image:
-      "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=560&q=80",
+    image: "/home/why-choose/Why Choose Us 6.jpg",
     label: "Practical approach, clear communication",
     side: "right" as const,
   },
@@ -91,9 +85,10 @@ interface ListItemProps {
   active: boolean;
   align: "left" | "right";
   onClick: () => void;
+  isLarge?: boolean;
 }
 
-function ListItem({ label, active, align, onClick }: ListItemProps) {
+function ListItem({ label, active, align, onClick, isLarge }: ListItemProps) {
   const [hovered, setHovered] = useState(false);
   const isHighlighted = active || hovered;
 
@@ -106,7 +101,7 @@ function ListItem({ label, active, align, onClick }: ListItemProps) {
         display: "flex",
         flexDirection: align === "right" ? "row-reverse" : "row",
         alignItems: "flex-start",
-        padding: "14px 16px",
+        padding: isLarge ? "18px 20px" : "14px 16px",
         borderRadius: 12,
         cursor: "pointer",
         border: "none",
@@ -124,25 +119,26 @@ function ListItem({ label, active, align, onClick }: ListItemProps) {
       <span
         style={{
           flexShrink: 0,
-          width: 8,
-          height: 8,
+          width: isLarge ? 10 : 8,
+          height: isLarge ? 10 : 8,
           background: isHighlighted ? "#C9A84C" : "#E8D08A",
           transform: `rotate(45deg) scale(${isHighlighted ? 1.3 : 1})`,
-          marginRight: align === "left" ? 14 : 0,
-          marginLeft: align === "right" ? 14 : 0,
+          marginRight: align === "left" ? (isLarge ? 18 : 14) : 0,
+          marginLeft: align === "right" ? (isLarge ? 18 : 14) : 0,
           marginTop: 7,
           transition: "background 0.3s ease, transform 0.3s ease",
           display: "inline-block",
         }}
       />
       <span
-        className="text-md lg:text-lg"
         style={{
+          fontSize: isLarge ? "1.2rem" : undefined,
           fontWeight: isHighlighted ? 500 : 400,
           color: isHighlighted ? "#1A1612" : "#3D3530",
           lineHeight: 1.4,
           transition: "color 0.3s ease",
         }}
+        className={!isLarge ? "text-md lg:text-lg" : undefined}
       >
         {label}
       </span>
@@ -206,10 +202,15 @@ function MobileListItem({
 export default function WhyChooseUs() {
   const [active, setActive] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const [isLarge, setIsLarge] = useState(false);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 900);
+    const check = () => {
+      const w = window.innerWidth;
+      setIsMobile(w < 900);
+      setIsLarge(w >= 1400);
+    };
     check();
     window.addEventListener("resize", check);
     return () => window.removeEventListener("resize", check);
@@ -244,14 +245,18 @@ export default function WhyChooseUs() {
   const leftItems = CARDS.filter((c) => c.side === "left");
   const rightItems = CARDS.filter((c) => c.side === "right");
 
+  // Card dimensions scale with screen size
+  const cardW = isMobile ? 240 : isLarge ? 360 : 280;
+  const cardH = isMobile ? 320 : isLarge ? 480 : 370;
+
   // ── SHARED: CARD STACK ──
   const CardStack = (
     <div
       onClick={handleStackClick}
       style={{
         position: "relative",
-        width: isMobile ? 240 : 280,
-        height: isMobile ? 320 : 370,
+        width: cardW,
+        height: cardH,
         cursor: "pointer",
         perspective: "1000px",
       }}
@@ -268,9 +273,9 @@ export default function WhyChooseUs() {
             style={{
               position: "absolute",
               inset: 0,
-              borderRadius: 24,
+              borderRadius: isLarge ? 32 : 24,
               overflow: "hidden",
-              border: "6px solid #FEFCF8",
+              border: `${isLarge ? 8 : 6}px solid #FEFCF8`,
               boxShadow:
                 pos === 0
                   ? "0 20px 60px rgba(0,0,0,0.18), 0 4px 16px rgba(0,0,0,0.1), 0 0 0 1px rgba(201,168,76,0.3)"
@@ -352,7 +357,11 @@ export default function WhyChooseUs() {
       style={{
         position: "relative",
         minHeight: "100vh",
-        padding: isMobile ? "64px 0 72px" : "100px 0 120px",
+        padding: isMobile
+          ? "64px 0 72px"
+          : isLarge
+            ? "120px 0 140px"
+            : "100px 0 120px",
         overflow: "hidden",
         background: "#FEFCF8",
       }}
@@ -370,16 +379,22 @@ export default function WhyChooseUs() {
       />
 
       {/* ── HEADER ── */}
-      <div className="text-center container max-w-4xl mx-auto mb-4 lg:mb-16">
-        <h2 className="text-4xl md:text-5xl font-rubik tracking-wide mb-6">
+      <div
+        className="text-center mx-auto mb-4 lg:mb-16"
+        style={{
+          maxWidth: isLarge ? "56rem" : "56rem",
+          padding: "0 24px",
+        }}
+      >
+        <h2 className="text-4xl lg:text-4xl mb-3 xl:text-5xl">
           WHY CHOOSE <span className="text-primary">US</span>
         </h2>
 
-        <p className="text-lg text-gray-600 ">
+        <p className="text-gray-600 text-lg mb-2">
           A simple approach, built around real business needs.
         </p>
 
-        <p className="text-gray-700 leading-relaxed max-w-2xl mx-auto">
+        <p className="text-gray-700 text-lg leading-relaxed mx-auto mb-4">
           We focus on products that are reliable, and made to perform in
           everyday working conditions.
         </p>
@@ -434,15 +449,21 @@ export default function WhyChooseUs() {
           style={{
             display: "grid",
             gridTemplateColumns: "1fr auto 1fr",
-            gap: 60,
+            gap: isLarge ? 80 : 60,
             alignItems: "center",
-            maxWidth: 1100,
+            maxWidth: isLarge ? 1440 : 1100,
             margin: "0 auto",
-            padding: "0 40px",
+            padding: isLarge ? "0 60px" : "0 40px",
           }}
         >
           {/* Left */}
-          <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: isLarge ? 12 : 8,
+            }}
+          >
             {leftItems.map((item) => (
               <ListItem
                 key={item.id}
@@ -450,6 +471,7 @@ export default function WhyChooseUs() {
                 active={active === item.id}
                 align="left"
                 onClick={() => handleSetActive(item.id)}
+                isLarge={isLarge}
               />
             ))}
           </div>
@@ -467,7 +489,13 @@ export default function WhyChooseUs() {
           </div>
 
           {/* Right */}
-          <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: isLarge ? 12 : 8,
+            }}
+          >
             {rightItems.map((item) => (
               <ListItem
                 key={item.id}
@@ -475,6 +503,7 @@ export default function WhyChooseUs() {
                 active={active === item.id}
                 align="right"
                 onClick={() => handleSetActive(item.id)}
+                isLarge={isLarge}
               />
             ))}
           </div>

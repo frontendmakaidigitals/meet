@@ -19,14 +19,15 @@ const page = () => {
           </h1>
           <p className="font-inter ">
             Middle East Engineering Technologies integrates sustainability into
-            every aspect of business. From product selection to partner
-            engagement, we focus on responsible choices that reduce energy use,
-            promote cleaner mobility, and support efficient resource management.
+            every aspect of business be it our process, procurement or
+            operations. From product selection to partner engagement, we focus
+            on responsible choices that reduce energy use, promote cleaner
+            mobility, and support efficient resource management.
           </p>
           <p className="font-inter hidden lg:block">
-            Our sustainable approach ensures that all offerings—from apparel
-            accessories and cooling jackets to electric bikes, scooters, and
-            energy storage solutions—deliver real-world performance while
+            Our sustainable approach ensures that all offerings right from
+            apparel accessories and cooling jackets to electric bikes, scooters,
+            and energy storage solutions deliver real world performance while
             minimizing environmental impact.
           </p>
         </div>
@@ -46,13 +47,14 @@ const page = () => {
               Let’s talk about <br /> Sustainability
             </h3>
             <p className="mt-8 mb-3">
-              Middle East Engineering Technologies is a trading and solutions
-              company and a subsidiary of ME Universal. We work with businesses
-              to deliver specialised products that are practical,
+              Middle East Engineering Technologies is a commercial distribution
+              and trading company, a subsidiary of ME Universal. We work with
+              businesses to deliver specialised products that are practical,
               cost-effective, and built for real working conditions. Our focus
               is on connecting advanced technologies with everyday business use.
-              We select products that help companies operate efficiently while
-              reducing energy consumption and environmental impact.
+              We select products that help companies and consumers operate
+              efficiently while reducing energy consumption and environmental
+              impact.
             </p>
             <p>
               Our offerings include durable apparel components, cooling jacket
@@ -88,12 +90,13 @@ const page = () => {
 
       <div className="container space-y-4 mb-7 text-center font-inter">
         <p>
-          Sustainability is part of our everyday decisions. We carefully
-          evaluate products, manufacturers, and partnerships to ensure
-          responsible business practices while maintaining performance.
+          Sustainability is part of our everyday decisions and is in build in
+          the company`s DNA. We carefully evaluate products, manufacturers, and
+          partnerships to ensure responsible business practices while
+          maintaining performance and quality.
         </p>
         <p>
-          We support energy-efficient technologies, cleaner mobility solutions,
+          We support energy efficient technologies, cleaner mobility solutions,
           and responsible sourcing practices that help businesses reduce
           environmental impact without compromising functionality or
           reliability.
