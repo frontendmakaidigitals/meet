@@ -19,8 +19,8 @@ export default function AparaellPage() {
         desc="At Middle East Engineering Technologies , we supply travel bags and luggage designed for durability, functionality, and everyday travel needs. We work closely with B2B partners to support consistent quality and long-term supply across global markets."
         image={
           typeof window !== "undefined" && window.innerWidth >= 1024
-            ? "/travel-bags/banner.png"
-            : "/travel-bags/mobile-banner.png"
+            ? "/travel-bags/banner.jpeg"
+            : "/travel-bags/banner.jpeg"
         }
         background="/travel-bags/background.jpg"
       />

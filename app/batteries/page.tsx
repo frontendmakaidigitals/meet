@@ -42,8 +42,8 @@ export default function AparaellPage() {
         desc="Middle East Engineering Technologies is a B2B supplier of automotive batteries and energy storage solutions, serving mobility, backup power, and renewable energy applications across regional and global markets."
         image={
           typeof window !== "undefined" && window.innerWidth >= 1024
-            ? "/battery/banner.png"
-            : "/battery/mobile-banner.png"
+            ? "/battery/banner.jpeg"
+            : "/battery/banner.jpeg"
         }
         background="/battery/background.jpg"
       />

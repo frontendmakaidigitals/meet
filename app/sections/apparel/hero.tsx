@@ -1,5 +1,9 @@
+"use client";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { useState } from "react";
 import Link from "next/link";
+import { useEffect } from "react";
 type SplitHeroProps = {
   title: React.ReactNode;
   titleText: string;
@@ -23,6 +27,20 @@ const SplitHero = ({
   dark = false,
   layer = false,
 }: SplitHeroProps) => {
+  const [cover, setCover] = useState(false);
+  const pathName = usePathname();
+  useEffect(() => {
+    const normalizedPath = pathName.toLowerCase();
+    if (
+      normalizedPath !== "/batteries" &&
+      normalizedPath !== "/home-appliance" &&
+      normalizedPath !== "/travel-bags"
+    ) {
+      setCover(true);
+    } else {
+      setCover(false);
+    }
+  }, [pathName]);
   return (
     <section className={`relative pt-28 py-20 ${bgClass}`}>
       {layer && (
@@ -34,17 +52,17 @@ const SplitHero = ({
       <div className="container z-10 relative mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-5 items-center">
           {/* ===== IMAGE — Top on mobile ===== */}
-          <div className="relative w-full   h-[300px] lg:h-[450px] order-1 md:order-2">
+          <div className="relative w-full  h-[300px] lg:h-[450px] order-1 md:order-2">
             <Image
               src={image}
               alt={titleText}
               fill
-              className="object-contain w-full h-full"
+              className={`${!cover ? "object-cover" : "object-contain"} w-full h-full`}
             />
           </div>
 
           {/* ===== TEXT ===== */}
-          <div className="space-y-1 lg:space-y-4 order-2 md:order-1">
+          <div className="space-y-1 mt-6 lg:mt-0 lg:space-y-4 order-2 md:order-1">
             <div className={`${dark ? "text-white" : "text-gray-900"}`}>
               {title}
             </div>

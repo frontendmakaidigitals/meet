@@ -57,8 +57,8 @@ export default function AparaellPage() {
         desc="At Middle East Engineering Technologies , we supply essential home appliances to businesses across global markets. Our focus is simple reliable products and long-term partnerships."
         image={
           typeof window !== "undefined" && window.innerWidth >= 1024
-            ? "/home-appliance/banner.png"
-            : "/home-appliance/mobile-banner.png"
+            ? "/home-appliance/banner.jpeg"
+            : "/home-appliance/banner.jpeg"
         }
         background="/home-appliance/bg.jpg"
         titleText=""
