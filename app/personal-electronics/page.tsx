@@ -5,6 +5,7 @@ import { Award, Layers, Building2, Globe } from "lucide-react";
 import Image from "next/image";
 import Brochure from "../sections/brochure";
 import CTASection from "../sections/cta";
+import Link from "next/link";
 export default function AparaellPage() {
   const productCategories = [
     {
@@ -167,9 +168,11 @@ export default function AparaellPage() {
                 <li>✔ Suitable for retail & B2B supply</li>
               </ul>
 
-              <button className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-teal-800 transition">
-                Learn More
-              </button>
+              <Link href={"/contact"}>
+                <button className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition">
+                  Learn More
+                </button>
+              </Link>
             </div>
           </div>
         </section>

@@ -48,7 +48,7 @@ const Products = () => {
       img: (
         <div className="relative w-full  overflow-hidden h-[250px] mx-auto flex items-end justify-center">
           <Image
-            src={"/home/products/battery.png"}
+            src={"/home/products/battery-12.png"}
             alt={""}
             width={500}
             height={500}
@@ -114,7 +114,7 @@ const Products = () => {
       img: (
         <div className="relative w-full h-[200px] lg:h-[380px] mx-auto flex items-end justify-center">
           <Image
-            src={"/home/products/headphones.png"}
+            src={"/home/products/ear.png"}
             alt={""}
             width={500}
             height={500}
@@ -123,7 +123,7 @@ const Products = () => {
         </div>
       ),
       bgColor: " bg-linear-to-b from-[#B3A287] to-[#F7F7F7]",
-      class: "lg:col-span-2",
+      class: "col-span-2",
       link: "/personal-electronics",
     },
     {
@@ -136,7 +136,7 @@ const Products = () => {
       img: (
         <div className="relative w-full h-[240px] lg:h-[380px] mx-auto flex items-end justify-center">
           <Image
-            src={"/home/products/bag.png"}
+            src={"/home/products/travel-1.png"}
             alt={""}
             width={500}
             height={500}
@@ -169,11 +169,11 @@ const Products = () => {
             return (
               <div
                 key={idx}
-                className={`${product.bgColor} ${product.class} ${isWide ? "px-8" : "p-8"} rounded-xl `}
+                className={`${product.bgColor} ${product.class} ${isWide ? "px-8" : "px-8 pb-1 pt-6"} rounded-xl `}
               >
                 {isWide ? (
                   /* ===================== WIDE CARD ===================== */
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-3 items-center">
+                  <div className="grid grid-cols-1 md:grid-cols-[.8fr_1.2fr] gap-10 items-center">
                     {/* IMAGE – top on mobile, right on desktop */}
                     <div className="order-1 md:order-2 flex justify-center md:justify-end lg:mb-0">
                       {product.img}
@@ -183,7 +183,7 @@ const Products = () => {
                     <div className="order-2 md:order-1 text-left">
                       <div className="mb-3">{product.label}</div>
 
-                      <p className="max-w-md text-sm text-black mb-5">
+                      <p className="max-w-md text-md text-black mb-5">
                         {product.desc}
                       </p>
 
@@ -230,7 +230,7 @@ const Products = () => {
                         </button>
                       </Link>
                     </div>
-                    <div className=" lg:order-4  w-full hidden lg:flex justify-center mt-5">
+                    <div className=" lg:order-4 w-full hidden lg:flex justify-center mt-5">
                       {product.img}
                     </div>
                   </div>
