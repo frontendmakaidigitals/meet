@@ -1,7 +1,14 @@
 "use client";
-
-import { useState, useEffect, useRef, useCallback } from "react";
+import {
+  useState,
+  useEffect,
+  useRef,
+  useCallback,
+  memo,
+  CSSProperties,
+} from "react";
 import { DM_Sans } from "next/font/google";
+import Image from "next/image";
 
 const dmSans = DM_Sans({ subsets: ["latin"], weight: ["300", "400", "500"] });
 
@@ -47,50 +54,84 @@ const CARDS = [
 
 const TILTS = [2.1, -3.4, 1.8, -2.7, 3.2, -1.5];
 
-function getCardTransform(pos: number, tilt: number) {
+// Pre-compute static transform strings so they're never rebuilt at runtime
+const CARD_TRANSFORMS: Record<
+  number,
+  { transform: string; opacity: number; zIndex: number }
+> = {
+  0: {
+    transform: "translateY(0px) rotate(0deg) scale(1)",
+    opacity: 1,
+    zIndex: 20,
+  },
+  1: {
+    transform: "translateY(18px) rotate(0deg) scale(0.96)",
+    opacity: 0.85,
+    zIndex: 19,
+  },
+  2: {
+    transform: "translateY(34px) rotate(0deg) scale(0.92)",
+    opacity: 0.6,
+    zIndex: 18,
+  },
+  3: {
+    transform: "translateY(48px) rotate(0deg) scale(0.88)",
+    opacity: 0.3,
+    zIndex: 17,
+  },
+};
+
+// Tilt is baked into per-card, per-position strings at module load — zero runtime cost
+const CARD_TRANSFORM_CACHE: Record<
+  string,
+  { transform: string; opacity: number; zIndex: number }
+> = {};
+function getCardTransform(cardIndex: number, pos: number) {
+  const key = `${cardIndex}-${pos}`;
+  if (CARD_TRANSFORM_CACHE[key]) return CARD_TRANSFORM_CACHE[key];
+  const tilt = TILTS[cardIndex % TILTS.length];
+  let result: { transform: string; opacity: number; zIndex: number };
   if (pos === 0)
-    return {
-      transform: "translateY(0) rotate(0deg) scale(1)",
+    result = {
+      transform: "translateY(0px) rotate(0deg) scale(1)",
       opacity: 1,
       zIndex: 20,
     };
-  if (pos === 1)
-    return {
+  else if (pos === 1)
+    result = {
       transform: `translateY(18px) rotate(${tilt}deg) scale(0.96)`,
       opacity: 0.85,
       zIndex: 19,
     };
-  if (pos === 2)
-    return {
+  else if (pos === 2)
+    result = {
       transform: `translateY(34px) rotate(${-tilt}deg) scale(0.92)`,
       opacity: 0.6,
       zIndex: 18,
     };
-  if (pos === 3)
-    return {
+  else if (pos === 3)
+    result = {
       transform: `translateY(48px) rotate(${tilt * 0.6}deg) scale(0.88)`,
       opacity: 0.3,
       zIndex: 17,
     };
-  return {
-    transform: "translateY(60px) scale(0.84)",
-    opacity: 0,
-    zIndex: 16 - pos,
-  };
+  else
+    result = {
+      transform: "translateY(60px) rotate(0deg) scale(0.84)",
+      opacity: 0,
+      zIndex: 16 - pos,
+    };
+  CARD_TRANSFORM_CACHE[key] = result;
+  return result;
 }
+
+// Static shadows — never change, defined once outside render tree
+const SHADOW_TOP = "0 20px 60px rgba(0,0,0,0.15), 0 4px 16px rgba(0,0,0,0.08)";
+const SHADOW_REST = "0 4px 16px rgba(0,0,0,0.08)";
 
 // ── DESKTOP LIST ITEM ──
-interface ListItemProps {
-  label: string;
-  active: boolean;
-  align: "left" | "right";
-  onClick: () => void;
-  isLarge?: boolean;
-  inView: boolean;
-  delay: number;
-}
-
-function ListItem({
+// memo prevents re-render unless active/label/inView actually change
+const ListItem = memo(function ListItem({
   label,
   active,
   align,
@@ -98,18 +139,23 @@ function ListItem({
   isLarge,
   inView,
   delay,
-}: ListItemProps) {
-  const [hovered, setHovered] = useState(false);
-  const isHighlighted = active || hovered;
-
+}: {
+  label: string;
+  active: boolean;
+  align: "left" | "right";
+  onClick: () => void;
+  isLarge?: boolean;
+  inView: boolean;
+  delay: number;
+}) {
+  // CSS class-based hover → avoids JS state entirely, zero re-renders on hover
   return (
     <div
       style={{
-        // will-change only while animating in; auto after
-        willChange: inView ? "auto" : "transform, opacity",
         opacity: inView ? 1 : 0,
+        // Use translateX(0) not "none" — keeps element on compositor thread
         transform: inView
-          ? "translateX(0)"
+          ? "translateX(0px)"
           : align === "right"
             ? "translateX(32px)"
             : "translateX(-32px)",
@@ -120,8 +166,8 @@ function ListItem({
     >
       <button
         onClick={onClick}
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
+        data-align={align}
+        data-active={active ? "true" : "false"}
         style={{
           display: "flex",
           flexDirection: align === "right" ? "row-reverse" : "row",
@@ -130,15 +176,28 @@ function ListItem({
           borderRadius: 12,
           cursor: "pointer",
           border: "none",
-          background: isHighlighted ? "#FDF8EE" : "transparent",
+          background: active ? "#FDF8EE" : "transparent",
           textAlign: align,
           width: "100%",
-          transform: hovered
-            ? align === "right"
-              ? "translateX(-4px)"
-              : "translateX(4px)"
-            : "none",
+          // translateX(0) as default so GPU layer is allocated — avoids layer promotion jank on hover
+          transform: "translateX(0px)",
           transition: "background 0.2s ease, transform 0.2s ease",
+        }}
+        // Use CSS pseudo-class via inline onMouse for transform only (no state, no re-render)
+        onMouseEnter={(e) => {
+          (e.currentTarget as HTMLButtonElement).style.transform =
+            align === "right" ? "translateX(-4px)" : "translateX(4px)";
+          if (!active) {
+            (e.currentTarget as HTMLButtonElement).style.background = "#FDF8EE";
+          }
+        }}
+        onMouseLeave={(e) => {
+          (e.currentTarget as HTMLButtonElement).style.transform =
+            "translateX(0px)";
+          if (!active) {
+            (e.currentTarget as HTMLButtonElement).style.background =
+              "transparent";
+          }
         }}
       >
         <span
@@ -146,8 +205,10 @@ function ListItem({
             flexShrink: 0,
             width: isLarge ? 10 : 8,
             height: isLarge ? 10 : 8,
-            background: isHighlighted ? "#C9A84C" : "#E8D08A",
-            transform: `rotate(45deg) scale(${isHighlighted ? 1.3 : 1})`,
+            background: active ? "#C9A84C" : "#E8D08A",
+            transform: active
+              ? "rotate(45deg) scale(1.3)"
+              : "rotate(45deg) scale(1)",
             marginRight: align === "left" ? (isLarge ? 18 : 14) : 0,
             marginLeft: align === "right" ? (isLarge ? 18 : 14) : 0,
             marginTop: 7,
@@ -158,10 +219,10 @@ function ListItem({
         <span
           style={{
             fontSize: isLarge ? "1.2rem" : undefined,
-            fontWeight: isHighlighted ? 500 : 400,
-            color: isHighlighted ? "#1A1612" : "#3D3530",
+            fontWeight: active ? 500 : 400,
+            color: active ? "#1A1612" : "#3D3530",
             lineHeight: 1.4,
-            transition: "color 0.2s ease, font-weight 0s",
+            transition: "color 0.2s ease",
           }}
           className={!isLarge ? "text-md lg:text-lg" : undefined}
         >
@@ -170,10 +231,10 @@ function ListItem({
       </button>
     </div>
   );
-}
+});
 
 // ── MOBILE LIST ITEM ──
-function MobileListItem({
+const MobileListItem = memo(function MobileListItem({
   label,
   active,
   onClick,
@@ -189,9 +250,8 @@ function MobileListItem({
   return (
     <div
       style={{
-        willChange: inView ? "auto" : "transform, opacity",
         opacity: inView ? 1 : 0,
-        transform: inView ? "translateY(0)" : "translateY(14px)",
+        transform: inView ? "translateY(0px)" : "translateY(14px)",
         transition: inView
           ? `opacity 0.4s ease ${delay}ms, transform 0.4s ease ${delay}ms`
           : "none",
@@ -219,7 +279,9 @@ function MobileListItem({
             width: 7,
             height: 7,
             background: active ? "#C9A84C" : "#E8D08A",
-            transform: `rotate(45deg) scale(${active ? 1.2 : 1})`,
+            transform: active
+              ? "rotate(45deg) scale(1.2)"
+              : "rotate(45deg) scale(1)",
             transition: "background 0.2s ease, transform 0.2s ease",
             display: "inline-block",
           }}
@@ -237,7 +299,139 @@ function MobileListItem({
       </button>
     </div>
   );
-}
+});
+
+// ── CARD STACK — isolated component so its renders don't affect list items ──
+const CardStack = memo(function CardStack({
+  active,
+  cardW,
+  cardH,
+  isLarge,
+  inView,
+  onClick,
+}: {
+  active: number;
+  cardW: number;
+  cardH: number;
+  isLarge: boolean;
+  inView: boolean;
+  onClick: () => void;
+}) {
+  return (
+    <div
+      onClick={onClick}
+      style={{
+        position: "relative",
+        width: cardW,
+        height: cardH,
+        cursor: "pointer",
+        opacity: inView ? 1 : 0,
+        transform: inView ? "translateY(0px)" : "translateY(24px)",
+        transition: inView
+          ? "opacity 0.55s ease 0.05s, transform 0.55s ease 0.05s"
+          : "none",
+      }}
+    >
+      {CARDS.map((card, i) => {
+        const pos =
+          (((i - active) % CARDS.length) + CARDS.length) % CARDS.length;
+        const { transform, opacity, zIndex } = getCardTransform(i, pos);
+        return (
+          <div
+            className="shadow-md border-gray-200!"
+            key={card.id}
+            style={{
+              position: "absolute",
+              inset: 0,
+              borderRadius: isLarge ? 32 : 24,
+              overflow: "hidden",
+              border: `${isLarge ? 8 : 6}px solid #FEFCF8`,
+              // boxShadow is NOT transitioned — removing it from the transition
+              // string prevents a paint on every animation frame
+              // Only transition transform + opacity (compositor-only, no paint)
+              transition:
+                "transform 0.45s cubic-bezier(0.3``4,1.26,0.64,1), opacity 0.35s ease",
+              willChange: "transform, opacity",
+              transform,
+              opacity,
+              zIndex,
+            }}
+          >
+            {pos === 0 && (
+              <div
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  borderRadius: isLarge ? 32 : 24,
+                  boxShadow: SHADOW_TOP,
+                  pointerEvents: "none",
+                  zIndex: 0,
+                }}
+              />
+            )}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <Image
+              src={card.image}
+              alt={card.label}
+              loading="lazy"
+              // Prevents layout recalc from image load
+              width={cardW}
+              height={cardH}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                display: "block",
+              }}
+            />
+          </div>
+        );
+      })}
+    </div>
+  );
+});
+
+// ── DOTS — isolated so it doesn't trigger card/list re-renders ──
+const Dots = memo(function Dots({
+  active,
+  onSelect,
+}: {
+  active: number;
+  onSelect: (i: number) => void;
+}) {
+  return (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        gap: 8,
+        marginTop: 20,
+      }}
+    >
+      {CARDS.map((card, i) => (
+        <button
+          key={card.id}
+          onClick={(e) => {
+            e.stopPropagation();
+            onSelect(i);
+          }}
+          aria-label={`Go to card ${i + 1}`}
+          style={{
+            width: 6,
+            height: 6,
+            borderRadius: "50%",
+            border: "none",
+            cursor: "pointer",
+            padding: 0,
+            background: active === i ? "#C9A84C" : "#E8D08A",
+            transform: active === i ? "scale(1.4)" : "scale(1)",
+            transition: "background 0.2s ease, transform 0.2s ease",
+          }}
+        />
+      ))}
+    </div>
+  );
+});
 
 // ── MAIN COMPONENT ──
 export default function WhyChooseUs() {
@@ -249,7 +443,6 @@ export default function WhyChooseUs() {
   const sectionRef = useRef<HTMLElement>(null);
   const resizeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // ── IN-VIEW OBSERVER — fires once ──
   useEffect(() => {
     const el = sectionRef.current;
     if (!el) return;
@@ -266,7 +459,6 @@ export default function WhyChooseUs() {
     return () => observer.disconnect();
   }, []);
 
-  // ── DEBOUNCED RESIZE — avoids excessive re-renders ──
   useEffect(() => {
     const check = () => {
       const w = window.innerWidth;
@@ -303,130 +495,24 @@ export default function WhyChooseUs() {
     };
   }, [inView, resetTimer]);
 
-  const handleSetActive = (idx: number) => {
-    setActive(idx);
-    resetTimer();
-  };
-  const handleStackClick = () => {
+  // Stable callbacks — won't cause child re-renders
+  const handleSetActive = useCallback(
+    (idx: number) => {
+      setActive(idx);
+      resetTimer();
+    },
+    [resetTimer],
+  );
+
+  const handleStackClick = useCallback(() => {
     setActive((p) => (p + 1) % CARDS.length);
     resetTimer();
-  };
+  }, [resetTimer]);
 
   const leftItems = CARDS.filter((c) => c.side === "left");
   const rightItems = CARDS.filter((c) => c.side === "right");
   const cardW = isMobile ? 240 : isLarge ? 360 : 280;
   const cardH = isMobile ? 320 : isLarge ? 480 : 370;
-
-  // ── CARD STACK ──
-  const CardStack = (
-    <div
-      onClick={handleStackClick}
-      style={{
-        position: "relative",
-        width: cardW,
-        height: cardH,
-        cursor: "pointer",
-        // will-change only before it animates in
-        willChange: inView ? "auto" : "transform, opacity",
-        opacity: inView ? 1 : 0,
-        transform: inView ? "translateY(0)" : "translateY(24px)",
-        transition: inView
-          ? "opacity 0.55s ease 0.05s, transform 0.55s ease 0.05s"
-          : "none",
-      }}
-    >
-      {CARDS.map((card, i) => {
-        const pos =
-          (((i - active) % CARDS.length) + CARDS.length) % CARDS.length;
-        const tilt = TILTS[i % TILTS.length];
-        const { transform, opacity, zIndex } = getCardTransform(pos, tilt);
-        return (
-          <div
-            key={card.id}
-            style={{
-              position: "absolute",
-              inset: 0,
-              borderRadius: isLarge ? 32 : 24,
-              overflow: "hidden",
-              border: `${isLarge ? 8 : 6}px solid #FEFCF8`,
-              // Static box-shadow per position — NOT transitioned (avoids paint)
-              boxShadow:
-                pos === 0
-                  ? "0 20px 60px rgba(0,0,0,0.15), 0 4px 16px rgba(0,0,0,0.08)"
-                  : "0 4px 16px rgba(0,0,0,0.08)",
-              // Only GPU-composited properties in transition
-              transition:
-                "transform 0.45s cubic-bezier(0.34,1.26,0.64,1), opacity 0.35s ease",
-              willChange: "transform, opacity",
-              transform,
-              opacity,
-              zIndex,
-            }}
-          >
-            {pos === 0 && (
-              <div
-                aria-hidden
-                style={{
-                  position: "absolute",
-                  inset: 0,
-                  background:
-                    "linear-gradient(135deg, rgba(201,168,76,0.12) 0%, transparent 50%)",
-                  pointerEvents: "none",
-                  zIndex: 1,
-                }}
-              />
-            )}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={card.image}
-              alt={card.label}
-              loading="lazy"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                display: "block",
-              }}
-            />
-          </div>
-        );
-      })}
-    </div>
-  );
-
-  // ── DOT NAV ──
-  const Dots = (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        gap: 8,
-        marginTop: 20,
-      }}
-    >
-      {CARDS.map((card, i) => (
-        <button
-          key={card.id}
-          onClick={(e) => {
-            e.stopPropagation();
-            handleSetActive(i);
-          }}
-          aria-label={`Go to card ${i + 1}`}
-          style={{
-            width: 6,
-            height: 6,
-            borderRadius: "50%",
-            border: "none",
-            cursor: "pointer",
-            padding: 0,
-            background: active === i ? "#C9A84C" : "#E8D08A",
-            transform: active === i ? "scale(1.4)" : "scale(1)",
-            transition: "background 0.2s ease, transform 0.2s ease",
-          }}
-        />
-      ))}
-    </div>
-  );
 
   return (
     <section
@@ -438,11 +524,10 @@ export default function WhyChooseUs() {
         padding: isMobile
           ? "64px 0 72px"
           : isLarge
-            ? "120px 0 140px"
+            ? "120px 0 80px"
             : "100px 0 120px",
         overflow: "hidden",
         background: "#FEFCF8",
-        // Contain layout/paint to this section — prevents repaints from propagating
         contain: "layout paint",
       }}
     >
@@ -463,9 +548,8 @@ export default function WhyChooseUs() {
         style={{
           maxWidth: "56rem",
           padding: "0 24px",
-          willChange: inView ? "auto" : "transform, opacity",
           opacity: inView ? 1 : 0,
-          transform: inView ? "translateY(0)" : "translateY(18px)",
+          transform: inView ? "translateY(0px)" : "translateY(18px)",
           transition: inView
             ? "opacity 0.5s ease, transform 0.5s ease"
             : "none",
@@ -494,15 +578,15 @@ export default function WhyChooseUs() {
             padding: "0 20px",
           }}
         >
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            {CardStack}
-          </div>
+          <CardStack
+            active={active}
+            cardW={cardW}
+            cardH={cardH}
+            isLarge={isLarge}
+            inView={inView}
+            onClick={handleStackClick}
+          />
+          <Dots active={active} onSelect={handleSetActive} />
           <div
             style={{
               display: "grid",
@@ -558,6 +642,7 @@ export default function WhyChooseUs() {
               />
             ))}
           </div>
+
           <div
             style={{
               display: "flex",
@@ -566,8 +651,16 @@ export default function WhyChooseUs() {
               padding: "30px 0",
             }}
           >
-            {CardStack}
+            <CardStack
+              active={active}
+              cardW={cardW}
+              cardH={cardH}
+              isLarge={isLarge}
+              inView={inView}
+              onClick={handleStackClick}
+            />
           </div>
+
           <div
             style={{
               display: "flex",

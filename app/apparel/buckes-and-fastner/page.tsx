@@ -1,6 +1,6 @@
 import React from "react";
 import Hero from "../../sections/sub-apparel/hero";
-import Products from "../../sections/sub-apparel/products";
+
 import Brochure from "@/app/sections/brochure";
 
 import CTASection from "@/app/sections/cta";
@@ -182,26 +182,55 @@ const page = () => {
         desc="Secure fastening solutions for apparel and gear"
         image="/apparel/detail/banner.jpg"
         background="/apparel/detail/apparel-bg.jpg"
-        partnerLogo={["/partner-logo/Nifco-Japan.png"]}
+        partnerLogo={[
+          "/partner-logo/Nifco-Japan.png",
+          "/partner-logo/zippkool.png",
+        ]}
       />
       <section className="space-y-3 container mt-14  font-inter text-lg text-center">
         <h3>
-          Middle East Engineering Technologies{" "}
-          <span className="text-primary">
-            supplies high-quality buckles to global companies{" "}
+          <span className="text-primary font-medium">
+            Middle East Engineering Technologies
           </span>{" "}
-          like NIFCO Japan, a globally recognised leader in fastening
-          technology. Our buckles are developed to meet international quality
-          standards and are used across a wide range of apparel and performance
-          products.
+          as one of the distribution partners of{" "}
+          <span className="text-primary font-medium">NIFCO, Japan</span> in both
+          Middle East and India supplies{" "}
+          <span className="text-primary font-medium">
+            high-quality buckles, zippers and shoelaces
+          </span>{" "}
+          to different manufacturers of branded apparel and shoes. With{" "}
+          <span className="text-primary font-medium">
+            NIFCO Japan being a globally recognised leader
+          </span>{" "}
+          in this segment, it has assisted in getting{" "}
+          <span className="text-primary font-medium">patented products</span> to
+          our customers at the{" "}
+          <span className="text-primary font-medium">right price point</span>.
+          The product range is developed to meet{" "}
+          <span className="text-primary font-medium">
+            international quality standards
+          </span>{" "}
+          and is used across a wide range of apparel and performance products.
+          <br />
           <br />
           Buckles are used to connect straps, adjust fit, and allow quick
-          opening and closing in apparel, footwear, bags, and gear. They must be
-          strong, easy to use, and reliable even after repeated use. Our buckles
-          are <span className="text-primary">lightweight and durable</span>,
-          making them suitable for fashion, outdoor wear, workwear, and
-          performance products. We support B2B requirements, including bulk
-          supply, consistent specifications, and long-term production needs.
+          opening and closing in apparel, footwear, bags, and gear. They must be{" "}
+          <span className="text-primary font-medium">
+            strong, easy to use, and reliable
+          </span>{" "}
+          even after repeated use. Our buckles are{" "}
+          <span className="text-primary font-medium">
+            lightweight and durable
+          </span>
+          , making them suitable for fashion, outdoor wear, workwear, and
+          performance products. We support{" "}
+          <span className="text-primary font-medium">B2B requirements</span>,
+          including{" "}
+          <span className="text-primary font-medium">
+            bulk supply, consistent specifications, and long-term production
+            needs
+          </span>
+          .
         </h3>
       </section>
       <section className="py-16">
@@ -274,22 +303,57 @@ const page = () => {
       </section>
       <section className="space-y-3 container mt-10 mb-6 font-inter text-lg text-center">
         <h3>
-          Middle East Engineering Technologies{" "}
-          <span className="text-primary">
-            supplies high-quality buckles to global companies{" "}
+          <span className="text-primary font-medium">
+            NIFCO's apparel fastener range
           </span>{" "}
-          like NIFCO Japan, a globally recognised leader in fastening
-          technology. Our buckles are developed to meet international quality
-          standards and are used across a wide range of apparel and performance
-          products.
+          covers an{" "}
+          <span className="text-primary font-medium">
+            extensive range of shapes
+          </span>{" "}
+          to fit any design, in hard or soft materials, for any cord and webbing
+          size, available in the{" "}
+          <span className="text-primary font-medium">
+            widest range of styles and colors
+          </span>{" "}
+          to match every possible requirement.
           <br />
-          Buckles are used to connect straps, adjust fit, and allow quick
-          opening and closing in apparel, footwear, bags, and gear. They must be
-          strong, easy to use, and reliable even after repeated use. Our buckles
-          are <span className="text-primary">lightweight and durable</span>,
-          making them suitable for fashion, outdoor wear, workwear, and
-          performance products. We support B2B requirements, including bulk
-          supply, consistent specifications, and long-term production needs.
+          <br />
+          The jacket range includes{" "}
+          <span className="text-primary font-medium">
+            side-release buckles, cord locks, cord stoppers, adjusters, D-rings,
+            and toggles
+          </span>{" "}
+          each crafted with{" "}
+          <span className="text-primary font-medium">Japanese precision</span>.
+          The{" "}
+          <span className="text-primary font-medium">
+            BBU25 urban-style belt side-release buckle
+          </span>{" "}
+          exemplifies NIFCO's ability to address{" "}
+          <span className="text-primary font-medium">
+            fashion design principles without sacrificing performance
+          </span>
+          , presenting{" "}
+          <span className="text-primary font-medium">
+            clean lines and an ultra-low profile
+          </span>
+          , giving designers{" "}
+          <span className="text-primary font-medium">
+            complete creative freedom
+          </span>
+          .
+          <br />
+          <br />
+          NIFCO's <span className="text-primary font-medium">
+            cord locks
+          </span>{" "}
+          feature a{" "}
+          <span className="text-primary font-medium">
+            thin, lightweight design
+          </span>{" "}
+          ideal for sportswear, acting as{" "}
+          <span className="text-primary font-medium">precise stoppers</span>{" "}
+          when adjusting drawcords on hoods, hems, and cuffs.
         </h3>
       </section>
       <section className="pt-10">

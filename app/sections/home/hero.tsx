@@ -91,7 +91,7 @@ const Hero = () => {
                     alt=""
                     width={100}
                     height={100}
-                    className="w-full h-full rounded-full object-contain"
+                    className="w-full h-full rounded-full"
                   />
                 </div>
               ))}

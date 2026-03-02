@@ -31,21 +31,21 @@ const automotiveProducts = [
         name: "Two Wheeler Batteries",
         usage:
           "Compact and durable batteries designed for motorcycles and scooters, offering reliable starting power and long service life.",
-        img: "/battery/details/two-wheeler-batt.jpg",
+        img: "/battery/details/two-wheeler.jpg",
       },
       {
         id: 2,
         name: "Four Wheeler Batteries",
         usage:
           "Automotive batteries designed for passenger cars, delivering consistent cranking power and dependable performance.",
-        img: "/battery/details/automotive-battery.webp",
+        img: "/battery/details/four-wheeler.jpg",
       },
       {
         id: 3,
         name: "E-Rickshaw Batteries",
         usage:
           "Deep-cycle batteries designed for electric rickshaws, supporting frequent charging and extended daily use.",
-        img: "/battery/details/rickshaw-battery.png",
+        img: "/battery/details/e-rickshaw.jpg",
       },
     ],
     brochure: null,
@@ -80,14 +80,14 @@ const leadAcidProducts = [
         name: "Inverter Tubular Batteries",
         usage:
           "Designed for home and commercial inverter systems, offering long backup time and stable discharge.",
-        img: "/battery/details/tubular-battery.webp",
+        img: "/battery/details/inverter-tubular.jpg",
       },
       {
         id: 2,
         name: "Solar Tubular Batteries",
         usage:
           "Built for solar applications, supporting deep discharge cycles and consistent energy storage.",
-        img: "/battery/details/Solar-Tubular-Batteries.avif",
+        img: "/battery/details/solar-tubular.jpg",
       },
     ],
     brochure: null,
@@ -121,21 +121,21 @@ const lithiumProducts = [
         name: "Lithium Inverter Batteries",
         usage:
           "High-efficiency lithium batteries offering faster charging and longer life cycles.",
-        img: "/battery/details/Lithium-Inverter-Batteries.webp",
+        img: "/battery/details/lithum.jpg",
       },
       {
         id: 2,
         name: "Wall Mounted Energy Storage Systems",
         usage:
           "Space-saving wall-mounted units designed for residential and commercial energy storage.",
-        img: "/battery/details/Wall-Mounted-Energy.webp",
+        img: "/battery/details/wall-mounted-2.png",
       },
       {
         id: 3,
         name: "Rack Mounted Energy Storage Systems",
         usage:
           "Scalable rack-mounted systems designed for industrial and large-scale installations.",
-        img: "/battery/details/rack-mounted-storage-1.webp",
+        img: "/battery/details/rack-mounted.png",
       },
     ],
     brochure: null,
@@ -151,7 +151,7 @@ const page = () => {
       <Hero
         title="BATTERIES & ENERGY STORAGE"
         desc="Automotive and energy storage solutions for mobility, backup power, and renewable systems."
-        image="/battery/details/banner.jpg"
+        image="/battery/details/banner-2.png"
         background="/battery/details/background.jpg"
         partnerLogo={["/partner-logo/Lucas.png"]}
       />

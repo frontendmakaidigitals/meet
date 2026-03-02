@@ -36,13 +36,13 @@ const Supplies = ({ link, products, heading }: SuppliesProps) => {
                     order-1`}
                   >
                     <div
-                      className={`relative  ${pathname.toLowerCase() === "/batteries" ? "bg-gray-100 p-7 rounded-2xl" : ""} w-full h-[200px] lg:h-[320px]`}
+                      className={`relative overflow-hidden ${pathname.toLowerCase() === "/batteries" ? "bg-gray-100 p-7 rounded-2xl" : ""} w-full h-[200px] lg:h-[380px]`}
                     >
                       <Image
                         fill
                         src={product.img}
                         alt="Product Image"
-                        className="object-contain"
+                        className={` ${pathname.toLowerCase() === "/batteries" ? "object-cover" : "object-contain"}`}
                       />
                     </div>
                   </div>

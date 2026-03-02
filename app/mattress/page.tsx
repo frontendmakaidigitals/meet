@@ -18,11 +18,7 @@ export default function AparaellPage() {
         }
         desc="At Middle East Engineering Technologies , we supply sleep and bedding products designed to improve comfort, support, and everyday sleep quality. We work with B2B partners across global markets, focusing on reliable products and long-term supply relationships.
 "
-        image={
-          typeof window !== "undefined" && window.innerWidth >= 1024
-            ? "/mattress/banner.png"
-            : "/mattress/mobile-banner.png"
-        }
+        image={"/mattress/banner-2.jpeg"}
         background="/mattress/background.jpg"
       />
 
@@ -125,7 +121,7 @@ export default function AparaellPage() {
               mattresses suited to your specific needs.
             </>
           }
-          btn={""}
+          btn={"/mattress/Jackson-Mattress-Brochure.pdf"}
         />
         <WhyChooseUs
           title="WHY GLOBAL LEADERS WORK WITH US"

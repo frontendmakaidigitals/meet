@@ -46,11 +46,7 @@ export default function AparaellPage() {
           </h1>
         }
         desc="Middle East Engineering Technologies  delivers trusted apparel components and advanced cooling jackets to global clothing brands, manufacturers, and B2B partners"
-        image={
-          typeof window !== "undefined" && window.innerWidth >= 1024
-            ? "/apparel/banner.png"
-            : "/apparel/mobile-banner.png"
-        }
+        image={"/apparel/banner.jpeg"}
         background="/apparel/background.jpg"
       />
       <div className="relative pb-20">

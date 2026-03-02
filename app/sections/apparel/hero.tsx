@@ -1,9 +1,7 @@
 "use client";
-import { usePathname } from "next/navigation";
 import Image from "next/image";
-import { useState } from "react";
 import Link from "next/link";
-import { useEffect } from "react";
+
 type SplitHeroProps = {
   title: React.ReactNode;
   titleText: string;
@@ -27,20 +25,6 @@ const SplitHero = ({
   dark = false,
   layer = false,
 }: SplitHeroProps) => {
-  const [cover, setCover] = useState(false);
-  const pathName = usePathname();
-  useEffect(() => {
-    const normalizedPath = pathName.toLowerCase();
-    if (
-      normalizedPath !== "/batteries" &&
-      normalizedPath !== "/home-appliance" &&
-      normalizedPath !== "/travel-bags"
-    ) {
-      setCover(true);
-    } else {
-      setCover(false);
-    }
-  }, [pathName]);
   return (
     <section className={`relative pt-28 py-20 ${bgClass}`}>
       {layer && (
@@ -57,7 +41,7 @@ const SplitHero = ({
               src={image}
               alt={titleText}
               fill
-              className={`${!cover ? "object-cover" : "object-contain"} w-full h-full`}
+              className={`object-cover w-full h-full`}
             />
           </div>
 

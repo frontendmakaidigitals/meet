@@ -1,6 +1,6 @@
 import React from "react";
 import Hero from "../../sections/sub-apparel/hero";
-import Products from "../../sections/sub-apparel/products";
+
 import Brochure from "@/app/sections/brochure";
 
 import CTASection from "@/app/sections/cta";
@@ -26,21 +26,21 @@ const jacket = [
         name: "KU91830 - Cooling Jacket",
         usage:
           "Lightweight construction with breathable design to help reduce heat buildup during extended wear.",
-        img: "/apparel/detail/buckels/KU91830.jpg",
+        img: "/apparel/cooling-jacket/KU91830.jpg",
       },
       {
         id: 2,
         name: "EK3731 - Fan-Assisted Cooling Jacket",
         usage:
           "Integrated fan system that enhances airflow to actively support body cooling.",
-        img: "/apparel/detail/buckels/EK3731.jpg",
+        img: "/apparel/cooling-jacket/EK3731.jpg",
       },
       {
         id: 3,
         name: "KU92514 - High-Visibility Cooling Vest",
         usage:
           "High-visibility cooling vest combining safety compliance with heat-relief performance.",
-        img: "/apparel/detail/buckels/KU92514.jpg",
+        img: "/apparel/cooling-jacket/KU92514.jpg",
       },
     ],
     brochure: null,
@@ -69,28 +69,54 @@ const page = () => {
       <Hero
         title="Cooling Jackets"
         desc="Safety and comfort solutions for workers"
-        image="/apparel/cooling-banner.png"
+        image="/apparel/cooling-jacket/banner-1.png"
         background="/apparel/detail/apparel-bg.jpg"
         partnerLogo={["/partner-logo/Nifco-Japan.png"]}
       />
       <section className="space-y-3 container mt-10 mb-6 font-inter text-lg text-center">
         <h3>
-          Middle East Engineering Technologies supplies{" "}
-          <span className="text-primary">advanced cooling jackets</span>
-          to global partners operating in high-temperature and demanding work
-          environments. Designed to meet international performance standards,
-          these jackets are developed to improve worker comfort, safety, and
-          productivity across industrial and outdoor applications.
+          <span className="text-primary font-semibold">
+            Middle East Engineering Technologies
+          </span>{" "}
+          supplies and services advanced cooling jackets also known as{" "}
+          <span className="text-primary font-semibold">
+            Air-Conditioned Jacket
+          </span>{" "}
+          to entities operating in{" "}
+          <span className="text-primary font-semibold">
+            high-temperature and demanding work environments
+          </span>
+          . Designed to meet{" "}
+          <span className="text-primary font-semibold">
+            international performance standards
+          </span>
+          , these jackets are developed in Japan, with{" "}
+          <span className="text-primary font-semibold">51 Patents</span> mainly
+          focused on improving{" "}
+          <span className="text-primary font-semibold">
+            worker comfort, safety, and productivity
+          </span>{" "}
+          across industrial and outdoor applications.
           <br />
           <br />
-          Cooling jackets help regulate body temperature by circulating air
-          within the garment, reducing heat stress during prolonged exposure to
-          high temperatures. They are especially valuable in construction,
-          manufacturing, logistics, and outdoor operations where overheating can
-          impact performance. Lightweight, durable, and easy to integrate into
-          workwear programs, these solutions support bulk B2B supply
-          requirements, consistent specifications, and long-term operational
-          needs.
+          Cooling jackets help{" "}
+          <span className="text-primary font-semibold">
+            regulate body temperature
+          </span>{" "}
+          by circulating air within the garment, reducing{" "}
+          <span className="text-primary font-semibold">heat stress</span> during
+          prolonged exposure to high temperatures. They are especially valuable
+          in{" "}
+          <span className="text-primary font-semibold">
+            construction, manufacturing, logistics, and outdoor operations
+          </span>{" "}
+          where overheating can impact performance. Lightweight, durable, and
+          easy to integrate into workwear programs, these solutions support{" "}
+          <span className="text-primary font-semibold">
+            bulk B2B supply requirements, consistent specifications, and
+            long-term operational needs
+          </span>
+          .
         </h3>
       </section>
       <section className="pt-14">

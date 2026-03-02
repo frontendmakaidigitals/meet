@@ -60,12 +60,8 @@ export default function AparaellPage() {
           </h1>
         }
         desc="Middle East Engineering Technologies  supplies essential personal electronic devices designed for everyday use, retail distribution, and bulk business requirements.
-We focus on reliable products, consistent quality, and long-term B2B partnerships across global markets."
-        image={
-          typeof window !== "undefined" && window.innerWidth >= 1024
-            ? "/electronics/electronic.png"
-            : "/electronics/mobile-banner.png"
-        }
+            We focus on reliable products, consistent quality, and long-term B2B partnerships across global markets."
+        image={"/electronics/banner-2.jpeg"}
         background="/electronics/background.jpg"
       />
       <section className="container text-lg font-inter text-center mt-20 mb-2 space-y-4">

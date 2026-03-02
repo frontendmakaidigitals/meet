@@ -7,13 +7,13 @@ import CTASection from "../sections/cta";
 export default function AparaellPage() {
   const products = [
     {
-      img: "/battery/automotive-battery.png",
+      img: "/battery/automotive.png",
       label: <h3 className="text-2xl font-rubik">Automotive Batteries</h3>,
       desc: "High-performance automotive batteries designed to deliver reliable starting power and consistent energy output across passenger vehicles and commercial fleets. Built for durability and long service life, these batteries support demanding driving conditions while meeting international quality standards for safety and performance.",
       link: "/batteries/detail",
     },
     {
-      img: "/battery/lead-acid-battery.png",
+      img: "/battery/lead-acid.png",
       label: (
         <h3 className="text-2xl font-rubik">Energy Storage – Lead Acid</h3>
       ),
@@ -21,7 +21,7 @@ export default function AparaellPage() {
       link: "/batteries/detail",
     },
     {
-      img: "/battery/lithium-ion.png",
+      img: "/battery/Lithium.png",
       label: <h3 className="text-2xl font-rubik">Energy Storage – Lithium</h3>,
       desc: "Advanced lithium energy storage solutions engineered for high efficiency, lightweight performance, and longer lifecycle operation. Ideal for renewable integration, commercial backup, and modern energy systems that require faster charging, greater energy density, and scalable power solutions.",
       link: "/batteries/detail",
@@ -42,8 +42,8 @@ export default function AparaellPage() {
         desc="Middle East Engineering Technologies is a B2B supplier of automotive batteries and energy storage solutions, serving mobility, backup power, and renewable energy applications across regional and global markets."
         image={
           typeof window !== "undefined" && window.innerWidth >= 1024
-            ? "/battery/banner.jpeg"
-            : "/battery/banner.jpeg"
+            ? "/battery/banner-2.png"
+            : "/battery/banner-2.png"
         }
         background="/battery/background.jpg"
       />
