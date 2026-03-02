@@ -135,28 +135,44 @@ export default function AparaellPage() {
             </div>
           </div>
         </div>
-        <Brochure
-          title={
-            <h2 className="text-3xl font-rubik mb-5">
-              Smart Personal Electronics for{" "}
-              <span className="text-primary">Everyday Performance</span>
-            </h2>
-          }
-          desc={
-            <>
-              Explore personal electronic devices built for durability,
-              usability, and consistent everyday performance. Designed for
-              modern consumer needs, these products deliver practical
-              functionality across retail and commercial applications.
-              <br />
-              <br />
-              The brochure provides product specifications, usage guidance,
-              performance details, and compatibility information to help you
-              choose the right electronics solutions for daily use.
-            </>
-          }
-          btn={""}
-        />
+        <section className="bg-gray-50 py-20 px-6 lg:px-20">
+          <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            {/* Image Side */}
+            <div className="relative">
+              <img
+                src="/electronics/brochure.png" // replace with your image path
+                alt="Personal Electronics"
+                className="rounded-2xl shadow-lg w-full object-cover"
+              />
+            </div>
+
+            {/* Content Side */}
+            <div>
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                <span className="text-primary">Reliable Electronics</span> for
+                Everyday Use
+              </h2>
+
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Our personal electronic products are designed with durability,
+                performance, and ease of use in mind. From power solutions to
+                audio devices, each product is engineered to meet modern
+                lifestyle and business demands.
+              </p>
+
+              <ul className="space-y-3 text-gray-700 mb-8">
+                <li>✔ High-quality components</li>
+                <li>✔ Energy efficient performance</li>
+                <li>✔ Tested for global standards</li>
+                <li>✔ Suitable for retail & B2B supply</li>
+              </ul>
+
+              <button className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-teal-800 transition">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
         <WhyChooseUs
           title="WHY GLOBAL LEADERS WORK WITH US"
           highlightWords={["GLOBAL", "LEADERS"]}

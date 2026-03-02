@@ -98,6 +98,7 @@ export default function AparaellPage() {
 
         <section className="">
           <Brochure
+            img={"/travel-bags/brochure.png"}
             title={
               <h2 className="text-3xl font-rubik mb-5">
                 <span className="text-primary">Smart Travel Bags</span> for

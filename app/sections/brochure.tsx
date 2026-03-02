@@ -8,11 +8,13 @@ const Brochure = ({
   btn,
   multi,
   donwloadLink,
+  img,
 }: {
   multi?: boolean;
   title: React.ReactNode;
   desc: React.ReactNode;
   btn: string;
+  img: string;
   donwloadLink?: { label: string; link: string }[];
 }) => {
   return (
@@ -20,11 +22,7 @@ const Brochure = ({
       <div className="container">
         <div className="grid grid-cols-1 items-center lg:grid-cols-2 gap-12">
           <div className="h-[400px] bg-white border-gray-300 overflow-hidden rounded-xl border ">
-            <img
-              src={"/brochure.png"}
-              alt=""
-              className="w-full h-full object-contain"
-            />
+            <img src={img} alt="" className="w-full h-full object-cover" />
           </div>
           <div>
             {title}

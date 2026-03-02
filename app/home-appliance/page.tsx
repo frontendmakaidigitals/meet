@@ -137,6 +137,7 @@ export default function AparaellPage() {
 
         <section className=" lg:mt-12">
           <Brochure
+            img={"/home-appliance/brochure.png"}
             title={
               <h2 className="text-3xl font-rubik mb-5">
                 Smart Home Appliances for{" "}

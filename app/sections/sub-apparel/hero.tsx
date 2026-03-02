@@ -40,7 +40,7 @@ const Hero = ({ title, desc, image, background, partnerLogo }: HeroProps) => {
             {partnerLogo.map((logo, index) => (
               <div
                 key={index}
-                className="size-16 flex justify-center p-1 items-center bg-white rounded-full"
+                className="size-18 flex justify-center items-center bg-white rounded-full"
               >
                 <Image src={logo} alt="Partner Logo" width={100} height={50} />
               </div>

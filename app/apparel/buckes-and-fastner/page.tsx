@@ -180,7 +180,7 @@ const page = () => {
       <Hero
         title="Buckles"
         desc="Secure fastening solutions for apparel and gear"
-        image="/apparel/detail/banner.jpg"
+        image="/apparel/detail/apparel.png"
         background="/apparel/detail/apparel-bg.jpg"
         partnerLogo={[
           "/partner-logo/Nifco-Japan.png",
@@ -285,12 +285,12 @@ const page = () => {
       <section>
         <div className="container relative h-[300px] lg:h-[450px] overflow-hidden lg:rounded-xl">
           <Image
-            src={"/apparel/fasteners.jpg"}
+            src={"/apparel/detail/banner-2.png"}
             alt={"fastner"}
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 w-full h-full bg-black/70" />
+          <div className="absolute inset-0 w-full h-full bg-black/40" />
 
           <div className="flex relative z-10 text-white flex-col pb-18 justify-end h-full items-center">
             <h2 className="text-4xl font-rubik mb-2 font-[600]">Fastner</h2>
@@ -408,6 +408,7 @@ const page = () => {
 
       <section className="lg:mt-10 mb-10">
         <Brochure
+          img={"/apparel/brochure.png"}
           title={
             <h2 className="text-3xl font-rubik mb-5">
               Smart Apparel for{" "}

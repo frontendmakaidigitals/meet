@@ -12,43 +12,6 @@ import Brochure from "@/app/sections/brochure";
 import { BadgeCheck } from "lucide-react";
 import CTASection from "@/app/sections/cta";
 const page = () => {
-  const reasons = [
-    {
-      icon: Shield,
-      title: "Quality Assurance",
-      description:
-        "Partnered with globally recognized manufacturers like NIFCO Japan and SEFT Technologies",
-    },
-    {
-      icon: Award,
-      title: "Proven Track Record",
-      description:
-        "Years of experience in B2B trading and solutions across multiple industries",
-    },
-    {
-      icon: Users,
-      title: "Dedicated Support",
-      description:
-        "Smooth support and claim settlement with responsive customer service",
-    },
-    {
-      icon: TrendingUp,
-      title: "Competitive Pricing",
-      description: "Cost-effective B2B pricing with bulk supply options",
-    },
-    {
-      icon: Globe,
-      title: "Global Network",
-      description:
-        "Strong international partnerships ensuring reliable supply chains",
-    },
-    {
-      icon: CheckCircle,
-      title: "Quality Control",
-      description:
-        "Rigorous quality standards and consistent product specifications",
-    },
-  ];
   return (
     <div>
       <Hero
@@ -56,11 +19,7 @@ const page = () => {
         desc="Electric bikes and scooters designed for clean, efficient, and reliable everyday transportation."
         image="/ev/details/banner.png"
         background="/ev/details/background.jpg"
-        partnerLogo={[
-          "/partner-logo/Autolite.png",
-          "/partner-logo/King-kong",
-          "/partner-logo/Lucas.png",
-        ]}
+        partnerLogo={["/partner-logo/King-kong.png", "/partner-logo/Lucas.png"]}
       />
       <section className="container mx-auto px-4 mt-10 lg:mt-0 py-8 md:py-24">
         <div className="grid border border-gray-300 rounded-xl p-8 bg-gradient-to-b from-amber-50 to-white grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
@@ -161,6 +120,7 @@ const page = () => {
 
       <section className="mt-10 mb-20">
         <Brochure
+          img={"/ev/brochure.png"}
           title={
             <h2 className="text-3xl font-rubik mb-5">
               <span className="text-primary">Smart Electronic Vehicle</span> for{" "}

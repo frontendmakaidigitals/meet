@@ -153,7 +153,7 @@ const page = () => {
         desc="Automotive and energy storage solutions for mobility, backup power, and renewable systems."
         image="/battery/details/banner-2.png"
         background="/battery/details/background.jpg"
-        partnerLogo={["/partner-logo/Lucas.png"]}
+        partnerLogo={["/partner-logo/Lucas.png", "/partner-logo/King-kong.png"]}
       />
 
       {/* Automotive Batteries */}
@@ -209,6 +209,7 @@ const page = () => {
 
       <section className="mt-10 mb-20">
         <Brochure
+          img={"/battery/brochure.png"}
           title={
             <h2 className="text-3xl mb-3 font-rubik">
               <span className="text-primary">Smart Energy</span> Storage

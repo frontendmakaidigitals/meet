@@ -101,6 +101,7 @@ export default function AparaellPage() {
           </div>
         </div>
         <Brochure
+          img={"/mattress/brochure.png"}
           title={
             <h2 className="text-3xl mb-3 font-rubik">
               <span className="text-primary">Smart Mattresses </span> for
