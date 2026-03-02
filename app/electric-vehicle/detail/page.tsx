@@ -58,7 +58,7 @@ const page = () => {
         background="/ev/details/background.jpg"
         partnerLogo={[
           "/partner-logo/Autolite.png",
-          "/partner-logo/King-Kong.png",
+          "/partner-logo/King-kong",
           "/partner-logo/Lucas.png",
         ]}
       />
