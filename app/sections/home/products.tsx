@@ -123,7 +123,7 @@ const Products = () => {
         </div>
       ),
       bgColor: " bg-linear-to-b from-[#B3A287] to-[#F7F7F7]",
-      class: "col-span-2",
+      class: "lg:col-span-2",
       link: "/personal-electronics",
     },
     {
@@ -169,7 +169,7 @@ const Products = () => {
             return (
               <div
                 key={idx}
-                className={`${product.bgColor} ${product.class} ${isWide ? "px-8" : "px-8 pb-1 pt-6"} rounded-xl `}
+                className={`${product.bgColor} ${product.class} ${isWide ? "px-8 pb-6 lg:pb-0" : "px-8 pb-1 pt-6"} rounded-xl `}
               >
                 {isWide ? (
                   /* ===================== WIDE CARD ===================== */
