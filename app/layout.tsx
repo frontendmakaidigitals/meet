@@ -8,8 +8,7 @@ import {
   Rubik,
 } from "next/font/google";
 import "./globals.css";
-import { Header } from "./header/header";
-import Footer from "./footer/footer";
+ 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -55,9 +54,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${rubik.variable} ${geistMono.variable} ${inter.variable} ${baskervville.variable} ${allura.variable} antialiased`}
       >
-        <Header />
         {children}
-        <Footer />
       </body>
     </html>
   );
