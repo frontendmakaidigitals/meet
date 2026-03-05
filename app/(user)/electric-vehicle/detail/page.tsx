@@ -120,7 +120,7 @@ const page = () => {
 
       <section className="mt-10 mb-20">
         <Brochure
-          img={"/ev/brochure.png"}
+          img={"/ev/details/brochure-2.jpeg"}
           title={
             <h2 className="text-3xl font-rubik mb-5">
               <span className="text-primary">Smart Electronic Vehicle</span> for{" "}

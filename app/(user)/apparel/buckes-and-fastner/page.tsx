@@ -408,7 +408,7 @@ const page = () => {
 
       <section className="lg:mt-10 mb-10">
         <Brochure
-          img={"/apparel/brochure.png"}
+          img={"/apparel/brochure-3.png"}
           title={
             <h2 className="text-3xl font-rubik mb-5">
               Smart Apparel for{" "}

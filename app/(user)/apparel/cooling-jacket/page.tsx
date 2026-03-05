@@ -169,7 +169,7 @@ const page = () => {
       </section>
       <section className="lg:mt-14 mb-10">
         <Brochure
-          img={"/apparel/cooling-jacket/Cooling Jacket Image 1.jpg"}
+          img={"/apparel/cooling-jacket/brochure-2.png"}
           title={
             <h2 className="text-3xl font-rubik mb-5">
               Smart Cooling Jackets for{" "}

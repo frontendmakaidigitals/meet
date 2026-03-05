@@ -60,7 +60,7 @@ export default function AparaellPage() {
         />
         <section className="mt-10 mb-20">
           <Brochure
-            img={"/battery/brochure.png"}
+            img={"/battery/details/brochure.png"}
             title={
               <h2 className="text-3xl mb-3 font-rubik">
                 <span className="text-primary">Smart Energy</span> Storage
