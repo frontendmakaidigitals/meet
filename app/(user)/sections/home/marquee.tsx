@@ -10,7 +10,7 @@ const logos = [
   { img: "YAMAGO.png" },
   { img: "Ariston.png" },
   { img: "Autolite.png" },
-  { img: "jackson-mattress.png" },
+  { img: "jackson-mattress.jpeg" },
   { img: "King-kong.png" },
   { img: "Lucas.png" },
 ];

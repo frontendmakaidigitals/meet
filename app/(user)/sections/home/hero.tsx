@@ -42,7 +42,7 @@ const Hero = () => {
         </h1>
 
         <p className="text-gray-200 max-w-3xl mx-auto mb-8 lg:text-lg">
-          Middle East Engineering Technologies is B2B Commercial Distribution
+          Middle East Engineering Technologies is a B2B Commercial Distribution
           and Trading company based in United Arab Emirates, operating globally
           with regional and international partners. We deal is reliable and
           durable products to ensure our partners are able to serve the

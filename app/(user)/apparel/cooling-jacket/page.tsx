@@ -71,7 +71,7 @@ const page = () => {
         desc="Safety and comfort solutions for workers"
         image="/apparel/cooling-jacket/banner-1.png"
         background="/apparel/detail/apparel-bg.jpg"
-        partnerLogo={["/partner-logo/Nifco-Japan.png"]}
+        partnerLogo={["/partner-logo/zippkool.png"]}
       />
       <section className="space-y-3 container mt-10 mb-6 font-inter text-lg text-center">
         <h3>

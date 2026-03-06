@@ -184,7 +184,7 @@ const page = () => {
         background="/apparel/detail/apparel-bg.jpg"
         partnerLogo={[
           "/partner-logo/Nifco-Japan.png",
-          "/partner-logo/zippkool.png",
+
         ]}
       />
       <section className="space-y-3 container mt-14  font-inter text-lg text-center">

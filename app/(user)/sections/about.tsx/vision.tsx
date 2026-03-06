@@ -23,7 +23,7 @@ const Vision = () => {
                 Our Vision
               </h2>
               <p className="text-gray-700 leading-relaxed">
-                Our vision is to be a trusted B2B solutions partner for
+                Our vision is to be a trusted B2B Distribution partner for
                 businesses across key markets.
               </p>
               <p className="text-gray-700 leading-relaxed">

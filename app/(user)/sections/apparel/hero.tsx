@@ -69,14 +69,14 @@ const SplitHero = ({
                 <h3
                   className={`font-rubik ${!dark ? "text-black" : "text-white"}`}
                 >
-                  Our Successful partners
+                  Our Brand partners
                 </h3>
 
                 <div className="flex items-center gap-2">
                   {logo.map((logo, index) => (
                     <div
                       key={index}
-                      className="size-16 bg-white flex justify-center items-center p-1 rounded-full"
+                      className="size-16 bg-white  overflow-hidden flex justify-center items-center p-2 rounded-full"
                     >
                       <Image
                         src={logo}

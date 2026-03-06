@@ -13,9 +13,7 @@ const Footer = () => {
             <Logo src={"/Logo/logo-light.png"} className="mb-5" />
 
             <p className="text-sm leading-relaxed mb-6">
-              Middle East Engineering Technologies in United Arab Emirates based
-              B2B Commercial Distribution and Trading company, a Subsidiary of
-              ME Universal.
+              Middle East Engineering Technologies is a United Arab Emirates based B2B Commercial Distribution and Trading company.
               <br />
               We serve businesses globally with curated products to cater to the
               targeted segments with primary focus on reliability, durability,

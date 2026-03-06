@@ -8,7 +8,7 @@ export default function AparaellPage() {
   return (
     <>
       <Hero
-        logo={["/partner-logo/jackson-mattress.png"]}
+        logo={["/partner-logo/New folder/jackson-mattress.jpeg"]}
         titleText=""
         title={
           <h1 className="text-4xl font-rubik md:text-5xl font-[400] text-black leading-tight tracking-tight">
@@ -79,7 +79,7 @@ export default function AparaellPage() {
           <div className="grid border bg-linear-to-b from-[#FFFDF7] to-[#FFFFFF] p-4 rounded-3xl border-gray-400 md:grid-cols-2 gap-12 items-center">
             <div className="w-full h-[230px] lg:h-[360px] rounded-2xl overflow-hidden ">
               <img
-                src="/mattress/mattress-3.webp"
+                src="/mattress/bed.jpeg"
                 alt="Mattresses"
                 className="w-full h-full object-cover object-bottom"
               />

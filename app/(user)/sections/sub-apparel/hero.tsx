@@ -33,9 +33,7 @@ const Hero = ({ title, desc, image, background, partnerLogo }: HeroProps) => {
       </div>
       {partnerLogo && (
         <div className=" relative py-10 flex justify-center items-center space-x-4">
-          <h3 className="text-xl font-rubik font-[400]">
-            Our Successful partners
-          </h3>
+          <h3 className="text-xl font-rubik font-[400]">Our Brand partners</h3>
           <div className="flex flex-wrap items-center gap-4">
             {partnerLogo.map((logo, index) => (
               <div
