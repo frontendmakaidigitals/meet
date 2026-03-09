@@ -221,7 +221,7 @@ export default function BlogClient({ blog }: { blog: any }) {
         {/* ── Hero image ── */}
         {blog?.image && (
           <div className="container mx-auto mt-10">
-            <div className="relative w-full h-[220px] sm:h-[380px] lg:h-[520px] rounded-2xl overflow-hidden shadow-2xl shadow-stone-200">
+            <div className="relative w-full h-[220px] sm:h-[380px] lg:h-[580px] rounded-2xl overflow-hidden shadow-2xl shadow-stone-200">
               <Image
                 fill
                 src={`/api/uploads/${blog.image}`}
