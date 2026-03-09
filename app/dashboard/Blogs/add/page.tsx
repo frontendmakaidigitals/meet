@@ -11,6 +11,8 @@ import {
   SelectValue,
   SelectContent,
 } from "@/components/ui/select";
+import imageCompression from "browser-image-compression";
+
 import { DialogTitle } from "@radix-ui/react-dialog";
 import { AnimatePresence, motion } from "motion/react";
 import { Editor } from "@/components/blocks/editor-00/editor";
@@ -80,9 +82,25 @@ export default function AddBlogPage() {
     }));
   };
 
-  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
-    if (file) {
+    if (!file) return;
+
+    try {
+      const compressed = await imageCompression(file, {
+        maxSizeMB: 1,
+        maxWidthOrHeight: 1280,
+        useWebWorker: true,
+      });
+
+      const namedFile = new File([compressed], file.name, {
+        type: compressed.type,
+      });
+      handleChange("image", namedFile);
+      setImagePreview(URL.createObjectURL(namedFile));
+    } catch (err) {
+      console.error("Compression failed:", err);
+      // fallback to original
       handleChange("image", file);
       setImagePreview(URL.createObjectURL(file));
     }

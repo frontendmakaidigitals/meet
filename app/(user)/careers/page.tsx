@@ -32,6 +32,7 @@ const CareersPage = () => {
   });
 
   const [errors, setErrors] = useState<FormErrors>({});
+  const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
   const validate = (): FormErrors => {
@@ -81,15 +82,33 @@ const CareersPage = () => {
     if (errors.file) setErrors((prev) => ({ ...prev, file: undefined }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
+    setLoading(true);
     e.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       return;
     }
-    setErrors({});
-    setSubmitted(true);
+
+    const data = new FormData();
+    data.append("name", form.name);
+    data.append("contact", form.contact);
+    data.append("email", form.email);
+    data.append("country", form.country);
+    data.append("message", form.message);
+    if (form.file) data.append("file", form.file);
+
+    const res = await fetch("/api/careers", { method: "POST", body: data });
+
+    if (res.ok) {
+      setErrors({});
+      setSubmitted(true);
+    } else {
+      const { error } = await res.json();
+      setErrors({ message: error ?? "Submission failed. Please try again." });
+    }
+    setLoading(false);
   };
 
   const inputCls = (err?: string) =>
@@ -192,19 +211,10 @@ const CareersPage = () => {
           <div className="rounded-2xl border border-amber-50 bg-gray-100 p-6 md:p-8">
             {submitted ? (
               <div className="py-12 text-center">
-                <div
-                  className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4"
-                  style={{
-                    background: "rgba(20,184,166,0.15)",
-                    border: "1px solid rgba(20,184,166,0.3)",
-                  }}
-                >
-                  <CheckCircle2
-                    className="size-8"
-                    style={{ color: "#2dd4bf" }}
-                  />
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4">
+                  <CheckCircle2 className="size-12 fill-green-500 text-gray-100" />
                 </div>
-                <h3 className="text-xl font-rubik text-white mb-2">
+                <h3 className="text-xl font-rubik text-primary mb-2">
                   Application Submitted!
                 </h3>
                 <p className="text-sm" style={{ color: "#94a3b8" }}>
@@ -243,7 +253,6 @@ const CareersPage = () => {
                     )}
                   </div>
                 </div>
-
                 <div>
                   <input
                     type="email"
@@ -257,7 +266,6 @@ const CareersPage = () => {
                     <p className="text-red-400 text-xs mt-1">{errors.email}</p>
                   )}
                 </div>
-
                 <div>
                   <select
                     name="country"
@@ -592,7 +600,6 @@ const CareersPage = () => {
                     </p>
                   )}
                 </div>
-
                 <div>
                   <label
                     className={`flex items-center bg-white gap-3 rounded-lg px-4 py-3 cursor-pointer transition border ${errors.file ? "border-red-400" : " border-gray-400/50"}`}
@@ -626,7 +633,6 @@ const CareersPage = () => {
                     <p className="text-red-400 text-xs mt-1">{errors.file}</p>
                   )}
                 </div>
-
                 <div>
                   <textarea
                     name="message"
@@ -640,9 +646,26 @@ const CareersPage = () => {
 
                 <button
                   type="submit"
-                  className="w-full shadow-md font-rubik text-white hover:bg-primary/90 flex items-center bg-primary justify-center gap-2 font-semibold px-6 py-3 rounded-lg text-sm transition-all duration-300 hover:scale-[1.01]"
+                  disabled={loading || submitted}
+                  className={`w-full shadow-md disabled:bg-gray-400 font-rubik text-white flex items-center justify-center gap-2 font-semibold px-6 py-3 rounded-lg text-sm transition-all duration-300 hover:scale-[1.01] ${
+                    submitted
+                      ? "bg-green-500 hover:bg-green-600"
+                      : errors.message
+                        ? "bg-red-500 hover:bg-red-600"
+                        : "bg-primary hover:bg-primary/90"
+                  }`}
                 >
-                  Submit Application <ArrowRight className="size-4" />
+                  {loading ? (
+                    <>Submitting...</>
+                  ) : submitted ? (
+                    <>Application Sent! ✓</>
+                  ) : errors.message ? (
+                    <>Submission Failed — Try Again</>
+                  ) : (
+                    <>
+                      Submit Application <ArrowRight className="size-4" />
+                    </>
+                  )}
                 </button>
               </form>
             )}
