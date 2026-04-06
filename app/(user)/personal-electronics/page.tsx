@@ -176,6 +176,30 @@ export default function AparaellPage() {
             </div>
           </div>
         </section>
+
+        <Brochure
+          img={"/electronics/brochure.png"}
+          title={
+            <h2 className="text-3xl mb-3 font-rubik">
+              <span className="text-primary">Personal Electronics </span> for
+              Everyday Use
+            </h2>
+          }
+          desc={
+            <>
+              Discover a range of high-quality personal electronics designed for
+              convenience, performance, and durability in daily life. From
+              gadgets to smart devices, each product is crafted to enhance
+              usability and integrate seamlessly into your lifestyle.
+              <br />
+              <br />
+              The brochure includes product specifications, features,
+              compatibility details, and usage guidance to help you select
+              electronics that best suit your personal or professional needs.
+            </>
+          }
+          btn={"/electronics/Personal Electronics Brochure.pdf"}
+        />
         <WhyChooseUs
           title="WHY GLOBAL LEADERS WORK WITH US"
           highlightWords={["GLOBAL", "LEADERS"]}
