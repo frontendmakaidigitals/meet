@@ -219,7 +219,7 @@ const page = () => {
           desc={
             "We offer advanced battery solutions that ensure consistent performance, long life, and dependable energy storage. Built to support critical operations, our batteries enable efficient power management across industries."
           }
-          btn={""}
+          btn={"battery/details/Lucas Four Wheeler Battery Brochure.pdf"}
         />
       </section>
 

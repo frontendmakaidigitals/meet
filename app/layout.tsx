@@ -39,7 +39,7 @@ const rubik = Rubik({
 });
 
 export const metadata: Metadata = {
-  title: "Meet - Middle East Engineering Technologies",
+  title: "MEET - Commercial Distribution Solutions",
   description:
     "Middle East Engineering Technologies  is a global B2B trading and solutions company. We work with trusted international partners to supply practical products that support business growth while encouraging responsible use of resources",
 };
