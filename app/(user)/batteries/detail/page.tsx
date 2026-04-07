@@ -288,7 +288,7 @@ const page = () => {
                           className="hover:bg-primary/20"
                         >
                           <Link
-                            href={`/battery/details/king-kong//${item.link}`}
+                            href={`/battery/details/king-kong/${item.link}`}
                             target="_blank"
                             className="w-full"
                           >
