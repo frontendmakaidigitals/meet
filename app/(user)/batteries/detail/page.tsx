@@ -252,7 +252,7 @@ const page = () => {
                       {[
                         {
                           label: "King Kong E-Rickshaw Battery Brochure",
-                          link: "King Kong E-Rickshaw Battery Brochure",
+                          link: "King Kong E-Rickshaw Battery Brochure.pdf",
                         },
                         {
                           label: "King Kong EV Motorbikes & Scooters",
@@ -295,8 +295,9 @@ const page = () => {
                           className="hover:bg-primary/20"
                         >
                           <Link
-                            href={`/king-kong/${item.link}`}
+                            href={`/battery/details/king-kong//${item.link}`}
                             target="_blank"
+                            className="w-full"
                           >
                             <button className="flex   items-center text-gray-800 gap-2">
                               <Download />

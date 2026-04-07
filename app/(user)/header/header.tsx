@@ -18,6 +18,7 @@ export const Header = () => {
       }
     };
 
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
 
     return () => {
