@@ -103,10 +103,7 @@ export default function AparaellPage() {
                             label: "King Kong E-Rickshaw Battery Brochure",
                             link: "King Kong E-Rickshaw Battery Brochure.pdf",
                           },
-                          {
-                            label: "King Kong EV Motorbikes & Scooters",
-                            link: "King Kong EV Motorbikes-and-Scooters.pdf",
-                          },
+
                           {
                             label: "King Kong Four Wheeler Battery Brochure",
                             link: "King Kong Four Wheeler Battery Brochure.pdf",
@@ -144,7 +141,7 @@ export default function AparaellPage() {
                             className="hover:bg-primary/20"
                           >
                             <Link
-                              href={`/battery/details/king-kong//${item.link}`}
+                              href={`/battery/details/king-kong/${item.link}`}
                               target="_blank"
                               className="w-full"
                             >
