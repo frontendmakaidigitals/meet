@@ -20,7 +20,7 @@ const page = () => {
         desc="Electric bikes and scooters designed for clean, efficient, and reliable everyday transportation."
         image="/ev/details/banner.png"
         background="/ev/details/background.jpg"
-        partnerLogo={["/partner-logo/King-kong.png", "/partner-logo/Lucas.png"]}
+        partnerLogo={["/partner-logo/King-kong.png"]}
       />
       <section className="container mx-auto px-4 mt-10 lg:mt-0 py-8 md:py-24">
         <div className="grid border border-gray-300 rounded-xl p-8 bg-gradient-to-b from-amber-50 to-white grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
@@ -132,38 +132,27 @@ const page = () => {
               </div>
               <div>
                 <h2 className="text-3xl mb-3 font-rubik">
-                  <span className="text-primary">Smart Energy</span> Storage
-                  Batteries for Everyday Performance
+                  <span className="text-primary">Electric Vehicles</span> for
+                  Smart & Reliable Mobility
                 </h2>
+
                 <p>
-                  We offer advanced battery solutions that ensure consistent
-                  performance, long life, and dependable energy storage. Built
-                  to support critical operations, our batteries enable efficient
-                  power management across industries.
+                  We offer innovative electric vehicle solutions designed for
+                  efficient, eco-friendly, and reliable transportation. Built to
+                  meet the demands of modern mobility, our EVs deliver smooth
+                  performance, reduced emissions, and cost-effective
+                  operation—making them ideal for both personal and commercial
+                  use.
                 </p>
 
-                <div className="lg:flex-row flex-col  flex lg:items-center gap-2 lg:gap-4 ">
-                  {" "}
+                <div className="lg:flex-row flex-col flex lg:items-center gap-2 lg:gap-4">
                   <Link
-                    href={
-                      "/battery/details/Lucas Four Wheeler Battery Brochure.pdf"
-                    }
+                    href="/battery/details/king-kong/King Kong EV Motorbikes -andScooters.pdf"
                     target="_blank"
                   >
                     <button className="px-5 mt-5 flex hover:bg-primary/80 items-center gap-2 py-2 bg-primary text-white">
                       <Download />
-                      Lucas Brochure
-                    </button>
-                  </Link>
-                  <Link
-                    href={
-                      "/battery/details/king-kong/King Kong EV Motorbikes -andScooters.pdf"
-                    }
-                    target="_blank"
-                  >
-                    <button className="px-5 mt-5 flex hover:bg-primary/80 items-center gap-2 py-2 bg-primary text-white">
-                      <Download />
-                      King kong Brochure
+                      King Kong EV Brochure
                     </button>
                   </Link>
                 </div>
