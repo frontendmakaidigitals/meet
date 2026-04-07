@@ -1,15 +1,16 @@
-import Image from "next/image";
-import Hero from "../../sections/sub-apparel/hero";
+"use client";
 import {
-  Shield,
-  Award,
-  Users,
-  TrendingUp,
-  Globe,
-  CheckCircle,
-} from "lucide-react";
-import Brochure from "@/app/(user)/sections/brochure";
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import Link from "next/link";
+import { Download } from "lucide-react";
+import Hero from "../../sections/sub-apparel/hero";
+
 import { BadgeCheck } from "lucide-react";
+
 import CTASection from "@/app/(user)/sections/cta";
 const page = () => {
   return (
@@ -119,32 +120,57 @@ const page = () => {
       </section>
 
       <section className="mt-10 mb-20">
-        <Brochure
-          img={"/ev/details/brochure-2.jpeg"}
-          title={
-            <h2 className="text-3xl font-rubik mb-5">
-              <span className="text-primary">Smart Electronic Vehicle</span> for{" "}
-              Everyday Performance
-            </h2>
-          }
-          desc={
-            <>
-              Explore engineered electric scooters built to deliver dependable
-              last-mile transport, low operating costs, and consistent
-              performance across commercial and corporate fleets. Designed for
-              frequent use in urban environments, these scooters combine
-              durability, ease of handling, and practical design for reliable
-              daily operation.
-              <br />
-              <br />
-              The brochure includes product specifications, battery performance,
-              charging guidance, load capacity, and operational tips to help you
-              choose the right EV scooter solutions for B2B and commercial
-              mobility projects.
-            </>
-          }
-          btn={""}
-        />
+        <div className=" bg-[#FCFAF5] py-16">
+          <div className="container">
+            <div className="grid grid-cols-1 items-center lg:grid-cols-2 gap-12">
+              <div className="h-[400px] bg-white border-gray-300 overflow-hidden rounded-xl border ">
+                <img
+                  src={"/ev/details/brochure-2.jpeg"}
+                  alt=""
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <h2 className="text-3xl mb-3 font-rubik">
+                  <span className="text-primary">Smart Energy</span> Storage
+                  Batteries for Everyday Performance
+                </h2>
+                <p>
+                  We offer advanced battery solutions that ensure consistent
+                  performance, long life, and dependable energy storage. Built
+                  to support critical operations, our batteries enable efficient
+                  power management across industries.
+                </p>
+
+                <div className="lg:flex-row flex-col  flex lg:items-center gap-2 lg:gap-4 ">
+                  {" "}
+                  <Link
+                    href={
+                      "/battery/details/Lucas Four Wheeler Battery Brochure.pdf"
+                    }
+                    target="_blank"
+                  >
+                    <button className="px-5 mt-5 flex hover:bg-primary/80 items-center gap-2 py-2 bg-primary text-white">
+                      <Download />
+                      Lucas Brochure
+                    </button>
+                  </Link>
+                  <Link
+                    href={
+                      "/battery/details/king-kong/King Kong EV Motorbikes -andScooters.pdf"
+                    }
+                    target="_blank"
+                  >
+                    <button className="px-5 mt-5 flex hover:bg-primary/80 items-center gap-2 py-2 bg-primary text-white">
+                      <Download />
+                      King kong Brochure
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <CTASection />
     </div>
