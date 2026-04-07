@@ -252,10 +252,6 @@ const page = () => {
                           link: "King Kong E-Rickshaw Battery Brochure.pdf",
                         },
                         {
-                          label: "King Kong EV Motorbikes & Scooters",
-                          link: "King Kong EV Motorbikes-and-Scooters.pdf",
-                        },
-                        {
                           label: "King Kong Four Wheeler Battery Brochure",
                           link: "King Kong Four Wheeler Battery Brochure.pdf",
                         },
