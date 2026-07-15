@@ -42,6 +42,9 @@ export const metadata: Metadata = {
   title: "MEET - Commercial Distribution Solutions",
   description:
     "Middle East Engineering Technologies  is a global B2B trading and solutions company. We work with trusted international partners to supply practical products that support business growth while encouraging responsible use of resources",
+   verification: {
+    google: "-gx1uvI6y2p_pQOnNLYSiqEmH8HvdhurOpGyEvQHJeA",
+  },
 };
 
 export default function RootLayout({
