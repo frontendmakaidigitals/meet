@@ -13,7 +13,8 @@ const Footer = () => {
             <Logo src={"/Logo/logo-light.png"} className="mb-5" />
 
             <p className="text-sm leading-relaxed mb-6">
-              Middle East Engineering Technologies is a United Arab Emirates based B2B Commercial Distribution and Trading company.
+              Middle East Engineering Technologies is a United Arab Emirates
+              based B2B Commercial Distribution and Trading company.
               <br />
               We serve businesses globally with curated products to cater to the
               targeted segments with primary focus on reliability, durability,
@@ -85,7 +86,7 @@ const Footer = () => {
             {/* Phone */}
             <div className="flex items-center gap-3">
               <Phone size={16} className="text-primary" />
-              <span>+971 50 9709496</span>
+              <span>+971 55 7850023</span>
             </div>
 
             {/* Email */}
